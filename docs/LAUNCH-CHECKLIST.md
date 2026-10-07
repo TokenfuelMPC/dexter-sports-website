@@ -38,9 +38,9 @@ Kim's career, education, and credentials were added from her LinkedIn (Oct 2026)
 ### Strategy alignment (see `_strategy/dexter-competitive-landscape.md`)
 The site now leads with coach representation and the women-coaches focus. Before launch:
 - [ ] **Kim:** Approve the coach-first positioning and the "Why we exist" section on the home page
-- [x] Women-in-coaching figures verified (Oct 7, 2026) against the WIA Report summary of *Women in NCAA Intercollegiate Athletics: The Legacy Revisited* (The Collective Think Tank, Mar 2026): ~2/3 of full-time assistant coaches; 46% of coaches for women's teams (2024); 6 in 100 coaches of men's teams; 43% of NCAA varsity athletes. The earlier "41%" and "~7% women of color" figures were removed (wrong or unsourced).
+- [x] Women-in-coaching figures verified (Oct 7, 2026) against the WIA Report summary of *Women in NCAA Intercollegiate Athletics: The Legacy Revisited* (The Collective Think Tank, Mar 2026): ~2/3 of full-time assistant coaches; 46% of coaches for women's teams (2024); 6 in 100 coaches of men's teams; 43% of NCAA varsity athletes. The earlier "41%" figure was replaced. Women-of-color figure now sourced: 7.3% of head coaches of women's teams at 94 D-I schools (Tucker Center / WeCOACH Women in College Coaching Report Card, 2025–26).
 - [ ] *(Optional)* Confirm in the full report whether "two-thirds of full-time assistant coaches" refers to women's teams only or to all teams, and tighten the wording if needed
-- [ ] Update `_strategy/` materials (landscape doc, slide 1 stats) to match: they still cite 41% and ~7%
+- [x] `_strategy/` landscape doc and slides updated to match (Oct 7)
 - [ ] **Kim:** Decide on the school-paid "For Athletic Departments" search desk. It exists as a draft service (hidden at launch). Publish only once it's decided *and* the conflict policy below exists.
 - [ ] **Kim:** Write the conflict-of-interest policy, then replace the placeholder FAQ "How do you handle conflicts of interest?" (required before any search-desk or NFLPA work)
 - [ ] **Counsel:** Confirm nothing on the public site counts as soliciting investment for a private raise. The Partners page lists investors but intentionally doesn't invite investment.
