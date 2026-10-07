@@ -73,19 +73,19 @@ window.DSC_CONFIG = {
      formEndpoint: optional SEPARATE endpoint so urgent requests can trigger
        louder alerts (e.g. its own Formspree form or a Zapier/Make webhook
        that texts Kim). Leave "" to use formProvider (Netlify form "urgent").
-     hours: when Kim actively monitors urgent requests (her local time).
-     response: the promise shown to the requester for each tier. KIM MUST
-       APPROVE these: only promise what she can keep every time.
+     cutoff: the same-day rule. Requests received before cutoff.hour on a
+       business day (cutoff.days, 0 = Sunday) get a same-day response;
+       anything later gets a response the next business day.
+     response: the promise shown for each case.
      backup: optional second contact (e.g. a partner attorney) shown when
        a request is submitted. Leave name "" to hide.
      Playbook: docs/URGENT-REQUESTS.md                                    */
   urgent: {
     formEndpoint: "",
-    hours: { start: 8, end: 20, days: [1, 2, 3, 4, 5, 6], timezone: "America/New_York", label: "8am–8pm ET, Monday–Saturday" },
+    cutoff: { hour: 12, days: [1, 2, 3, 4, 5], timezone: "America/New_York", label: "12:00 pm ET" },
     response: {
-      P1: "For deadlines within 24 hours, Kim aims to respond within 2 hours during urgent hours.",
-      P2: "For deadlines within 72 hours, Kim aims to respond the same day.",
-      P3: "Kim will respond within one business day. If anything changes, call or text."
+      sameDay: "Your request arrived before the 12:00 pm ET cutoff, so Kim will respond today.",
+      nextDay: "Your request arrived after the 12:00 pm ET cutoff, so Kim will respond by the next business day."
     },
     allowText: true,
     backup: { name: "", phone: "", email: "", note: "" }

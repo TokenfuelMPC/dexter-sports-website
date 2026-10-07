@@ -38,14 +38,17 @@ Kim's career, education, and credentials were added from her LinkedIn (Oct 2026)
 ### Strategy alignment (see `_strategy/dexter-competitive-landscape.md`)
 The site now leads with coach representation and the women-coaches focus. Before launch:
 - [ ] **Kim:** Approve the coach-first positioning and the "Why we exist" section on the home page
-- [ ] Verify the four women-in-coaching figures on the home page (41%, ~7%, ~2/3, 5–6%) against the latest NCAA demographics data and WeCOACH, and update the numbers and source line if needed
+- [x] Women-in-coaching figures verified (Oct 7, 2026) against the WIA Report summary of *Women in NCAA Intercollegiate Athletics: The Legacy Revisited* (The Collective Think Tank, Mar 2026): ~2/3 of full-time assistant coaches; 46% of coaches for women's teams (2024); 6 in 100 coaches of men's teams; 43% of NCAA varsity athletes. The earlier "41%" and "~7% women of color" figures were removed (wrong or unsourced).
+- [ ] *(Optional)* Confirm in the full report whether "two-thirds of full-time assistant coaches" refers to women's teams only or to all teams, and tighten the wording if needed
+- [ ] Update `_strategy/` materials (landscape doc, slide 1 stats) to match: they still cite 41% and ~7%
 - [ ] **Kim:** Decide on the school-paid "For Athletic Departments" search desk. It exists as a draft service (hidden at launch). Publish only once it's decided *and* the conflict policy below exists.
 - [ ] **Kim:** Write the conflict-of-interest policy, then replace the placeholder FAQ "How do you handle conflicts of interest?" (required before any search-desk or NFLPA work)
 - [ ] **Counsel:** Confirm nothing on the public site counts as soliciting investment for a private raise. The Partners page lists investors but intentionally doesn't invite investment.
 - [ ] Keep fees (3%, $6K floor), competitor names and financials, NFLPA plans, and fundraising details **off** the public site unless Kim decides otherwise
 
 ### Toolkit wall, newsletter & urgent requests
-- [ ] **Kim:** Approve the urgent-request response promises and urgent hours (`config.js → urgent`). Only promise what can be kept every time.
+- [x] Urgent response rule set: same day if received by 12:00 pm ET on a business day, otherwise next business day (`config.js → urgent.cutoff`)
+- [ ] **Kim:** Confirm business days are Mon–Fri (current setting)
 - [ ] **Kim:** Name a backup contact for urgent requests (optional, recommended)
 - [ ] Set up urgent alerts, at least levels 1–2 in [URGENT-REQUESTS.md](URGENT-REQUESTS.md) (email + phone notification), and run the test
 - [ ] Create the Kit account, forms, `role` field, and toolkit incentive email; set `newsletter` in `config.js`

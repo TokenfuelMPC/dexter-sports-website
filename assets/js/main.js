@@ -628,14 +628,16 @@
     var h = (t - Date.now()) / 36e5;
     return { key: h <= 0 ? "PAST" : h <= 24 ? "P1" : h <= 72 ? "P2" : "P3", hours: Math.max(0, Math.round(h)) };
   }
-  function withinUrgentHours() {
-    var H = (CFG.urgent || {}).hours || {};
+  /* Same-day rule: requests received by the cutoff (default noon ET) on a
+     business day get a same-day response; later ones, the next business day. */
+  function beforeCutoff() {
+    var C = (CFG.urgent || {}).cutoff || {};
     try {
-      var parts = new Intl.DateTimeFormat("en-US", { timeZone: H.timezone || "America/New_York", hour: "numeric", hourCycle: "h23", weekday: "short" }).formatToParts(new Date());
+      var parts = new Intl.DateTimeFormat("en-US", { timeZone: C.timezone || "America/New_York", hour: "numeric", hourCycle: "h23", weekday: "short" }).formatToParts(new Date());
       var hour = +parts.filter(function (p) { return p.type === "hour"; })[0].value;
       var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(parts.filter(function (p) { return p.type === "weekday"; })[0].value);
-      return (H.days || [1, 2, 3, 4, 5, 6]).indexOf(day) > -1 && hour >= (H.start || 8) && hour < (H.end || 20);
-    } catch (e) { return true; }
+      return (C.days || [1, 2, 3, 4, 5]).indexOf(day) > -1 && hour < (C.hour == null ? 12 : C.hour);
+    } catch (e) { return false; }
   }
   function urgent() {
     var f = $("[data-urgent]");
@@ -654,7 +656,7 @@
     }
     dl.addEventListener("input", showTier);
     var hrs = $("[data-urgent-hours]");
-    if (hrs) hrs.textContent = ((U.hours || {}).label) || "";
+    if (hrs) hrs.textContent = ((U.cutoff || {}).label) || "";
 
     f.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -667,7 +669,7 @@
       d.priority = tier;
       d.hours_to_deadline = String(t.hours);
       d.deadline_readable = when.toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
-      d.received_in_urgent_hours = withinUrgentHours() ? "yes" : "no (after hours)";
+      d.response_commitment = beforeCutoff() ? "same day" : "next business day";
       d._subject = "[URGENT " + tier + " · " + t.hours + "h] " + (d.offer_type || "Offer") + " — " + (d.name || "");
       var btn = $("button[type=submit]", f);
       btn.disabled = true; btn.textContent = "Sending…";
@@ -681,7 +683,7 @@
     });
 
     function done(d, tier, t) {
-      var after = d.received_in_urgent_hours !== "yes";
+      var sameDay = d.response_commitment === "same day";
       var digits = String(CFG.phone).replace(/\D/g, "");
       var smsBody = "URGENT offer (" + tier + "): " + (d.name || "") + ", " + (d.offer_type || "offer") + " from " + (d.offering_party || "?") + ", deadline " + d.deadline_readable + ". I submitted the website form.";
       var B = U.backup || {};
@@ -690,8 +692,8 @@
         '<div class="intake urgent-done">' +
         '<span class="tier-chip tier-' + tier.toLowerCase() + '"><strong>' + TIERS[tier].label + "</strong> · " + (t.key === "PAST" ? "deadline now" : t.hours + "h to deadline") + "</span>" +
         "<h2 style=\"margin-top:16px\">Received. Kim has been alerted.</h2>" +
-        '<p class="lead">' + esc((U.response || {})[tier] || "Kim will respond as quickly as possible.") + "</p>" +
-        (after ? '<div class="callout"><strong>It\'s outside urgent hours (' + esc((U.hours || {}).label || "") + ").</strong> " + (tier === "P1" ? "Because your deadline is close, please also call or text now." : "Your request is first in line when hours resume.") + "</div>" : "") +
+        '<p class="lead">' + esc((U.response || {})[sameDay ? "sameDay" : "nextDay"] || "Kim will respond as quickly as possible.") + "</p>" +
+        (!sameDay && tier === "P1" ? '<div class="callout"><strong>Your deadline is close.</strong> Because this arrived after the ' + esc((U.cutoff || {}).label || "noon") + " cutoff, please also call or text Kim now.</div>" : "") +
         (tier !== "P3" ? '<div class="btn-row" style="margin:20px 0">' +
           '<a class="btn btn--alert" href="tel:+1' + digits + '">Call Kim now</a>' +
           (U.allowText !== false ? '<a class="btn btn--ghost" href="sms:+1' + digits + "?&body=" + encodeURIComponent(smsBody) + '">Text Kim</a>' : "") + "</div>" : "") +

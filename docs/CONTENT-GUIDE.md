@@ -139,3 +139,29 @@ Save the new PDF over `assets/docs/before-you-sign-nil-toolkit.pdf`, keeping the
 ## Change the menu
 
 The menu is defined once at the top of `assets/js/main.js` in the `NAV` list. Add, remove, or reorder lines there; the header and footer menus update on every page.
+
+---
+
+## Cite data (asterisk footnotes)
+
+Any statistic or outside fact on the site gets an asterisk that links to a **Sources** list at the bottom of the same page (see the home page's women-in-coaching figures).
+
+1. After the number or sentence, add the marker. One asterisk for source 1, two for source 2, and so on:
+   ```html
+   46%<sup class="fn"><a href="#src-1" aria-label="Source 1">*</a></sup>
+   ```
+2. At the bottom of the page, just before `</main>`, make sure there's a Sources section. Copy it from `index.html` if the page doesn't have one yet:
+   ```html
+   <section class="sources" aria-labelledby="sources-title">
+     <div class="container">
+       <h2 class="sources-title" id="sources-title">Sources</h2>
+       <ol>
+         <li id="src-1"><span class="fn-mark">*</span> Publisher, <em>Title</em> (date), <a href="https://…">link</a>.</li>
+         <li id="src-2"><span class="fn-mark">**</span> …</li>
+       </ol>
+     </div>
+   </section>
+   ```
+3. Keep `src-N` numbers and asterisk counts matched. Record when you checked the source, and re-check figures when a new edition is published.
+
+Never publish a figure you can't cite. Estimates from internal strategy documents stay off the public site.

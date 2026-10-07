@@ -10,24 +10,28 @@ How the **Urgent Offer Help** page (`urgent.html`) works, how alerts reach Kim, 
 2. Fills in a short form: name, role, mobile, email, offer type, who made the offer, **response deadline**, best contact method, whether they have the full agreement, and a short description.
 3. Sees their **priority tier** as soon as they enter the deadline.
 4. After submitting, gets:
-   - their tier and the response promise for that tier (set in `config.js`)
+   - their tier and the response commitment: **same day** if received by 12:00 pm ET on a business day, otherwise **next business day**
    - **Call Kim now** / **Text Kim** buttons for P1 and P2 (the text is pre-filled with the request summary)
-   - an after-hours notice if it's outside urgent hours
+   - for P1 requests that miss the noon cutoff, a prompt to also call or text Kim now
    - a backup contact, if one is configured
    - immediate steps (don't sign, ask for time, gather documents), plus a copy-ready **extension request** message
 
-## 2. Triage tiers
+## 2. Response commitment & triage
 
-| Tier | Deadline | Default response promise (edit in `config.js → urgent.response`) |
+**The rule (set by Kim, Oct 2026):** urgent requests received by **12:00 pm ET on a business day (Mon–Fri)** get a **same-day response**. Requests after noon, or on weekends, get a response the **next business day**.
+
+Tiers set the order of work within that commitment:
+
+| Tier | Deadline | Handling |
 |---|---|---|
-| **P1** | Within 24 hours, or already passed | Response within 2 hours during urgent hours; visitor is prompted to call or text too |
-| **P2** | Within 72 hours | Same-day response |
-| **P3** | More than 72 hours | Within one business day |
+| **P1** | Within 24 hours, or already passed | Top of the queue. Call/text buttons shown; if it misses the noon cutoff, the visitor is asked to call or text too |
+| **P2** | Within 72 hours | Next in line. Call/text buttons shown |
+| **P3** | More than 72 hours | Standard order |
 
-Tiers are calculated in the visitor's browser and included in the submission: `priority`, `hours_to_deadline`, `deadline_readable`, `received_in_urgent_hours`. The email subject reads, for example:
+Calculated in the visitor's browser and included in the submission: `priority`, `hours_to_deadline`, `deadline_readable`, `response_commitment` ("same day" / "next business day"). The email subject reads, for example:
 `[URGENT P1 · 10h] Coaching contract or job offer — Jane Smith`
 
-> ⚠️ **Kim must approve the response promises and urgent hours before launch.** Only promise what can be kept every time. Missing a promised window is worse than promising a longer one.
+> **Confirm with Kim:** whether "business day" means Mon–Fri (the current setting, `cutoff.days`), and whether after-noon requests should get a stated time the next day (e.g., "by noon"). Both are one-line changes in `config.js`.
 
 ## 3. How alerts reach Kim (escalation ladder)
 
@@ -66,7 +70,7 @@ Set up at least levels 1–2 before launch. Levels 3–4 are optional upgrades.
 | Key | What it does |
 |---|---|
 | `formEndpoint` | Optional separate endpoint (Formspree form, Zapier/Make webhook). Blank = Netlify form "urgent" |
-| `hours` | Urgent-hours window, days (0 = Sunday), time zone, and the label shown to visitors |
-| `response.P1/P2/P3` | The promise shown after submission. **Kim approves** |
+| `cutoff` | Same-day cutoff hour (24-h clock), business days (0 = Sunday), time zone, and label |
+| `response.sameDay` / `response.nextDay` | The commitment shown after submission |
 | `allowText` | Show the "Text Kim" button (set `false` if the number can't receive texts) |
 | `backup` | Name, phone, email, and note for a backup contact. Leave name blank to hide |
