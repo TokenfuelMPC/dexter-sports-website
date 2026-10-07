@@ -69,8 +69,8 @@ robots.txt, sitemap.xml SEO
 ## Status
 
 - ✅ Design, all pages, interactive tools, and responsive layout are built and tested
-- ✅ Confirmed facts in place: contact details, Charlotte base, Howard University D-I volleyball background, NIL toolkit
-- ⏳ Needs Kim's input: career history after Howard, headshot, stats, investors, partners, testimonials, credentials (see the [Launch Checklist](docs/LAUNCH-CHECKLIST.md))
+- ✅ Confirmed facts in place: contact details, Charlotte base, NIL toolkit, and Kim's career, education & credentials (CFRE; JM, Florida State; B.S. and D-I volleyball, Howard)
+- ⏳ Needs Kim's input: review of her bio, founding story, headshot file, remaining stats, investors, partners, testimonials (see the [Launch Checklist](docs/LAUNCH-CHECKLIST.md))
 - ⏳ Needs setup: form endpoint, optional booking link and analytics, domain cutover
 
 ---

@@ -9,20 +9,21 @@ Everything that needs to happen between "built" and "live." Work through it top 
 ## 1. Content from Kim
 
 ### Bio & story: `about.html`, `index.html`
-- [ ] **Kim:** Career since Howard: roles, organizations, years (About page, paragraph 2)
-- [ ] **Kim:** The turning point: why she started Dexter Sports Co. (About, paragraph 3)
-- [ ] **Kim:** How she works today, and what she won't do (About, paragraph 4)
-- [ ] **Kim:** One-to-two-sentence career summary for the home page founder block
+Kim's career, education, and credentials were added from her LinkedIn (Oct 2026): CFRE; Juris Master (FSU, Legal Risk Management, Contracting & Compliance); B.S. Howard + D-I volleyball; roles at Population Connection, Black Women's Health Imperative, University of Arkansas, The Arc of Southwest Georgia, and The Independence Fund.
+- [ ] **Kim:** Review the About page and timeline. Approve naming each past employer, and edit the one-line role descriptions (they were written from job titles only).
+- [ ] **Kim:** Year Dexter Sports Co. was founded (timeline, "[Year]–Present")
+- [ ] **Kim:** The turning point: why she started Dexter Sports Co. (About, placeholder paragraph)
+- [ ] **Kim:** How she works today, and what she won't do (About, placeholder paragraph)
+- [ ] **Kim:** *(Optional)* One fundraising result she's proud of (About)
 - [ ] **Kim:** Approve or rewrite the suggested pull quote on the home page ("The first offer changes the conversation…")
-- [ ] **Kim:** Confirm or edit the Howard details now on the site: *Charlotte native; junior college, then NCAA Division I volleyball at Howard University (2005 roster).*
+- [ ] **Kim:** Update her LinkedIn headline/banner to reference Dexter Sports Co. Prospects will look her up, and the profile currently reads "Nonprofit Fundraising Executive" and #OpenToWork. Then add the URL to `config.js` → `social.linkedin`.
 
 ### Headshot
-- [ ] **Kim:** Professional portrait, vertical, at least 1200×1500 px. Save as `assets/img/kim-dexter.jpg`. The site picks it up automatically on Home and About.
+- [ ] **Kim:** Original file of her professional portrait (the LinkedIn photo works well; a screenshot is too low-resolution), vertical, at least 1200×1500 px. Save as `assets/img/kim-dexter.jpg`. The site picks it up automatically on Home and About.
 
 ### Lists: `assets/js/content.js`
-- [ ] **Kim:** `stats`: four real numbers (years, clients, relationships, value). Remove any she isn't comfortable publishing.
-- [ ] **Kim:** `timeline`: career highlights, plus her Howard degree and field of study
-- [ ] **Kim:** `credentials`: athlete-agent registrations, associations, boards. *(Many states require athlete agents to register; families are told to verify credentials. Listing them builds trust.)*
+- [ ] **Kim:** `stats`: "10+ years" is confirmed; supply or remove the other three (clients, relationships, value)
+- [ ] **Kim:** `credentials`: CFRE, JM, and B.S. are in. Add any athlete-agent registration, associations, or boards. *(Many states require athlete agents to register; families are told to verify credentials. Listing them builds trust.)*
 - [ ] **Kim:** `network`: confirm each of the six "Access" categories is accurate; edit or delete as needed
 - [ ] **Kim:** `investors`: names, one-line blurbs, logos, and links, **with each investor's written OK to be listed**
 - [ ] **Kim:** `partners`: same, with each partner's OK

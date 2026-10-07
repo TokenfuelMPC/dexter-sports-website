@@ -92,6 +92,14 @@ After launch:
 ---
 
 ## Ownership & access (important for handoffs)
+
+### Transferring this repository to Kim's team
+The repository starts as a **private** repo under the developer's GitHub account. To hand it over:
+1. Kim's team creates a GitHub account or organization (e.g. `dexter-sports-co`).
+2. The current owner opens the repo → **Settings → General → Danger Zone → Transfer ownership** and enters the new owner. Issues, history, and settings move with it, and GitHub redirects the old URL.
+3. The new owner accepts the transfer and adds collaborators under **Settings → Collaborators**.
+4. Reconnect the host (Netlify, Cloudflare Pages, etc.) to the repo at its new location.
+
 - Hosting, domain, form, and analytics accounts should be **owned by Dexter Sports Co.** (kim@dextersportsco.com), with contractors added as team members. That way, changing vendors never means losing the site.
 - Keep this repository in a Git account the business controls. Contractors work on a branch or fork and open pull requests.
 - Never commit passwords, API keys, client documents, or athlete personal information to this repository.

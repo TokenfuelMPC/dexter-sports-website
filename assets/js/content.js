@@ -16,7 +16,7 @@ window.DSC_CONTENT = {
 
   /* ---- Credibility numbers (home + about). Replace with real figures. ---- */
   stats: [
-    { value: "[XX]+", label: "Years in sports business & athlete development", draft: true },
+    { value: "10+", label: "Years building partnerships, sponsorships & major-gift relationships" },
     { value: "[XX]",  label: "Athletes & coaches advised", draft: true },
     { value: "[XX]",  label: "Brand & institutional relationships", draft: true },
     { value: "[$X]M", label: "In partnership value negotiated", draft: true }
@@ -101,27 +101,32 @@ window.DSC_CONTENT = {
   /* ---- Kim's network / access (home "Access" section). Confirm wording with Kim. ---- */
   network: [
     { title: "Collegiate athletics", text: "Working relationships with athletic departments, compliance offices, and coaching staffs.", draft: true },
-    { title: "Brands & marketers", text: "Direct lines to regional and national brands, agencies, and NIL collectives.", draft: true },
+    { title: "Corporate partners & sponsors", text: "A decade of building corporate partnerships and sponsorships. Kim knows how businesses decide what to fund and why." },
+    { title: "Brands & NIL collectives", text: "Direct lines to regional and national brands, agencies, and NIL collectives.", draft: true },
     { title: "Legal & tax professionals", text: "A vetted referral bench of sports attorneys and CPAs for independent review.", draft: true },
     { title: "Wealth & financial planning", text: "Trusted advisers for athletes' first earnings and long-term planning.", draft: true },
     { title: "Media & content", text: "Producers, photographers, and outlets to tell the athlete's story well.", draft: true },
     { title: "Pro & coaching pathways", text: "Connections across professional, coaching, and front-office networks.", draft: true }
   ],
 
-  /* ---- Kim's career highlights (about page timeline). REPLACE ALL. ---- */
+  /* ---- Kim's career highlights (about page timeline). Source: Kim's LinkedIn, Oct 2026. ---- */
   timeline: [
     { when: "[Year]–Present", title: "Founder, Dexter Sports Co.", text: "Founded Dexter Sports Co. to protect talent, shape opportunity, and help athletes and coaches build lasting value beyond the game." },
-    { when: "[Year]–[Year]", title: "[Previous role, organization]", text: "[One or two sentences on what Kim led or achieved here.]", draft: true },
-    { when: "[Year]–[Year]", title: "[Previous role, organization]", text: "[One or two sentences on what Kim led or achieved here.]", draft: true },
-    { when: "2005", title: "NCAA Division I volleyball, Howard University", text: "Competed for the Howard Bison women's volleyball team as an upperclassman after starting her collegiate career at the junior-college level. She knows recruiting, transfers, and the student-athlete experience firsthand." },
-    { when: "[Year]", title: "[Degree, Howard University / other education]", text: "[Degree and field of study, plus any certification or honor.]", draft: true }
+    { when: "2024–2026", title: "Major Gifts Officer, Population Connection", text: "Cultivated and stewarded major-donor relationships for a national organization." },
+    { when: "2022–2023", title: "Director of Institutional Giving, Black Women's Health Imperative", text: "Led institutional and corporate giving for a national health-equity organization." },
+    { when: "2021–2022", title: "Associate Director of Development & External Relations, University of Arkansas", text: "Built donor and external relationships inside a major SEC university." },
+    { when: "2018–2020", title: "Director of Development & Communications, The Arc of Southwest Georgia", text: "Ran fundraising and communications for a community nonprofit." },
+    { when: "2016–2017", title: "Development Manager, The Independence Fund", text: "Raised support in Charlotte for a national veterans' organization." },
+    { when: "Education", title: "Juris Master, Florida State University", text: "Legal Risk Management, Contracting, and Compliance: the disciplines at the heart of evaluating any NIL or coaching agreement. (A JM is not a law license; Kim works alongside attorneys, not in place of them.)" },
+    { when: "Education", title: "B.S., Howard University · NCAA Division I volleyball", text: "Competed for the Howard Bison after starting her collegiate career at the junior-college level. She knows recruiting, transfers, and the student-athlete experience firsthand." }
   ],
 
-  /* ---- Credentials / affiliations (about page). REPLACE ALL. ---- */
+  /* ---- Credentials / affiliations (about page). ---- */
   credentials: [
-    { title: "[Certification or registration]", text: "[e.g., state athlete-agent registration, professional association membership]", draft: true },
-    { title: "[Professional association]", text: "[Membership or role]", draft: true },
-    { title: "[Board or advisory seat]", text: "[Organization and role]", draft: true }
+    { title: "CFRE: Certified Fund Raising Executive", text: "An internationally recognized credential for fundraising professionals, awarded by CFRE International and grounded in demonstrated experience, education, and an ethics commitment." },
+    { title: "Juris Master (JM), Florida State University", text: "Graduate legal education in Legal Risk Management, Contracting, and Compliance. It is not a law license, and Dexter Sports Co. is not a law firm." },
+    { title: "B.S., Howard University", text: "Former NCAA Division I volleyball student-athlete." },
+    { title: "[Athlete-agent registration, if applicable]", text: "[State registration(s) or professional association memberships.]", draft: true }
   ],
 
   /* ---- Investors (partners page + home logo strip). ---- */
