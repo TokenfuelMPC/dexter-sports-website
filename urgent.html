@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urgent Offer Help | Exploding Offers & Deadlines | Dexter Sports Co.</title>
+  <meta name="description" content="Facing a coaching or NIL offer with a tight deadline? Send an urgent request to Kim Dexter. Triage by deadline, with call or text escalation.">
+  <link rel="canonical" href="https://www.dextersportsco.com/urgent.html">
+  <meta property="og:title" content="Urgent offer help | Dexter Sports Co.">
+  <meta property="og:image" content="https://www.dextersportsco.com/assets/img/og-image.png">
+  <meta name="theme-color" content="#0052ff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="urgent">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="section" style="padding-top:clamp(40px,6vw,72px)">
+      <div class="container split split--top split--wide">
+        <div>
+          <span class="eyebrow" style="color:var(--alert)">Urgent offer help</span>
+          <h1 style="font-size:var(--step-3)">An offer with a deadline? <em class="serif-italic">Don't sign under pressure.</em></h1>
+          <p class="lead">Coaching contracts, NIL deals, and recruiting offers sometimes come with "exploding" deadlines. Tell us what you have and when it's due. Requests are triaged by deadline, and the closest deadlines go to the front of the line.</p>
+
+          <!-- URGENT FORM: posts as Netlify form "urgent" or to config.urgent.formEndpoint. Field names are used in alerts; keep them. -->
+          <form class="intake" name="urgent" data-urgent data-netlify="true" netlify-honeypot="_gotcha" novalidate style="margin-top:28px">
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="field-row">
+              <div class="field"><label for="u-name">Your name <span class="req">*</span></label><input id="u-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="u-role">I am <span class="req">*</span></label>
+                <select id="u-role" name="role" required>
+                  <option value="">Select…</option>
+                  <option>Coach</option>
+                  <option>Athlete</option>
+                  <option>Parent or guardian</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="u-phone">Mobile phone <span class="req">*</span></label><input id="u-phone" name="phone" type="tel" autocomplete="tel" required></div>
+              <div class="field"><label for="u-email">Email <span class="req">*</span></label><input id="u-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="u-type">Type of offer <span class="req">*</span></label>
+                <select id="u-type" name="offer_type" required>
+                  <option value="">Select…</option>
+                  <option>Coaching contract or job offer</option>
+                  <option>Contract extension or buyout</option>
+                  <option>NIL or brand deal</option>
+                  <option>Recruiting / scholarship / transfer</option>
+                  <option>Representation agreement</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field"><label for="u-party">Who made the offer?</label><input id="u-party" name="offering_party" type="text" placeholder="School, brand, collective…"></div>
+            </div>
+            <div class="field">
+              <label for="u-deadline">When do you have to respond? <span class="req">*</span></label>
+              <input id="u-deadline" name="deadline" type="datetime-local" required>
+              <span class="tier-chip" data-tier hidden style="margin-top:8px;align-self:flex-start"></span>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="u-contact">Best way to reach you now</label>
+                <select id="u-contact" name="contact_method">
+                  <option>Call</option>
+                  <option>Text</option>
+                  <option>Email</option>
+                </select>
+              </div>
+              <div class="field"><label for="u-docs">Do you have the full agreement in writing?</label>
+                <select id="u-docs" name="have_documents">
+                  <option value="">Select…</option>
+                  <option>Yes, the complete agreement</option>
+                  <option>Partial: term sheet or summary only</option>
+                  <option>No, verbal offer only</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="u-msg">What's the situation? <span class="req">*</span></label>
+              <textarea id="u-msg" name="message" required placeholder="The offer in a few sentences, what's unclear, and what you need help deciding."></textarea>
+              <span class="hint">Don't paste the contract or any account numbers here. We'll arrange a secure way to share documents.</span>
+            </div>
+            <label class="check"><input type="checkbox" name="consent" value="Yes" required> <span>Contact me about this request by phone, text, or email. I understand Dexter Sports Co. LLC is not a law firm and this request doesn't create a representation relationship. <span class="req">*</span></span></label>
+            <div class="form-status" role="status" aria-live="polite"></div>
+            <div class="btn-row" style="margin-top:24px"><button class="btn btn--alert" type="submit">Send urgent request</button></div>
+          </form>
+        </div>
+
+        <aside class="stack" data-sticky style="position:sticky;top:100px">
+          <div class="card card--flat" style="border-left:4px solid var(--alert)">
+            <h3 style="margin-top:0">Deadline in the next few hours?</h3>
+            <p>Send the form, then call or text Kim directly.</p>
+            <div class="btn-row">
+              <a class="btn btn--alert btn--sm" data-bind="phone" href="tel:+18032035435">803-203-5435</a>
+            </div>
+            <p class="small muted" style="margin:14px 0 0">Urgent hours: <span data-urgent-hours>8am–8pm ET, Monday–Saturday</span></p>
+          </div>
+          <div class="card card--flat">
+            <h3 style="margin-top:0">Do this right now</h3>
+            <ol class="urgent-steps">
+              <li><strong>Don't sign or verbally accept.</strong> A deadline isn't a reason to agree to terms you haven't reviewed.</li>
+              <li><strong>Ask for time in writing.</strong> Requesting a few days to review with an adviser is normal and professional.</li>
+              <li><strong>Get the complete document.</strong> Ask for the full agreement and every attachment it references.</li>
+              <li><strong>Write down what was promised.</strong> Note anything said verbally that isn't in writing yet.</li>
+            </ol>
+          </div>
+          <div class="card card--flat">
+            <h3 style="margin-top:0">How triage works</h3>
+            <p class="small" style="margin-bottom:8px"><span class="tier-chip tier-p1"><strong>P1</strong> · within 24 hours</span></p>
+            <p class="small" style="margin-bottom:8px"><span class="tier-chip tier-p2"><strong>P2</strong> · within 72 hours</span></p>
+            <p class="small" style="margin-bottom:0"><span class="tier-chip tier-p3"><strong>P3</strong> · more than 72 hours</span></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

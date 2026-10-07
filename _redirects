@@ -1,0 +1,2 @@
+# Netlify / compatible hosts: never serve internal strategy files publicly.
+/_strategy/*  /404.html  404!

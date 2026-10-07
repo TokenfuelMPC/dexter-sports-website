@@ -28,10 +28,12 @@ File: `assets/js/config.js`
 |---|---|
 | `email`, `phone`, `location` | Shown in the footer and on the Contact page, everywhere at once |
 | `social` | Paste a full profile URL to show its icon in the footer. Leave `""` to hide it. |
-| `formEndpoint` | Where Contact-form submissions go. Blank = opens the visitor's email app instead. |
-| `newsletterEndpoint` | Where footer sign-ups go. Blank = uses `formEndpoint`. |
+| `formProvider` / `formEndpoint` | Where Contact and Urgent form submissions go (`"netlify"` recommended). Blank = opens the visitor's email app instead. |
+| `newsletter` | The monthly-newsletter connector used by the toolkit wall, the footer sign-up, and the contact form's newsletter checkbox (`provider: "kit"` recommended). See DEPLOYMENT.md#newsletter--toolkit-registration-wall |
+| `toolkitGate` | `"reveal"` / `"email"` / `"off"`: how the toolkit is unlocked after sign-up |
+| `urgent` | Urgent-request hours, response promises, backup contact. See URGENT-REQUESTS.md |
 | `bookingUrl` | A Calendly / Cal.com link. Adds "Book a call" on the Contact page and after a form is sent. |
-| `plausibleDomain` | Turns on privacy-friendly analytics |
+| `cloudflareAnalyticsToken` / `plausibleDomain` | Free page-view analytics / paid event analytics |
 | `toolkitPdf` | Path to the toolkit PDF |
 | `showDrafts` | `true` = review mode (placeholders highlighted). `false` = live mode. |
 

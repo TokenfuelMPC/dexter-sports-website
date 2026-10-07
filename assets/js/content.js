@@ -22,30 +22,19 @@ window.DSC_CONTENT = {
     { value: "[$X]M", label: "In partnership value negotiated", draft: true }
   ],
 
-  /* ---- Services (services page + home). icon: shield | handshake | whistle | spark | compass | book ---- */
+  /* ---- Services (services page + home; home shows the first 6). Order = priority.
+         icon: shield | handshake | whistle | spark | compass | book | target | building ---- */
   services: [
-    {
-      id: "athletes",
-      icon: "shield",
-      title: "Athlete Representation",
-      summary: "Advocacy for high school, college, and professional athletes, so opportunities move on the athlete's terms.",
-      points: [
-        "Opportunity sourcing and evaluation",
-        "Offer review alongside your attorney and advisers",
-        "Negotiation support and deal management",
-        "Compliance coordination with school and association rules"
-      ]
-    },
     {
       id: "coaches",
       icon: "whistle",
       title: "Coach Representation",
-      summary: "Career strategy and contract support for coaches building programs and their own professional brand.",
+      summary: "Contract and career representation for head and assistant coaches in every sport, with a focus on the women coaches and mid-career assistants the big agencies overlook.",
       points: [
-        "Career planning and positioning",
-        "Contract and compensation preparation",
-        "Speaking, clinic, and media opportunities",
-        "Reputation and personal-brand development"
+        "New contracts, extensions, and renegotiations",
+        "Buyouts, guarantees, and multi-year terms",
+        "Incentives, supplemental income, and staff resources",
+        "Career planning and personal-brand development"
       ]
     },
     {
@@ -58,6 +47,30 @@ window.DSC_CONTENT = {
         "Deliverables, usage rights, and exclusivity mapping",
         "Campaign workflow, records, and payment follow-up",
         "Pitch development for athlete-led partnerships"
+      ]
+    },
+    {
+      id: "placement",
+      icon: "target",
+      title: "Job Search & Placement",
+      summary: "Strategy and advocacy for your next move, from assistant to coordinator to head coach, at mid-major, D-II, D-III, and beyond.",
+      points: [
+        "Career-move strategy and target-program mapping",
+        "Candidacy materials and interview preparation",
+        "Introductions and outreach to decision-makers",
+        "Offer evaluation and negotiation"
+      ]
+    },
+    {
+      id: "athletes",
+      icon: "shield",
+      title: "Athlete Representation",
+      summary: "Advocacy for high school, college, and professional athletes, so opportunities move on the athlete's terms.",
+      points: [
+        "Opportunity sourcing and evaluation",
+        "Offer review alongside your attorney and advisers",
+        "Negotiation support and deal management",
+        "Compliance coordination with school and association rules"
       ]
     },
     {
@@ -95,18 +108,32 @@ window.DSC_CONTENT = {
         "Custom materials for programs",
         "Free Before You Sign toolkit"
       ]
+    },
+    {
+      /* Strategy option still being modeled (see _strategy/). Keep draft until decided, and
+         publish only with a written conflict-of-interest/disclosure policy in place. */
+      id: "departments",
+      icon: "building",
+      title: "For Athletic Departments",
+      summary: "Vetted candidate slates for mid-major, D-II, and D-III searches, with a deep bench of women coaches across all sports.",
+      points: [
+        "Candidate slates for head and assistant roles",
+        "Fast turnaround from a ready bench",
+        "Priced for programs outside the Power conferences",
+        "Full disclosure of any representation relationships"
+      ],
+      draft: true
     }
   ],
 
-  /* ---- Kim's network / access (home "Access" section). Confirm wording with Kim. ---- */
+  /* ---- Kim's network / access (home + about "Access" sections). draft = confirm with Kim. ---- */
   network: [
-    { title: "Collegiate athletics", text: "Working relationships with athletic departments, compliance offices, and coaching staffs.", draft: true },
+    { title: "Inside university advancement", text: "Kim worked inside an SEC university's development and external relations office. She knows how decision-makers, donors, and athletic leadership connect." },
     { title: "Corporate partners & sponsors", text: "A decade of building corporate partnerships and sponsorships. Kim knows how businesses decide what to fund and why." },
+    { title: "HBCU & women's sports", text: "A former Howard University student-athlete with roots in HBCU athletics and women's sports, communities the largest agencies don't prioritize." },
+    { title: "Coaching associations", text: "Relationships with coaching associations and women-in-coaching organizations across sports.", draft: true },
     { title: "Brands & NIL collectives", text: "Direct lines to regional and national brands, agencies, and NIL collectives.", draft: true },
-    { title: "Legal & tax professionals", text: "A vetted referral bench of sports attorneys and CPAs for independent review.", draft: true },
-    { title: "Wealth & financial planning", text: "Trusted advisers for athletes' first earnings and long-term planning.", draft: true },
-    { title: "Media & content", text: "Producers, photographers, and outlets to tell the athlete's story well.", draft: true },
-    { title: "Pro & coaching pathways", text: "Connections across professional, coaching, and front-office networks.", draft: true }
+    { title: "Legal, tax & financial professionals", text: "A vetted referral bench of sports attorneys, CPAs, and financial planners for independent review.", draft: true }
   ],
 
   /* ---- Kim's career highlights (about page timeline). Source: Kim's LinkedIn, Oct 2026. ---- */
@@ -154,6 +181,13 @@ window.DSC_CONTENT = {
   /* ---- Insights / articles. url can point to insights/*.html or an outside article. ---- */
   insights: [
     {
+      title: "Beyond the base salary: seven terms every assistant coach should negotiate",
+      category: "Coaches",
+      date: "2026-10-07",
+      summary: "Salary is the headline. Guarantees, buyouts, and what happens when the head coach leaves are the fine print that shapes a career.",
+      url: "insights/beyond-base-salary.html"
+    },
+    {
       title: "Before you sign: six questions every athlete family should ask",
       category: "NIL",
       date: "2026-10-06",
@@ -166,24 +200,20 @@ window.DSC_CONTENT = {
       date: "2026-10-06",
       summary: "Two $750 offers can be very different commitments. How usage rights and exclusivity change the math.",
       url: "insights/same-fee-different-deal.html"
-    },
-    {
-      title: "[Article title: e.g., what coaches should know before their next contract]",
-      category: "Coaches",
-      date: "2026-10-06",
-      summary: "[One-sentence summary.]",
-      url: "",
-      draft: true
     }
+
   ],
 
   /* ---- FAQ (home + contact). ---- */
   faqs: [
-    { q: "Who do you work with?", a: "High school, college, and professional athletes, coaches, and the families supporting them, plus brands and businesses that want to partner with athletes the right way." },
+    { q: "Who do you work with?", a: "Coaches first: head and assistant coaches in every sport, with a particular focus on women coaches and mid-career assistants at mid-major, Division II, and Division III programs. We also represent athletes, guide the families supporting them, and work with brands that want to partner with athletes and coaches the right way." },
+    { q: "Do you only represent women coaches?", a: "No. We represent coaches of every gender. We focus on women coaches because they are under-served by the large agencies, not because we turn anyone away." },
+    { q: "I'm an assistant coach. Is representation worth it at my level?", a: "Often, yes. The terms that matter most, such as guarantees, buyouts, what happens if the head coach leaves, and supplemental income, are set early in a career and carry forward. A conversation costs nothing and will tell you whether representation makes sense right now." },
+    { q: "How do you handle conflicts of interest?", a: "[Summary of Dexter's written conflict-of-interest policy: e.g., how coach and athlete clients are kept separate, and how any relationship with a hiring institution is disclosed and consented to in writing.]", draft: true },
     { q: "Is Dexter Sports Co. a law firm?", a: "No. Dexter Sports Co. LLC is not a law firm and does not provide legal, tax, or investment advice. We work alongside qualified attorneys and CPAs and can refer you to vetted professionals for independent review." },
     { q: "What does representation cost?", a: "It depends on the scope of the work. We explain services, fees, and what income is covered in writing before any agreement, and we encourage every family to have a representation agreement reviewed independently." },
     { q: "My athlete is in high school. Is it too early?", a: "Not for preparation. Rules differ by state and association, so the right first step is often a family priorities conversation and a clear process for evaluating offers when they arrive. Our free toolkit is a good place to start." },
-    { q: "We already have an offer in hand. What should we do?", a: "Do not sign under time pressure. Ask for the complete agreement and every attachment, request time to review, and reach out. We can help you organize the offer and prepare questions for your attorney." },
+    { q: "We have an offer with a deadline. What should we do?", a: "Don't sign under time pressure. Ask for the complete agreement and every attachment, and request time to review in writing. Then use the Urgent Offer Help form (in the menu). Requests are triaged by deadline, and offers due within 24 hours escalate to a call or text." },
     { q: "I'm a brand. How do we work with your athletes?", a: "Use the Start a Conversation form and choose \"Brand or business.\" Tell us about your goals, audience, and timeline and we'll follow up with fit and next steps." }
   ],
 

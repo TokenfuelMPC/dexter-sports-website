@@ -1,7 +1,7 @@
 /* ==========================================================================
-   SITE SETTINGS — the one place to change contact details, integrations,
+   SITE SETTINGS: the one place to change contact details, integrations,
    and launch switches. No code knowledge needed: edit the values in quotes.
-   See docs/CONTENT-GUIDE.md ("Site settings") for what each one does.
+   See docs/CONTENT-GUIDE.md ("Site settings") and docs/COSTS-AND-ACCOUNTS.md.
    ========================================================================== */
 window.DSC_CONFIG = {
   /* ---- Business details (shown in header, footer, contact page) ---- */
@@ -22,25 +22,83 @@ window.DSC_CONFIG = {
     tiktok: ""
   },
 
-  /* ---- Forms --------------------------------------------------------
-     formEndpoint: where the "Start a conversation" form is sent.
-       Works with Formspree, Basin, Getform, or any endpoint that accepts
-       a JSON POST. Example: "https://formspree.io/f/abcdwxyz"
-       If left "", the form falls back to opening the visitor's email app
-       pre-filled to the address above (nothing is lost, just less smooth).
-     newsletterEndpoint: same idea for the email sign-up in the footer.
-       If "", the sign-up uses formEndpoint with a "newsletter" tag.     */
+  /* ---- Contact (intake) form ---------------------------------------
+     formProvider:
+       "netlify"  = Netlify Forms (free, unlimited on Netlify hosting).
+                    Submissions appear in Netlify > Forms and can be emailed
+                    to Kim. Recommended when the site is hosted on Netlify.
+       "endpoint" = POST JSON to formEndpoint (Formspree, Basin, etc.).
+       ""         = fallback: opens the visitor's email app, pre-filled.  */
+  formProvider: "",
   formEndpoint: "",
-  newsletterEndpoint: "",
 
-  /* ---- Scheduling --------------------------------------------------
-     A Calendly / Cal.com / SavvyCal link. If set, a "Book a call" button
-     appears on the contact page and after the intake form is sent.     */
+  /* ---- Monthly newsletter + toolkit registration wall -----------------
+     provider:
+       "kit"       = Kit (kit.com). RECOMMENDED: free up to 10,000 subscribers.
+                     Paste the numeric form IDs from Kit > Grow > Landing
+                     Pages & Forms (the number in the form's URL).
+                     kitToolkitFormId    = form used by the toolkit wall
+                                           (turn on its "incentive email" to
+                                           deliver the PDF by email)
+                     kitNewsletterFormId = footer sign-up (may be the same)
+       "mailchimp" = Mailchimp. Paste the "action" URL from an embedded
+                     form, e.g. https://xxxx.us21.list-manage.com/subscribe/post?u=...&id=...
+                     Optional tag IDs per source in mailchimpTags.
+       "endpoint"  = POST JSON {email, first_name, role, source} to endpoint
+                     (Zapier/Make webhook, Formspree, etc.)
+       ""          = not connected yet (sign-ups are NOT saved; console warns)
+     Full setup: docs/DEPLOYMENT.md#newsletter                           */
+  newsletter: {
+    provider: "",
+    kitToolkitFormId: "",
+    kitNewsletterFormId: "",
+    mailchimpUrl: "",
+    mailchimpTags: { toolkit: "", newsletter: "", inquiry: "" },
+    endpoint: ""
+  },
+
+  /* toolkitGate:
+       "reveal" = visitor registers, then the download appears on the page
+                  (remembered in their browser). Simple; a determined person
+                  could still find the PDF link. RECOMMENDED to start.
+       "email"  = visitor registers and the link arrives only by email
+                  (Kit "incentive email" or a Mailchimp/automation welcome).
+                  Strongest gate; verifies the email address.
+       "off"    = no wall; anyone can download.                          */
+  toolkitGate: "reveal",
+
+  /* ---- Urgent offer requests (urgent.html) ---------------------------
+     For live / exploding offers. Requests are triaged by time-to-deadline:
+       P1 = deadline within 24h (or passed), P2 = within 72h, P3 = later.
+     formEndpoint: optional SEPARATE endpoint so urgent requests can trigger
+       louder alerts (e.g. its own Formspree form or a Zapier/Make webhook
+       that texts Kim). Leave "" to use formProvider (Netlify form "urgent").
+     hours: when Kim actively monitors urgent requests (her local time).
+     response: the promise shown to the requester for each tier. KIM MUST
+       APPROVE these: only promise what she can keep every time.
+     backup: optional second contact (e.g. a partner attorney) shown when
+       a request is submitted. Leave name "" to hide.
+     Playbook: docs/URGENT-REQUESTS.md                                    */
+  urgent: {
+    formEndpoint: "",
+    hours: { start: 8, end: 20, days: [1, 2, 3, 4, 5, 6], timezone: "America/New_York", label: "8am–8pm ET, Monday–Saturday" },
+    response: {
+      P1: "For deadlines within 24 hours, Kim aims to respond within 2 hours during urgent hours.",
+      P2: "For deadlines within 72 hours, Kim aims to respond the same day.",
+      P3: "Kim will respond within one business day. If anything changes, call or text."
+    },
+    allowText: true,
+    backup: { name: "", phone: "", email: "", note: "" }
+  },
+
+  /* ---- Scheduling: Calendly / Cal.com link (free tiers work) ---- */
   bookingUrl: "",
 
-  /* ---- Analytics ---------------------------------------------------
-     Paste a Plausible domain (privacy-friendly, no cookie banner needed)
-     e.g. "dextersportsco.com". Leave "" for no analytics.              */
+  /* ---- Analytics (both optional) ------------------------------------
+     cloudflareAnalyticsToken: free, cookieless page views (Cloudflare
+       Web Analytics). RECOMMENDED for the lowest budget.
+     plausibleDomain: paid, adds event tracking (registrations, inquiries). */
+  cloudflareAnalyticsToken: "",
   plausibleDomain: "",
 
   /* ---- Downloads ---- */

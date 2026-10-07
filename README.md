@@ -5,8 +5,9 @@ The marketing and client-intake website for **Dexter Sports Co. LLC** (DBA *Dext
 It replaces the one-page Wix site at `dextersportsco.com` with a multi-page site that does more of the work:
 
 - **Builds credibility.** Kim's story and career, her network, credentials, stats, testimonials, and an Insights library.
-- **Converts prospects.** A guided, multi-step "Start a Conversation" intake form that routes athletes, parents, coaches, brands, investors, and media.
-- **Gives before it asks.** The free *Before You Sign* NIL toolkit (PDF), an interactive NIL Readiness Check, and an offer cash calculator.
+- **Converts prospects.** A guided, multi-step "Start a Conversation" intake form that routes coaches, athletes, parents, brands, partners, and media.
+- **Handles exploding offers.** An **Urgent Offer Help** page that triages requests by deadline (P1/P2/P3) and escalates to Kim's phone.
+- **Builds a list.** The free *Before You Sign* NIL toolkit sits behind a sign-up for Kim's monthly NIL newsletter (Kit, Mailchimp, or any endpoint), alongside an interactive NIL Readiness Check and an offer cash calculator.
 - **Showcases backers.** Dedicated space for investors and strategic partners, plus a home-page logo strip.
 
 **It is plain HTML, CSS, and JavaScript.** There is no build step, framework, database, or monthly platform fee. Any web developer, agency, or host can take it over.
@@ -19,7 +20,9 @@ It replaces the one-page Wix site at `dextersportsco.com` with a multi-page site
 |---|---|
 | **Kim / the business owner** | [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md): what still needs your input before launch |
 | **Someone updating content** (text, partners, articles) | [docs/CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md): step-by-step, no coding background needed |
-| **Whoever hosts / launches the site** | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): hosting, domain cutover from Wix, forms, analytics |
+| **Whoever hosts / launches the site** | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): hosting, domain cutover from Wix, forms, newsletter, analytics |
+| **Whoever pays the bills** | [docs/COSTS-AND-ACCOUNTS.md](docs/COSTS-AND-ACCOUNTS.md): the $0/month stack, who owns which account |
+| **Whoever answers urgent requests** | [docs/URGENT-REQUESTS.md](docs/URGENT-REQUESTS.md): triage tiers, alert setup, response runbook |
 | **A developer or agency taking over** | [docs/DEVELOPER-GUIDE.md](docs/DEVELOPER-GUIDE.md) + [docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md) |
 
 ## Preview it locally (2 minutes)
@@ -43,6 +46,7 @@ partners.html           Investors & strategic partners
 insights.html           Article index
 insights/*.html         Articles (copy _article-template.html to add one)
 contact.html            Multi-step intake form
+urgent.html             Urgent offer help (deadline triage + escalation)
 privacy.html            Privacy policy (template, needs legal review)
 404.html                Not-found page
 
@@ -54,6 +58,8 @@ assets/img/             Favicon, social share image, Kim's headshot (add kim-dex
 assets/docs/            The Before You Sign toolkit PDF
 
 docs/                   Handoff guides (you are here)
+_strategy/              INTERNAL ONLY: competitive landscape, comps data, investor slides. Never published (see _strategy/README.md)
+_redirects, _headers    Netlify rules: keep _strategy/ private, keep the PDF out of search, security headers
 robots.txt, sitemap.xml SEO
 ```
 
@@ -71,6 +77,7 @@ robots.txt, sitemap.xml SEO
 - ✅ Design, all pages, interactive tools, and responsive layout are built and tested
 - ✅ Confirmed facts in place: contact details, Charlotte base, NIL toolkit, and Kim's career, education & credentials (CFRE; JM, Florida State; B.S. and D-I volleyball, Howard)
 - ⏳ Needs Kim's input: review of her bio, founding story, headshot file, remaining stats, investors, partners, testimonials (see the [Launch Checklist](docs/LAUNCH-CHECKLIST.md))
+- ✅ Positioning aligned with the Oct 2026 competitive-landscape strategy: coach-first, with a focus on women coaches and assistants across all sports
 - ⏳ Needs setup: form endpoint, optional booking link and analytics, domain cutover
 
 ---

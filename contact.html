@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body data-page="contact">
@@ -33,7 +33,7 @@
     <section class="section">
       <div class="container split split--top split--wide">
         <!-- INTAKE FORM: fields are sent as-is to config.formEndpoint. See docs/CONTENT-GUIDE.md -->
-        <form class="intake" data-intake novalidate>
+        <form class="intake" name="inquiry" data-intake data-netlify="true" netlify-honeypot="_gotcha" novalidate>
           <div class="progress" aria-hidden="true"><span></span><span></span><span></span></div>
           <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
           <input type="hidden" name="readiness" value="">
@@ -43,11 +43,11 @@
             <legend>Which best describes you?</legend>
             <p class="muted">We'll tailor the next questions.</p>
             <div class="role-grid">
+              <label class="role-option"><input type="radio" name="role" value="Coach"><span><strong>Coach</strong><small>Head or assistant, any sport</small></span></label>
               <label class="role-option"><input type="radio" name="role" value="Athlete"><span><strong>Athlete</strong><small>High school, college, or pro</small></span></label>
               <label class="role-option"><input type="radio" name="role" value="Parent or guardian"><span><strong>Parent or guardian</strong><small>Supporting an athlete</small></span></label>
-              <label class="role-option"><input type="radio" name="role" value="Coach"><span><strong>Coach</strong><small>Any level</small></span></label>
               <label class="role-option"><input type="radio" name="role" value="Brand or business"><span><strong>Brand or business</strong><small>Partnering with talent</small></span></label>
-              <label class="role-option"><input type="radio" name="role" value="Investor or partner"><span><strong>Investor or partner</strong><small>Strategic or professional</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="Investor or partner"><span><strong>Partner</strong><small>Associations, professionals, investors</small></span></label>
               <label class="role-option"><input type="radio" name="role" value="Media or speaking"><span><strong>Media or speaking</strong><small>Events, press, schools</small></span></label>
             </div>
           </fieldset>
@@ -72,17 +72,33 @@
                 </select>
               </div>
             </div>
+            <p class="urgent-nudge" data-urgent-nudge hidden>Deadline coming up fast? Use the <a href="urgent.html">urgent offer request</a> instead. It's triaged by deadline and escalates to Kim's phone.</p>
             <div class="field-row" data-show-for="Athlete Parent%20or%20guardian Coach">
               <div class="field"><label for="f-sport">Sport</label><input id="f-sport" name="sport" type="text"></div>
               <div class="field"><label for="f-level">Level</label>
                 <select id="f-level" name="level">
                   <option value="">Select…</option>
+                  <option>NCAA Division I (Power conference)</option>
+                  <option>NCAA Division I (mid-major)</option>
+                  <option>NCAA Division II</option>
+                  <option>NCAA Division III</option>
+                  <option>NAIA / junior college</option>
                   <option>High school</option>
-                  <option>College</option>
                   <option>Professional</option>
                   <option>Other</option>
                 </select>
               </div>
+            </div>
+            <div class="field" data-show-for="Coach"><label for="f-position">Current position</label>
+              <select id="f-position" name="position">
+                <option value="">Select…</option>
+                <option>Head coach</option>
+                <option>Associate head coach</option>
+                <option>Assistant coach</option>
+                <option>Coordinator / director of operations</option>
+                <option>Graduate assistant</option>
+                <option>Between positions</option>
+              </select>
             </div>
             <div class="field" data-show-for="Athlete Parent%20or%20guardian Coach"><label for="f-org">School, team, or program</label><input id="f-org" name="organization" type="text"></div>
             <div class="field" data-show-for="Brand%20or%20business Investor%20or%20partner Media%20or%20speaking"><label for="f-company">Company or organization <span class="req">*</span></label><input id="f-company" name="company" type="text" data-req></div>
@@ -90,7 +106,8 @@
               <select id="f-topic" name="topic">
                 <option value="">Select…</option>
                 <option data-topic="athletes">Athlete representation</option>
-                <option data-topic="coaches">Coach representation</option>
+                <option data-topic="coaches">Coach contract representation</option>
+                <option data-topic="placement">Coaching job search / next move</option>
                 <option data-topic="nil">Help with an NIL offer</option>
                 <option data-topic="families">Family advisory / attorney referral</option>
                 <option data-topic="brands">Brand partnership</option>
@@ -134,8 +151,8 @@
           </div>
           <div class="card card--flat">
             <h3 style="margin-top:0">Have an offer with a deadline?</h3>
-            <p>Ask the brand for time to review. It's a normal, professional request. The toolkit includes a ready-made message.</p>
-            <a class="arrow-link" href="nil-toolkit.html">Get the free toolkit</a>
+            <p>Use the urgent request form. It's triaged by deadline, with call and text escalation for offers due within 24 hours.</p>
+            <a class="btn btn--alert btn--sm" href="urgent.html">Urgent offer help</a>
           </div>
           <div class="card card--flat">
             <h3 style="margin-top:0">Not ready to talk yet?</h3>

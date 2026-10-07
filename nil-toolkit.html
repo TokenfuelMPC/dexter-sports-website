@@ -13,7 +13,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body data-page="toolkit">
@@ -28,9 +28,48 @@
           <h1>Before You Sign. <em>A process for the first offer, and every one after.</em></h1>
           <p class="lead">You don't need to know every business term to ask a useful question. You do need a process. Start with the free toolkit, check your readiness, and run the numbers.</p>
           <div class="btn-row">
-            <a class="btn btn--primary" data-toolkit href="assets/docs/before-you-sign-nil-toolkit.pdf" download>Download the toolkit (PDF)</a>
+            <a class="btn btn--primary" href="#get-toolkit">Get the free toolkit</a>
             <a class="btn btn--ghost" href="#readiness">Take the Readiness Check</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION WALL: subscribes via config.newsletter, then reveals the PDF (config.toolkitGate) -->
+    <section class="section section--blue" id="get-toolkit">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Free with the monthly NIL newsletter</span>
+          <h2 style="color:#fff">Get <em class="serif-italic">Before You Sign</em>, free.</h2>
+          <p class="lead">A 23-page guide and fillable workbook, plus Kim's monthly NIL newsletter: rule changes, deal trends, and practical guidance for athlete families and coaches.</p>
+          <ul class="checks">
+            <li>Offer snapshot, deliverable planner &amp; compensation worksheets</li>
+            <li>Questions to bring to counsel on rights &amp; exclusivity</li>
+            <li>Eight ready-to-adapt messages for brands</li>
+            <li>One email a month. Unsubscribe anytime.</li>
+          </ul>
+        </div>
+        <div class="gate">
+          <form data-toolkit-gate novalidate>
+            <h3>Send me the toolkit</h3>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="field"><label for="g-first">First name</label><input id="g-first" name="first_name" type="text" autocomplete="given-name"></div>
+            <div class="field"><label for="g-email">Email <span class="req">*</span></label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="g-role">I am</label>
+              <select id="g-role" name="role">
+                <option value="">Select…</option>
+                <option>Parent or guardian</option>
+                <option>Athlete</option>
+                <option>Coach</option>
+                <option>School or program staff</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <label class="check"><input type="checkbox" name="consent" value="Yes" required> <span>Send me the toolkit and Kim's monthly NIL newsletter. I can unsubscribe at any time. <span class="req">*</span></span></label>
+            <div class="form-status" role="status" aria-live="polite"></div>
+            <button class="btn btn--primary" type="submit" style="width:100%;margin-top:20px">Send me the toolkit</button>
+            <p class="small muted" style="margin:12px 0 0">We never sell your information. See our <a href="privacy.html">privacy policy</a>.</p>
+          </form>
         </div>
       </div>
     </section>
@@ -133,9 +172,9 @@
         <div class="cta-band">
           <div>
             <h2>Have an offer in hand?</h2>
-            <p>Don't sign under time pressure. We can help you organize it and prepare the right questions, or refer you to an attorney.</p>
+            <p>Don't sign under time pressure. If there's a deadline, send an urgent request and we'll triage it right away.</p>
           </div>
-          <div class="btn-row"><a class="btn btn--primary" href="contact.html?topic=nil">Get help with an offer</a></div>
+          <div class="btn-row"><a class="btn btn--alert" href="urgent.html">Urgent offer help</a><a class="btn btn--ghost" href="contact.html?topic=nil">Start a conversation</a></div>
         </div>
         <p class="disclaimer">The toolkit and tools on this page provide general educational guidance and are not legal, tax, or investment advice. Consult a qualified professional about your specific circumstances before signing an agreement. Rules change; check current official guidance from your school, association, the <a href="https://www.ncaa.org/student-athletes/name-image-likeness/" target="_blank" rel="noopener">NCAA</a>, and the <a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" target="_blank" rel="noopener">FTC</a>.</p>
       </div>
