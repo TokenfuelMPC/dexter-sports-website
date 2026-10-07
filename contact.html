@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start a Conversation | Dexter Sports Co.</title>
+  <meta name="description" content="Contact Kim Dexter about athlete or coach representation, NIL offers, brand partnerships, referrals, or speaking.">
+  <link rel="canonical" href="https://www.dextersportsco.com/contact.html">
+  <meta property="og:title" content="Start a Conversation | Dexter Sports Co.">
+  <meta property="og:image" content="https://www.dextersportsco.com/assets/img/og-image.png">
+  <meta name="theme-color" content="#0052ff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="hero hero--page">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow">Connect with us</span>
+          <h1>Representation, partnerships, referrals, <em>or a good conversation.</em></h1>
+          <p class="lead">Tell us a little about where you are. Kim reviews every inquiry and will be in touch within two business days.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split split--top split--wide">
+        <!-- INTAKE FORM: fields are sent as-is to config.formEndpoint. See docs/CONTENT-GUIDE.md -->
+        <form class="intake" data-intake novalidate>
+          <div class="progress" aria-hidden="true"><span></span><span></span><span></span></div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="readiness" value="">
+
+          <!-- STEP 1 -->
+          <fieldset class="intake-step">
+            <legend>Which best describes you?</legend>
+            <p class="muted">We'll tailor the next questions.</p>
+            <div class="role-grid">
+              <label class="role-option"><input type="radio" name="role" value="Athlete"><span><strong>Athlete</strong><small>High school, college, or pro</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="Parent or guardian"><span><strong>Parent or guardian</strong><small>Supporting an athlete</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="Coach"><span><strong>Coach</strong><small>Any level</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="Brand or business"><span><strong>Brand or business</strong><small>Partnering with talent</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="Investor or partner"><span><strong>Investor or partner</strong><small>Strategic or professional</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="Media or speaking"><span><strong>Media or speaking</strong><small>Events, press, schools</small></span></label>
+            </div>
+          </fieldset>
+
+          <!-- STEP 2 -->
+          <fieldset class="intake-step">
+            <legend>Tell us about you</legend>
+            <p class="muted">Fields marked <span class="req">*</span> are required.</p>
+            <div class="field-row" style="margin-top:20px">
+              <div class="field"><label for="f-name">Your name <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="field"><label for="f-timeline">Timeline</label>
+                <select id="f-timeline" name="timeline">
+                  <option value="">Select…</option>
+                  <option>I have an offer or deadline now</option>
+                  <option>Within the next month</option>
+                  <option>This season</option>
+                  <option>Just exploring</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row" data-show-for="Athlete Parent%20or%20guardian Coach">
+              <div class="field"><label for="f-sport">Sport</label><input id="f-sport" name="sport" type="text"></div>
+              <div class="field"><label for="f-level">Level</label>
+                <select id="f-level" name="level">
+                  <option value="">Select…</option>
+                  <option>High school</option>
+                  <option>College</option>
+                  <option>Professional</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field" data-show-for="Athlete Parent%20or%20guardian Coach"><label for="f-org">School, team, or program</label><input id="f-org" name="organization" type="text"></div>
+            <div class="field" data-show-for="Brand%20or%20business Investor%20or%20partner Media%20or%20speaking"><label for="f-company">Company or organization <span class="req">*</span></label><input id="f-company" name="company" type="text" data-req></div>
+            <div class="field"><label for="f-topic">I'm interested in</label>
+              <select id="f-topic" name="topic">
+                <option value="">Select…</option>
+                <option data-topic="athletes">Athlete representation</option>
+                <option data-topic="coaches">Coach representation</option>
+                <option data-topic="nil">Help with an NIL offer</option>
+                <option data-topic="families">Family advisory / attorney referral</option>
+                <option data-topic="brands">Brand partnership</option>
+                <option data-topic="education">NIL workshop or speaking</option>
+                <option data-topic="investor">Investing or strategic partnership</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-msg">How can we help? <span class="req">*</span></label>
+              <textarea id="f-msg" name="message" required placeholder="A few sentences about your situation, goals, or questions."></textarea>
+              <span class="hint">Please don't include contract documents, account numbers, or other sensitive details here. We'll arrange a secure way to share them.</span>
+            </div>
+          </fieldset>
+
+          <!-- STEP 3 -->
+          <fieldset class="intake-step">
+            <legend>Review &amp; send</legend>
+            <p class="muted">Make sure everything looks right.</p>
+            <dl class="review-list"></dl>
+            <label class="check"><input type="checkbox" name="consent" value="Yes" required> <span>Yes, please contact me about my inquiry. I understand Dexter Sports Co. LLC is not a law firm and this form does not create a representation relationship. <span class="req">*</span></span></label>
+            <label class="check" style="margin-top:12px"><input type="checkbox" name="newsletter" value="Yes"> <span>Send me occasional NIL insights and updates.</span></label>
+          </fieldset>
+
+          <div class="form-status" role="status" aria-live="polite"></div>
+          <div class="intake-nav">
+            <button class="btn btn--ghost" type="button" data-back>Back</button>
+            <span></span>
+            <button class="btn btn--blue" type="button" data-next>Continue</button>
+            <button class="btn btn--primary" type="submit" data-submit>Send to Kim</button>
+          </div>
+        </form>
+
+        <aside class="stack">
+          <div class="card card--flat">
+            <span class="eyebrow" style="margin-bottom:10px">Direct</span>
+            <h3 style="margin-top:0">Kim Dexter</h3>
+            <p style="margin-bottom:6px"><a data-bind="email" href="mailto:kim@dextersportsco.com">kim@dextersportsco.com</a></p>
+            <p style="margin-bottom:6px"><a data-bind="phone" href="tel:+18032035435">803-203-5435</a></p>
+            <p class="muted" data-bind="location">Charlotte, NC</p>
+            <a class="btn btn--primary btn--sm" data-booking href="#" target="_blank" rel="noopener" hidden>Book a call</a>
+          </div>
+          <div class="card card--flat">
+            <h3 style="margin-top:0">Have an offer with a deadline?</h3>
+            <p>Ask the brand for time to review. It's a normal, professional request. The toolkit includes a ready-made message.</p>
+            <a class="arrow-link" href="nil-toolkit.html">Get the free toolkit</a>
+          </div>
+          <div class="card card--flat">
+            <h3 style="margin-top:0">Not ready to talk yet?</h3>
+            <p>Take the two-minute NIL Readiness Check and see where your family stands.</p>
+            <a class="arrow-link" href="nil-toolkit.html#readiness">Check your readiness</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--sand">
+      <div class="container split split--top">
+        <div><span class="eyebrow">FAQ</span><h2>Before you reach out</h2></div>
+        <div class="accordion" data-render="faqs"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

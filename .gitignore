@@ -1,0 +1,10 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+# Local drafts / private material — never commit client PII or unsigned agreements
+_local/
+*.local.*
+node_modules/

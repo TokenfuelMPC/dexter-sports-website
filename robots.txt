@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /insights/_article-template.html
+
+Sitemap: https://www.dextersportsco.com/sitemap.xml
