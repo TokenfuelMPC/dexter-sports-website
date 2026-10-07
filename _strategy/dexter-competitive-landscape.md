@@ -1,5 +1,5 @@
 # Dexter Sports Co. — Competitive Landscape & Strategy
-**Internal working document · Kim Dexter & team · Prepared October 2026**
+**Internal working document · Kim Dexter & team · Prepared October 2026 · Updated October 7, 2026 (verified coaching data; website alignment)**
 
 > Purpose: map who Dexter Sports Co. competes with, what the market pays, where capital is flowing, and where Dexter can win. Companion files: `comps.csv` (data behind every table here) and `dexter-comp-slides.pptx` (investor-deck version).
 
@@ -9,7 +9,7 @@
 
 1. **Dexter competes in two markets at once.** Coach agents are paid by the coach, usually a 3–4% commission. Search firms are paid by the school, typically a flat $25K–$120K fee. Dexter's 3% fee with a $6K floor puts it in the agent lane, but its volume-placement model looks more like a search desk. That hybrid is the opportunity.
 2. **The top of the market is crowded and capital-rich; the middle is not.** CAA, The Team (formerly Wasserman), Athletes First and Octagon fight over Power-conference head coaches and pro athletes. Few firms serve assistants, mid-career coaches, mid-major and D-II/D-III programs, or women coaches across all sports.
-3. **Women coaches are an underserved, measurable segment.** Women lead about 41% of women's college teams, women of color hold only about 7% of those head-coach seats, and women coach roughly 5–6% of men's teams. Women already make up nearly two-thirds of full-time assistant coaches. That is a large, under-represented pipeline at exactly the career stage Dexter targets.
+3. **Women coaches are an underserved, measurable segment.** Women are nearly two-thirds of full-time assistant coaches, but they hold only 46% of coaching positions on women's college teams (2024) and just 6 in 100 on men's teams, even though women have been about 43% of NCAA varsity athletes since the 1990s.\* That is a large, under-represented pipeline at exactly the career stage Dexter targets.
 4. **Investors are paying up for representation businesses.** CAA's valuation rose from $1.1B (2014) to about $7B (2023). Athletes First went from a $50M valuation (2015) to a VC-backed majority buyout. Turnkey sold into a PE-backed search rollup. Boutiques with defensible rosters are acquisition targets, which gives Dexter a credible exit story.
 5. **The NFLPA expansion needs a conflict policy from day one.** Agencies that represent both college coaches and the NFL players those coaches recruit draw public criticism. A Big 12 commissioner has called it a conflict of interest. Dexter should write its conflict policy before Kim's certification, not after.
 
@@ -84,6 +84,7 @@ Private boutiques do not publish financials. Where nothing is reported, the tabl
 ## 6. Where Dexter can win
 
 - **Segment:** women coaches and assistants across all sports, mid-career, at mid-major, D-II and D-III programs. The big agencies don't serve this group economically; the boutiques mostly stop at basketball.
+- **Second specialty: NIL.** NIL guidance for athletes and families stays a major, co-equal focus, both as a revenue line and as the top of the funnel (see Section 8).
 - **Geography:** start in the Southeast (ACC, SEC, Sun Belt, CIAA/MEAC HBCU conferences) and the Carolinas, where Kim lives and has networks.
 - **Proof points to build in Year 1:** number of coaches represented, placements, average raise negotiated, and contract terms improved (buyouts, multi-year guarantees). Investors will compare these to BDS's published track record.
 - **Channel partners:** WeCOACH, WBCA and sport-specific coaching associations for referrals; search firms for candidate-slate referrals.
@@ -102,18 +103,40 @@ Private boutiques do not publish financials. Where nothing is reported, the tabl
 
 ---
 
-## 8. Next 90 days
+## 8. Website & go-to-market alignment (October 7, 2026)
 
-1. Update Kim's LinkedIn and dextersportsco.com so they match the investor story.
-2. Sign the first 5–10 coach clients and track the Year-1 proof metrics above.
-3. Open conversations with WeCOACH and one coaching association about a referral partnership.
-4. Model the school-paid search-desk line as a toggle in the proforma, alongside NFLPA and NIL.
-5. Draft the conflict-of-interest policy before NFLPA certification.
-6. Pull WeCOACH's Form 990 and any state filings for boutique comps to fill the data gaps in Section 4.
+The new dextersportsco.com (private repo, not yet launched) is built around this strategy:
+
+| Strategy point | How the site expresses it |
+|---|---|
+| Two specialties | Home hero has two equal lanes: **Representation for coaches** and **NIL, done right**. Services lead with Coach Representation, then NIL & Brand Partnerships |
+| Underserved segment | "Why we exist" section with the verified women-in-coaching figures (cited with asterisk footnotes) |
+| Founder edge (Section 2) | Hero credential chips (CFRE · Juris Master FSU · D-I Howard) and "Built for this work" cards |
+| Lead engine | *Before You Sign* toolkit gated behind the **monthly NIL newsletter** (Kit, free to 10,000 subscribers). Every download becomes a subscriber tagged by role (parent, athlete, coach, staff) |
+| Service differentiator | **Urgent Offer Help** for exploding offers: deadline triage (P1 under 24h, P2 under 72h, P3 later); **same-day response if received by 12:00 pm ET on a business day**, otherwise next business day; call/text escalation |
+| Search-desk option (Section 5) | Built as a hidden draft service ("For Athletic Departments"). Publish only after the decision *and* a written conflict policy |
+| Low overhead | ~$0/month stack (Netlify hosting + forms, Kit, Cloudflare analytics) plus domain renewal; all accounts owned by Dexter Sports Co. |
+
+**Kept off the public site on purpose:** fee structure (3%, $6K floor), competitor names and financials, valuation and exit discussion, NFLPA plans, and any invitation to invest. Public solicitation can conflict with private-offering rules; confirm with counsel before adding investor language anywhere public.
+
+**Funnel metrics to track from launch:** toolkit registrations (by role), newsletter subscribers, inquiries by role, urgent requests by tier, and the share of urgent requests answered within the commitment.
 
 ---
 
-## 9. Data notes and sources
+## 9. Next 90 days
+
+1. ~~Update dextersportsco.com so it matches the investor story.~~ Site rebuilt (Oct 7). Remaining: Kim's content review, launch, domain cutover from Wix.
+2. Update Kim's LinkedIn headline and current role to Dexter Sports Co. founder, and remove the Open to Work banner, before the deck goes out.
+3. Sign the first 5–10 coach clients and track the Year-1 proof metrics above.
+4. Launch the toolkit + monthly newsletter (Kit) and publish the first issue; target a first list milestone (e.g., 250 subscribers) to show NIL demand.
+5. Open conversations with WeCOACH and one coaching association about a referral partnership.
+6. Model the school-paid search-desk line as a toggle in the proforma, alongside NFLPA and NIL.
+7. Draft the conflict-of-interest policy before NFLPA certification (also required before the search desk goes public).
+8. Pull WeCOACH's Form 990 and any state filings for boutique comps to fill the data gaps in Section 4.
+
+---
+
+## 10. Data notes and sources
 
 All figures are from public reporting as of October 2026. Valuations reported "per sources" were not confirmed by the companies. Private firms marked "none reported" have no public financials; do not estimate them in investor materials.
 
@@ -125,4 +148,6 @@ All figures are from public reporting as of October 2026. Valuations reported "p
 - TurnkeyZRG / ZRG: turnkeyzrg.com; Hunt Scanlon
 - BDS Agency: thebdsagency.com · Coaches Inc.: Front Office Sports · Kauffman: HoopDirt, SportsBusiness Daily
 - Opendorse: SportBusiness, Profluence, Caplight
-- Women-in-coaching data: NCAA, WeCOACH, Collective Think Tank report (via WIA Report)
+- \* Women-in-coaching data: The Collective Think Tank, *Women in NCAA Intercollegiate Athletics: The Legacy Revisited* (March 2026), as reported in "Report Examines Women's Progress in Collegiate Athletics," WIA Report (https://wiareport.com/2026/03/report-examines-womens-progress-in-collegiate-athletics/). Verified October 7, 2026. Coverage: 1,000+ NCAA schools, all three divisions.
+  - **Corrections (Oct 7):** earlier drafts cited "41% of women's teams led by women" and "~7% held by women of color." The report gives 46% (all coaches of women's teams, 2024), and the ~7% figure has no source in it. Both are removed. Don't reuse them without a primary source.
+  - Open question: confirm in the full report whether "nearly two-thirds of full-time assistant coaches" covers women's teams only or all teams.

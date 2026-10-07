@@ -32,15 +32,15 @@ lg.forEach(([n,f,l],i)=>{s.addShape(pres.shapes.OVAL,{x:X0+0.1+i*1.75,y:1.25,w:0
  s.addText(n,{x:X0+0.26+i*1.75,y:1.19,w:1.5,h:0.22,fontSize:8,color:MUTE,isTextBox:true,margin:0});});
 // right panel
 const RX=6.45;
-const stats=[['41%','of women\'s college teams are led by women; ~7% by women of color'],
- ['~2/3','of full-time assistant coaches are women: the pipeline we serve'],
+const stats=[['~2/3','of full-time assistant coaches are women: the pipeline we serve*'],
+ ['46%','of coaches for women\'s college teams are women (2024); just 6 in 100 for men\'s teams*'],
  ['$7B','CAA valuation in 2023, up from $1.1B in 2014. Capital is paying for rosters']];
 stats.forEach(([n,t],i)=>{const y=1.6+i*1.05;
  s.addShape(pres.shapes.LINE,{x:RX,y:y,w:0,h:0.8,line:{color:GOLD,width:2.5}});
  s.addText(n,{x:RX+0.15,y:y-0.03,w:3,h:0.42,fontFace:'Georgia',fontSize:22,color:NAVY,bold:true,isTextBox:true,margin:0});
  s.addText(t,{x:RX+0.15,y:y+0.38,w:3.0,h:0.45,fontSize:9.5,color:INK,isTextBox:true,margin:0,valign:'top'});});
-s.addText('Positioning is illustrative. Sources: NCAA, WeCOACH, Sportico, Pollstar.',{x:0.5,y:5.3,w:9,h:0.2,fontSize:7,color:MUTE,isTextBox:true,margin:0});
-s.addNotes('Big agencies fight over Power-5 head coaches. Boutiques like BDS stop at women\'s basketball. Nobody serves women coaches and assistants across all sports at mid-major and below. That is Dexter\'s lane.');
+s.addText('Positioning is illustrative. *The Collective Think Tank, Women in NCAA Intercollegiate Athletics: The Legacy Revisited (2026), via WIA Report. CAA: Sportico, Pollstar.',{x:0.5,y:5.3,w:9,h:0.2,fontSize:7,color:MUTE,isTextBox:true,margin:0});
+s.addNotes('Women are nearly two-thirds of full-time assistant coaches but only 46% of coaches for women\'s teams and 6 in 100 for men\'s teams (Collective Think Tank, 2026). Big agencies fight over Power-5 head coaches. Boutiques like BDS stop at women\'s basketball. Nobody serves women coaches and assistants across all sports at mid-major and below. That is Dexter\'s lane.');
 
 // Slide 2: comp table
 s=pres.addSlide(); s.background={color:BG};
