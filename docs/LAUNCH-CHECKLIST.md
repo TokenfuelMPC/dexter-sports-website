@@ -10,7 +10,8 @@ Everything that needs to happen between "built" and "live." Work through it top 
 
 ### Bio & story: `about.html`, `index.html`
 Kim's career, education, and credentials were added from her LinkedIn (Oct 2026): CFRE; Juris Master (FSU, Legal Risk Management, Contracting & Compliance); B.S. Howard + D-I volleyball; roles at Population Connection, Black Women's Health Imperative, University of Arkansas, The Arc of Southwest Georgia, and The Independence Fund.
-- [ ] **Kim:** Review the About page and timeline. Approve naming each past employer, and edit the one-line role descriptions (they were written from job titles only).
+- [x] Career timeline hidden on the About page (Oct 8); the Experience section now links to Kim's LinkedIn. Timeline entries remain in `content.js` if it's ever brought back
+- [ ] **Kim:** Make sure her LinkedIn is ready for prospects, since the site now sends visitors there for her career history
 - [ ] **Kim:** Year Dexter Sports Co. was founded (timeline, "[Year]–Present")
 - [x] Founding story: Kim's own first-person story is on the About page (received Oct 8, 2026); her quote replaces the suggested home-page pull quote
 - [x] Positioning decided (Oct 8): **all sports, with a specialty in uplifting women.** Site copy aligned
