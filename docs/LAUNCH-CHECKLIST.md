@@ -12,10 +12,10 @@ Everything that needs to happen between "built" and "live." Work through it top 
 Kim's career, education, and credentials were added from her LinkedIn (Oct 2026): CFRE; Juris Master (FSU, Legal Risk Management, Contracting & Compliance); B.S. Howard + D-I volleyball; roles at Population Connection, Black Women's Health Imperative, University of Arkansas, The Arc of Southwest Georgia, and The Independence Fund.
 - [ ] **Kim:** Review the About page and timeline. Approve naming each past employer, and edit the one-line role descriptions (they were written from job titles only).
 - [ ] **Kim:** Year Dexter Sports Co. was founded (timeline, "[Year]–Present")
-- [ ] **Kim:** The turning point: why she started Dexter Sports Co. (About, placeholder paragraph)
-- [ ] **Kim:** How she works today, and what she won't do (About, placeholder paragraph)
-- [ ] **Kim:** *(Optional)* One fundraising result she's proud of (About)
-- [ ] **Kim:** Approve or rewrite the suggested pull quote on the home page ("The first offer changes the conversation…")
+- [x] Founding story: Kim's own first-person story is on the About page (received Oct 8, 2026); her quote replaces the suggested home-page pull quote
+- [ ] **Decide:** Kim's story says she represents **college football coaches**, but the site and strategy lead with **women coaches across all sports**. Align one or the other (see the home "Why we exist" section and the coach lane)
+- [ ] **Decide:** her story publicly mentions **pursuing NFLPA certification**; the strategy recommended keeping NFLPA plans private until a conflict-of-interest policy exists
+- [ ] **Kim:** Approve the "Giving back" scholarship section on About (worded as a plan, "in development")
 - [ ] **Kim:** Update her LinkedIn headline/banner to reference Dexter Sports Co. Prospects will look her up, and the profile currently reads "Nonprofit Fundraising Executive" and #OpenToWork. Then add the URL to `config.js` → `social.linkedin`.
 
 ### Headshot
