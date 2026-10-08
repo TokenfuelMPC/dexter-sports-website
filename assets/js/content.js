@@ -29,7 +29,7 @@ window.DSC_CONTENT = {
       id: "coaches",
       icon: "whistle",
       title: "Coach Representation",
-      summary: "Contract and career representation for head and assistant coaches in every sport, with a focus on the women coaches and mid-career assistants the big agencies overlook.",
+      summary: "Contract and career representation for head and assistant coaches in every sport, with a specialty in uplifting women coaches and the mid-career assistants the big agencies overlook.",
       points: [
         "New contracts, extensions, and renegotiations",
         "Buyouts, guarantees, and multi-year terms",
@@ -206,8 +206,8 @@ window.DSC_CONTENT = {
 
   /* ---- FAQ (home + contact). ---- */
   faqs: [
-    { q: "Who do you work with?", a: "Coaches first: head and assistant coaches in every sport, with a particular focus on women coaches and mid-career assistants at mid-major, Division II, and Division III programs. We also represent athletes, guide the families supporting them, and work with brands that want to partner with athletes and coaches the right way." },
-    { q: "Do you only represent women coaches?", a: "No. We represent coaches of every gender. We focus on women coaches because they are under-served by the large agencies, not because we turn anyone away." },
+    { q: "Who do you work with?", a: "Coaches and athletes in every sport, with a specialty in uplifting women, especially women coaches and mid-career assistants at mid-major, Division II, and Division III programs. We also represent athletes, guide the families supporting them, and work with brands that want to partner with athletes and coaches the right way." },
+    { q: "Do you only represent women coaches?", a: "No. We represent coaches and athletes of every gender in every sport. Uplifting women in sport is our specialty, because women coaches are under-served by the large agencies, not because we turn anyone away." },
     { q: "I'm an assistant coach. Is representation worth it at my level?", a: "Often, yes. The terms that matter most, such as guarantees, buyouts, what happens if the head coach leaves, and supplemental income, are set early in a career and carry forward. A conversation costs nothing and will tell you whether representation makes sense right now." },
     { q: "How do you handle conflicts of interest?", a: "[Summary of Dexter's written conflict-of-interest policy: e.g., how coach and athlete clients are kept separate, and how any relationship with a hiring institution is disclosed and consented to in writing.]", draft: true },
     { q: "Is Dexter Sports Co. a law firm?", a: "No. Dexter Sports Co. LLC is not a law firm and does not provide legal, tax, or investment advice. We work alongside qualified attorneys and CPAs and can refer you to vetted professionals for independent review." },

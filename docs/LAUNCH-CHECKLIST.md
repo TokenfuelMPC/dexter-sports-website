@@ -13,8 +13,9 @@ Kim's career, education, and credentials were added from her LinkedIn (Oct 2026)
 - [ ] **Kim:** Review the About page and timeline. Approve naming each past employer, and edit the one-line role descriptions (they were written from job titles only).
 - [ ] **Kim:** Year Dexter Sports Co. was founded (timeline, "[Year]–Present")
 - [x] Founding story: Kim's own first-person story is on the About page (received Oct 8, 2026); her quote replaces the suggested home-page pull quote
-- [ ] **Decide:** Kim's story says she represents **college football coaches**, but the site and strategy lead with **women coaches across all sports**. Align one or the other (see the home "Why we exist" section and the coach lane)
-- [ ] **Decide:** her story publicly mentions **pursuing NFLPA certification**; the strategy recommended keeping NFLPA plans private until a conflict-of-interest policy exists
+- [x] Positioning decided (Oct 8): **all sports, with a specialty in uplifting women.** Site copy aligned
+- [x] NFLPA mention removed from the public site (Oct 8). Keep NFLPA plans private until the conflict-of-interest policy exists
+- [ ] **Kim:** Approve the one reworded sentence in her story (About page): "That includes representing coaches and athletes across all sports, with a specialty in uplifting women in sport, and supporting athletes navigating NIL." (Originally named college football coaches and NFLPA certification.)
 - [ ] **Kim:** Approve the "Giving back" scholarship section on About (worded as a plan, "in development")
 - [ ] **Kim:** Update her LinkedIn headline/banner to reference Dexter Sports Co. Prospects will look her up, and the profile currently reads "Nonprofit Fundraising Executive" and #OpenToWork. Then add the URL to `config.js` → `social.linkedin`.
 
