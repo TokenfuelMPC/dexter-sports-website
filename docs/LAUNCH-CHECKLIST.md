@@ -102,7 +102,7 @@ Investors, Recent wins, In their words, In the news, and the key-stats band (`ke
 
 ## Placeholder cleanup (Oct 9, 2026)
 - [x] All bracketed placeholder entries removed (stats figures, athlete-agent credential, investors, partners, recent wins, press, testimonials). Those lists are now empty `[]` in `content.js`; add real entries using the format in CONTENT-GUIDE.md.
-- [x] `showDrafts: false`: review mode is off. Unconfirmed items (3 "Access" network tiles, and the "For Athletic Departments" service) stay in `content.js` as `draft: true` and are hidden until Kim confirms them.
+- [x] `showDrafts: false`: review mode is off. **Final pass:** the last draft entries were deleted outright: the 3 unconfirmed "Access" tiles (coaching associations, brands/NIL collectives, referral bench) and the "For Athletic Departments" service. Recover them from git history (commit 7285b6a) if Kim confirms them. The article template now returns 404 online (it stays in the repo for the webmaster).
 - [x] Privacy policy filled in (dated Oct 9, 2026; names Netlify; states that no tracking cookies are used). **Still recommended: a quick review by counsel.** Update it if analytics or Kit are added.
 - [x] Netlify custom domain set: `www.dextersportsco.com` (primary) plus `dextersportsco.com`. DNS cutover in Wix is still to do (WEBMASTER-GUIDE §2a).
 

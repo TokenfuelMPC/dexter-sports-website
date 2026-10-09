@@ -4,3 +4,5 @@
 /brand-kit/*  /404.html  404!
 /docs/*       /404.html  404!
 /README.md    /404.html  404!
+# Article template is for the webmaster to copy, not a public page
+/insights/_article-template.html  /404.html  404!

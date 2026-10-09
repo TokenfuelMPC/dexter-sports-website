@@ -105,32 +105,14 @@ window.DSC_CONTENT = {
         "Custom materials for programs",
         "Free Before You Sign toolkit"
       ]
-    },
-    {
-      /* Strategy option still being modeled (see _strategy/). Keep draft until decided, and
-         publish only with a written conflict-of-interest/disclosure policy in place. */
-      id: "departments",
-      icon: "building",
-      title: "For Athletic Departments",
-      summary: "Vetted candidate slates for mid-major, D-II, and D-III searches, with a deep bench of women coaches across all sports.",
-      points: [
-        "Candidate slates for head and assistant roles",
-        "Fast turnaround from a ready bench",
-        "Priced for programs outside the Power conferences",
-        "Full disclosure of any representation relationships"
-      ],
-      draft: true
     }
   ],
 
-  /* ---- Kim's network / access (home + about "Access" sections). draft = confirm with Kim. ---- */
+  /* ---- Kim's network / access (home + about "Access" sections). Add only relationships Kim confirms. ---- */
   network: [
     { title: "Inside university advancement", text: "Kim worked inside an SEC university's development and external relations office. She knows how decision-makers, donors, and athletic leadership connect." },
     { title: "Corporate partners & sponsors", text: "A decade of building corporate partnerships and sponsorships. Kim knows how businesses decide what to fund and why." },
-    { title: "HBCU & women's sports", text: "A former Howard University student-athlete with roots in HBCU athletics and women's sports, communities the largest agencies don't prioritize." },
-    { title: "Coaching associations", text: "Relationships with coaching associations and women-in-coaching organizations across sports.", draft: true },
-    { title: "Brands & NIL collectives", text: "Direct lines to regional and national brands, agencies, and NIL collectives.", draft: true },
-    { title: "Legal, tax & financial professionals", text: "A vetted referral bench of sports attorneys, CPAs, and financial planners for independent review.", draft: true }
+    { title: "HBCU & women's sports", text: "A former Howard University student-athlete with roots in HBCU athletics and women's sports, communities the largest agencies don't prioritize." }
   ],
 
   /* ---- Kim's career highlights (about page timeline). Source: Kim's LinkedIn, Oct 2026. ---- */
