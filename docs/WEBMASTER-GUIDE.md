@@ -27,6 +27,8 @@ All accounts belong to **Dexter Sports Co.** (login: kim@dextersportsco.com) and
 
 ## 2a. Web hosting & connecting the dextersportsco.com URL
 
+> **Quick version for the Wix DNS change:** see [DNS-SETUP.md](DNS-SETUP.md) (exact before/after records as of Oct 9, 2026).
+
 How to put the site on Netlify and point **dextersportsco.com** at it, replacing the current Wix site. Budget about an hour of work, plus up to 48 hours for DNS to update worldwide. Nothing here touches email.
 
 > DNS values below were checked against Netlify's documentation in October 2026. If Netlify's dashboard shows different values when you do this, **use what the dashboard shows**.
