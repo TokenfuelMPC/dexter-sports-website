@@ -11,7 +11,9 @@ window.DSC_CONFIG = {
   founder: "Kim Dexter",
   email: "kim@dextersportsco.com",
   phone: "803-203-5435",
-  location: "Charlotte, NC",
+  location: "Charlotte, NC",          // headquarters (used in structured data, not repeated on pages)
+  serviceArea: "Serving clients nationwide",
+  serviceAreaLong: "Headquartered in Charlotte, NC, a central hub on the East Coast, we serve clients from the Mid-Atlantic down through the Northeast and Southeast, and across the Midwest and West Coast.",
   siteUrl: "https://www.dextersportsco.com",
 
   /* ---- Social links (leave "" to hide an icon) ---- */

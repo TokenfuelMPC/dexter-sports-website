@@ -122,7 +122,7 @@
       '<li><a href="' + url("contact.html") + '">Contact</a></li>' +
       '<li><a href="' + url("urgent.html") + '">Urgent offer help</a></li></ul></div>' +
       "<div><h4>Contact</h4><ul>" +
-      "<li>" + esc(CFG.location) + "</li>" +
+      "<li>" + esc(CFG.serviceArea || CFG.location) + "</li>" +
       '<li><a href="' + tel(CFG.phone) + '">' + esc(CFG.phone) + "</a></li>" +
       '<li><a href="mailto:' + esc(CFG.email) + '">' + esc(CFG.email) + "</a></li></ul></div>" +
       "<div><h4>The monthly NIL newsletter</h4><p class=\"small\">Rule changes, deal trends, and practical guidance for athlete families and coaches. One email a month.</p>" +
@@ -751,6 +751,10 @@
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var saveData = navigator.connection && navigator.connection.saveData;
     if (!list.length || reduce || saveData) return;
+    // Wait until the page has fully loaded so video never competes with text, fonts, or images
+    var start = function () { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(startVideo); };
+    if (document.readyState === "complete") start(); else window.addEventListener("load", start, { once: true });
+    function startVideo() {
     var vids = [0, 1].map(function () {
       var v = document.createElement("video");
       v.className = "hero-video"; v.muted = true; v.playsInline = true; v.preload = "auto";
@@ -776,6 +780,7 @@
         var v = vids[cur];
         if (visible) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause();
       }).observe(host);
+    }
     }
   }
 

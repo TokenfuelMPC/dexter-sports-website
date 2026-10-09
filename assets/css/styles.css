@@ -577,7 +577,8 @@ textarea { min-height: 130px; resize: vertical; }
    is true the <html> element gets .show-drafts and placeholders glow yellow.
    Items in content.js with draft:true get a "Placeholder" badge.            */
 .show-drafts .ph { background: #fff3a8; color: var(--ink); outline: 1px dashed #c9a400; border-radius: 3px; padding: 0 3px; -webkit-text-fill-color: var(--ink); }
-.draft-badge { position: absolute; top: 12px; right: 12px; z-index: 3; background: #fff3a8; color: #5c4a00; font-family: var(--font-label); font-size: .6rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; border: 1px dashed #c9a400; }
+/* Sits above the content (not over it) so it never covers text; review mode only */
+.draft-badge { position: relative; display: inline-block; vertical-align: top; margin: 0 0 10px; z-index: 3; background: #fff3a8; color: #5c4a00; font-family: var(--font-label); font-size: .6rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; border: 1px dashed #c9a400; }
 .draft-banner { position: fixed; left: 16px; bottom: 16px; z-index: 60; background: #fff3a8; color: #5c4a00; border: 1px dashed #c9a400; padding: 10px 14px; border-radius: 10px; font-size: .8rem; font-weight: 600; box-shadow: var(--shadow); max-width: calc(100vw - 32px); }
 .draft-banner button { margin-left: 10px; background: none; border: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
 

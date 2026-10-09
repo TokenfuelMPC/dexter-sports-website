@@ -143,7 +143,7 @@ window.DSC_CONTENT = {
     { when: "2022–2023", title: "Director of Institutional Giving, Black Women's Health Imperative", text: "Led institutional and corporate giving for a national health-equity organization." },
     { when: "2021–2022", title: "Associate Director of Development & External Relations, University of Arkansas", text: "Built donor and external relationships inside a major SEC university." },
     { when: "2018–2020", title: "Director of Development & Communications, The Arc of Southwest Georgia", text: "Ran fundraising and communications for a community nonprofit." },
-    { when: "2016–2017", title: "Development Manager, The Independence Fund", text: "Raised support in Charlotte for a national veterans' organization." },
+    { when: "2016–2017", title: "Development Manager, The Independence Fund", text: "Raised support for a national veterans' organization." },
     { when: "Education", title: "Juris Master, Florida State University", text: "Legal Risk Management, Contracting, and Compliance: the disciplines at the heart of evaluating any NIL or coaching agreement. (A JM is not a law license; Kim works alongside attorneys, not in place of them.)" },
     { when: "Education", title: "B.S., Howard University · NCAA Division I volleyball", text: "Competed for the Howard Bison after starting her collegiate career at the junior-college level. She knows recruiting, transfers, and the student-athlete experience firsthand." }
   ],
@@ -201,20 +201,19 @@ window.DSC_CONTENT = {
       url: "insights/beyond-base-salary.html"
     },
     {
-      title: "Before you sign: six questions every athlete family should ask",
-      category: "NIL",
-      date: "2026-10-06",
-      summary: "The first offer changes the conversation. A simple process for getting the full picture before anyone signs.",
-      url: "insights/before-you-sign.html"
-    },
-    {
       title: "Same fee, different deal: why scope matters more than the number",
       category: "NIL",
-      date: "2026-10-06",
+      date: "2026-09-09",
       summary: "Two $750 offers can be very different commitments. How usage rights and exclusivity change the math.",
       url: "insights/same-fee-different-deal.html"
+    },
+    {
+      title: "Before you sign: six questions every athlete family should ask",
+      category: "NIL",
+      date: "2026-08-12",
+      summary: "The first offer changes the conversation. A simple process for getting the full picture before anyone signs.",
+      url: "insights/before-you-sign.html"
     }
-
   ],
 
   /* ---- FAQ (home + contact). ---- */
