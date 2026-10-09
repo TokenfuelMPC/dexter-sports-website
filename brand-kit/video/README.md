@@ -9,8 +9,11 @@ All footage comes from **Pexels** under the [Pexels License](https://www.pexels.
 | `10350259-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/a-woman-holding-a-volleyball-10350259/ | Volleyball close-up, black background with net. **Hero (desktop + phone crop)** |
 | `10350261-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/woman-in-white-t-shirt-holding-ball-against-black-background-10350261/ | Same series, full body. **Hero (desktop + phone crop)** |
 | `10350257-hd_720_1366_25fps.mp4` | https://www.pexels.com/video/woman-throwing-ball-against-black-background-10350257/ | Same series, vertical throw. **Hero (phone)** |
+| `10350262-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/woman-in-white-t-shirt-holding-ball-against-black-background-10350262/ | Same series, full body moving to face close-up. **Hero (desktop + phone crop)** |
+| `10350258-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/woman-holding-ball-10350258/ | Same series, handling the ball. **Hero (desktop + phone crop)** |
+| `10350260-hd_720_1366_25fps.mp4` | https://www.pexels.com/video/woman-holding-ball-10350260/ | Same series, vertical, holding the ball. **Hero (phone)** |
 
-Downloaded Oct 9, 2026. Direction: **feature women of color**. Boxing, soccer, and basketball clips were tried and removed at the client's request (Oct 9). Requirements for any new sport footage: **a woman of color, in a real team jersey/uniform, in real game or training action** (not fitness or yoga wear). Free libraries (Pexels, Mixkit, Pixabay) have very little footage of Black women playing soccer or basketball; see "Upgrading footage" below.
+Downloaded Oct 9, 2026 (the full six-clip volleyball series). Direction: **feature women of color**. Boxing, soccer, and basketball clips were tried and removed at the client's request (Oct 9). Requirements for any new sport footage: **a woman of color, in a real team jersey/uniform, in real game or training action** (not fitness or yoga wear). Free libraries (Pexels, Mixkit, Pixabay) have very little footage of Black women playing soccer or basketball; see "Upgrading footage" below.
 
 ## Web files (`web/`, copies of what's in `assets/video/`)
 | File | Made from | Treatment |
@@ -19,7 +22,10 @@ Downloaded Oct 9, 2026. Direction: **feature women of color**. Boxing, soccer, a
 | `hero-volleyball-fullbody.mp4` | 10350261 | Desktop clip 2. Mirrored, 1280 wide |
 | `hero-volleyball-mobile.mp4` | 10350257 | Phone clip 1. 720×1366 vertical |
 | `hero-volleyball-closeup-mobile.mp4` | 10350259 | Phone clip 2. Vertical crop (405×720 at x=344 → 540×960) |
-| `hero-volleyball-fullbody-mobile.mp4` | 10350261 | Phone clip 3. Vertical crop (405×720 at x=290 → 540×960) |
+| `hero-volleyball-fullbody-mobile.mp4` | 10350261 | Phone clip. Vertical crop (405×720 at x=290 → 540×960) |
+| `hero-volleyball-approach.mp4` / `-mobile` | 10350262 | Desktop: mirrored 1280 wide · Phone: crop at x=344 |
+| `hero-volleyball-ball.mp4` / `-mobile` | 10350258 | Desktop: mirrored 1280 wide · Phone: crop at x=454 |
+| `hero-volleyball-hold-mobile.mp4` | 10350260 | Phone: 540 wide vertical |
 | `hero-poster.jpg`, `hero-poster-mobile.jpg` | Volleyball clips, frame at 2 s | Shown while video loads, and to visitors with reduced-motion or data-saver on |
 
 Commands used (ffmpeg; any recent version):
