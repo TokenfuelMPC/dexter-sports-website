@@ -44,7 +44,7 @@ The site now leads with coach representation and the women-coaches focus. Before
 - [ ] *(Optional)* Confirm in the full report whether "two-thirds of full-time assistant coaches" refers to women's teams only or to all teams, and tighten the wording if needed
 - [x] `_strategy/` landscape doc and slides updated to match (Oct 7)
 - [ ] **Kim:** Decide on the school-paid "For Athletic Departments" search desk. It exists as a draft service (hidden at launch). Publish only once it's decided *and* the conflict policy below exists.
-- [ ] **Kim:** Write the conflict-of-interest policy, then replace the placeholder FAQ "How do you handle conflicts of interest?" (required before any search-desk or NFLPA work)
+- [ ] **Kim:** Write the conflict-of-interest policy (internal; required before any search-desk or NFLPA work). The FAQ question about conflicts was removed from the site on Oct 9, 2026; add it back only once the policy exists
 - [ ] **Counsel:** Confirm nothing on the public site counts as soliciting investment for a private raise. The Partners page lists investors but intentionally doesn't invite investment.
 - [ ] Keep fees (3%, $6K floor), competitor names and financials, NFLPA plans, and fundraising details **off** the public site unless Kim decides otherwise
 
@@ -63,7 +63,9 @@ Investors, Recent wins, In their words, In the news, and the key-stats band (`ke
 
 ## 2. Setup
 
-- [ ] **Forms.** On Netlify: enable form detection, set `formProvider: "netlify"`, and add email notifications for the *inquiry* and *urgent* forms. See [DEPLOYMENT.md](DEPLOYMENT.md#forms).
+- [x] **Netlify site live** at https://dexter-sports.netlify.app (Oct 9, 2026): auto-deploys from GitHub, Netlify Forms on, email notifications to kim@dextersportsco.com
+- [ ] **Kim takes over the Netlify project.** See [WEBMASTER-GUIDE.md §2b](WEBMASTER-GUIDE.md#2b-current-netlify-setup--kims-takeover)
+- [ ] Send one test submission each from Contact and Urgent; confirm the emails reach kim@ (check spam the first time)
 - [ ] Send one test submission from **each** role on the Contact page and confirm it arrives
 - [ ] Test the newsletter sign-up in the footer
 - [ ] *(Optional)* Booking link → `config.js` → `bookingUrl` (Calendly, Cal.com…)

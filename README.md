@@ -83,7 +83,8 @@ robots.txt, sitemap.xml SEO
 - ✅ Confirmed facts in place: contact details, Charlotte base, NIL toolkit, and Kim's career, education & credentials (CFRE; JM, Florida State; B.S. and D-I volleyball, Howard)
 - ⏳ Needs Kim's input: review of her bio, founding story, headshot file, remaining stats, investors, partners, testimonials (see the [Launch Checklist](docs/LAUNCH-CHECKLIST.md))
 - ✅ Positioning aligned with the Oct 2026 competitive-landscape strategy: coach-first, with a focus on women coaches and assistants across all sports
-- ⏳ Needs setup: form endpoint, optional booking link and analytics, domain cutover
+- ✅ **Hosted on Netlify:** https://dexter-sports.netlify.app (auto-deploys from `main`; forms email kim@dextersportsco.com)
+- ⏳ Needs: Kim to take over the Netlify project (WEBMASTER-GUIDE §2b), domain cutover from Wix (§2a), optional booking link and analytics
 - ⏸ **Hidden for now** (switch back on in `assets/js/config.js` → `features`): Investors, Recent wins, In their words (testimonials), In the news, and the key-stats band (years / clients / relationships / value negotiated). See [CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md#turn-sections-on-or-off)
 
 ---

@@ -14,14 +14,14 @@ All accounts belong to **Dexter Sports Co.** (login: kim@dextersportsco.com) and
 |---|---|---|---|---|---|
 | **Domain registrar** (wherever dextersportsco.com is registered; currently via Wix) | Owns the web address | Annual | ~$10–25/yr | None (Kim only) | ✅ Exists. Move DNS at launch |
 | **GitHub** | Stores the site's code and media; history of every change | Free (private repo) | $0 | Collaborator (write) | ✅ Exists (transfer to Kim's account; see DEPLOYMENT.md) |
-| **Netlify** | Hosting, HTTPS, auto-deploy from GitHub, **contact & urgent forms** | Free | $0 | Team member, or none if editing only through GitHub | ⏳ Create at launch |
+| **Netlify** | Hosting, HTTPS, auto-deploy from GitHub, **contact & urgent forms** | Free | $0 | Team member, or none if editing only through GitHub | ✅ **Live at https://dexter-sports.netlify.app** (Oct 9, 2026), currently on Marcus's "Mpact Capital" team; **Kim to take over (§2b)** |
 | **Kit** (kit.com) | Monthly NIL newsletter; toolkit registration wall | Newsletter (free, ≤10,000 subscribers) | $0 | Optional, Kim's choice | ⏳ Create (setup in DEPLOYMENT.md) |
 | **Cloudflare Web Analytics** | Page-view analytics without cookies | Free | $0 | Read-only | Optional |
 | **Calendly / Cal.com** | "Book a call" button | Free | $0 | None | Optional |
 | **Email** (kim@dextersportsco.com) | Receives form alerts | Existing | Existing | None | ✅ Exists. **Don't change MX records** |
 | **Google Fonts** | Inter, Inter Tight, Instrument Serif, JetBrains Mono | Free, no account | $0 | n/a | ✅ In use |
 | **Pexels** | Source of the hero video footage | Free, no account | $0 | n/a | ✅ Licensed (see brand-kit/video/README.md) |
-| ~~Vercel preview~~ | Temporary review link (dexter-sports-preview.vercel.app) | — | $0 | — | 🗑 Delete after launch |
+| ~~Vercel preview~~ | Old temporary review link (dexter-sports-preview.vercel.app), superseded by Netlify | — | $0 | — | 🗑 Delete (no longer updated) |
 
 **Expected running cost: about $0/month plus the domain renewal.** Paid upgrades (only if needed) are in [COSTS-AND-ACCOUNTS.md](COSTS-AND-ACCOUNTS.md#when-to-pay-for-something).
 
@@ -91,6 +91,34 @@ Put back the records from your Step 0 screenshot. The old Wix site returns as DN
 
 ### Day-to-day hosting
 After launch, nothing needs managing: every push to `main` on GitHub deploys within about a minute. To roll back a bad change, go to Netlify → **Deploys**, pick an earlier deploy, and choose **Publish deploy**.
+
+## 2b. Current Netlify setup & Kim's takeover
+
+### What's set up now (Oct 9, 2026)
+| Item | Value |
+|---|---|
+| Netlify project | **dexter-sports** → https://dexter-sports.netlify.app |
+| Netlify team | "Mpact Capital" (owner: Marcus Martin, marcus@mpactcap.com), Free plan |
+| Source | GitHub `TokenfuelMPC/dexter-sports-website`, branch `main`, publish directory `.` (repo root), no build command |
+| Auto-deploy | Every push to `main` deploys in about 30 seconds (a read-only deploy key on the repo, plus a GitHub webhook to `api.netlify.com/hooks/github`). No broad GitHub app access was granted |
+| Forms | Form detection **on**. Forms `inquiry` (contact page) and `urgent` (urgent offer page) |
+| Email alerts | Every form submission → **kim@dextersportsco.com**. Subject lines come from the form (e.g. `[URGENT P1 · 10h] …`) |
+| Privacy | `/_strategy/`, `/brand-kit/`, `/docs/`, and `README.md` return 404 on the live site (verified) |
+| Custom domain | Not connected yet (see §2a, Step 2 onward) |
+| Review mode | `showDrafts: true`, so placeholders are highlighted. Set it to `false` at launch |
+
+### Handing Netlify over to Kim (about 15 minutes)
+1. **Kim creates her account:** sign up at netlify.com with **kim@dextersportsco.com** (Free plan). This creates her own team.
+2. **Kim invites Marcus to her team** (Team settings → Members → Invite) so he can move the project. Marcus accepts the email invite.
+3. **Marcus transfers the project:** in the *dexter-sports* project → **Project configuration → General → Danger zone → Transfer project** → choose Kim's team. The site, its URL, deploy history, forms, and notification settings move with it.
+4. **Kim confirms** that the project now appears in her team, then (optionally) removes Marcus from her team.
+5. **If the GitHub repo also moves** to Kim's account or organization (see DEPLOYMENT.md, *Transferring this repository*), the deploy key and webhook move with it automatically. Then in Netlify, go to **Project configuration → Build & deploy → Repository** and confirm (or re-link) the new repository path, and push a small change to confirm auto-deploy still works.
+6. **Billing & ownership:** everything stays on the Free plan. If anything is ever upgraded, it's billed to Kim's team.
+
+> If the Free plan blocks inviting a second team member, use this alternative: after the GitHub repo moves to Kim, Kim clicks **Add new project → Import from Git** in her own team, picks the repo, and uses the same settings (branch `main`, publish directory `.`, no build command). Then she turns on **Forms → form detection** and re-creates the email notification (Forms → Form notifications → Email → kim@dextersportsco.com). Finally, delete the old project from Marcus's team.
+
+### Testing the forms (do once after takeover, and monthly)
+Submit a test on `/contact.html` and `/urgent.html` with the name "TEST – ignore". Confirm both appear in Netlify → Forms and that kim@ receives both emails (check spam the first time and mark them "not spam"), then delete the test submissions.
 
 ## 3. Where things live
 
