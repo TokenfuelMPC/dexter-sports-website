@@ -99,3 +99,10 @@ Investors, Recent wins, In their words, In the news, and the key-stats band (`ke
 - [ ] Add an Insights article about once a month (see [CONTENT-GUIDE.md](CONTENT-GUIDE.md#publish-an-article))
 - [ ] Review the stats and partner list each quarter
 - [ ] Refresh the toolkit when NIL rules change, and update `toolkitEdition` in `config.js`
+
+## Placeholder cleanup (Oct 9, 2026)
+- [x] All bracketed placeholder entries removed (stats figures, athlete-agent credential, investors, partners, recent wins, press, testimonials). Those lists are now empty `[]` in `content.js`; add real entries using the format in CONTENT-GUIDE.md.
+- [x] `showDrafts: false`: review mode is off. Unconfirmed items (3 "Access" network tiles, and the "For Athletic Departments" service) stay in `content.js` as `draft: true` and are hidden until Kim confirms them.
+- [x] Privacy policy filled in (dated Oct 9, 2026; names Netlify; states that no tracking cookies are used). **Still recommended: a quick review by counsel.** Update it if analytics or Kit are added.
+- [x] Netlify custom domain set: `www.dextersportsco.com` (primary) plus `dextersportsco.com`. DNS cutover in Wix is still to do (WEBMASTER-GUIDE §2a).
+

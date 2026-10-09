@@ -148,5 +148,5 @@ window.DSC_CONFIG = {
              Use while reviewing with Kim.
      false = placeholder entries are hidden and highlights are off.
              Set to false before going live (see docs/LAUNCH-CHECKLIST.md). */
-  showDrafts: true
+  showDrafts: false
 };

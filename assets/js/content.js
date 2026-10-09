@@ -16,10 +16,7 @@ window.DSC_CONTENT = {
 
   /* ---- Credibility numbers (home + about). Replace with real figures. ---- */
   stats: [
-    { value: "10+", label: "Years building partnerships, sponsorships & major-gift relationships" },
-    { value: "[XX]",  label: "Athletes & coaches advised", draft: true },
-    { value: "[XX]",  label: "Brand & institutional relationships", draft: true },
-    { value: "[$X]M", label: "In partnership value negotiated", draft: true }
+    { value: "10+", label: "Years building partnerships, sponsorships & major-gift relationships" }
   ],
 
   /* ---- Services (services page + home; home shows the first 6). Order = priority.
@@ -138,7 +135,7 @@ window.DSC_CONTENT = {
 
   /* ---- Kim's career highlights (about page timeline). Source: Kim's LinkedIn, Oct 2026. ---- */
   timeline: [
-    { when: "[Year]–Present", title: "Founder, Dexter Sports Co.", text: "Founded Dexter Sports Co. to protect talent, shape opportunity, and help athletes and coaches build lasting value beyond the game." },
+    { when: "Present", title: "Founder, Dexter Sports Co.", text: "Founded Dexter Sports Co. to protect talent, shape opportunity, and help athletes and coaches build lasting value beyond the game." },
     { when: "2024–2026", title: "Major Gifts Officer, Population Connection", text: "Cultivated and stewarded major-donor relationships for a national organization." },
     { when: "2022–2023", title: "Director of Institutional Giving, Black Women's Health Imperative", text: "Led institutional and corporate giving for a national health-equity organization." },
     { when: "2021–2022", title: "Associate Director of Development & External Relations, University of Arkansas", text: "Built donor and external relationships inside a major SEC university." },
@@ -152,44 +149,24 @@ window.DSC_CONTENT = {
   credentials: [
     { title: "CFRE: Certified Fund Raising Executive", text: "An internationally recognized credential for fundraising professionals, awarded by CFRE International and grounded in demonstrated experience, education, and an ethics commitment." },
     { title: "Juris Master (JM), Florida State University", text: "Graduate legal education in Legal Risk Management, Contracting, and Compliance. It is not a law license, and Dexter Sports Co. is not a law firm." },
-    { title: "B.S., Howard University", text: "Former NCAA Division I volleyball student-athlete." },
-    { title: "[Athlete-agent registration, if applicable]", text: "[State registration(s) or professional association memberships.]", draft: true }
+    { title: "B.S., Howard University", text: "Former NCAA Division I volleyball student-athlete." }
   ],
 
   /* ---- Investors (partners page + home logo strip). ---- */
-  investors: [
-    { name: "[Investor name]", type: "Lead investor", logo: "", url: "", blurb: "[One sentence on who they are and why they back Dexter Sports Co.]", draft: true },
-    { name: "[Investor name]", type: "Investor", logo: "", url: "", blurb: "[One sentence on who they are and why they back Dexter Sports Co.]", draft: true },
-    { name: "[Investor name]", type: "Advisor & investor", logo: "", url: "", blurb: "[One sentence on who they are and why they back Dexter Sports Co.]", draft: true }
-  ],
+  investors: [],
 
   /* ---- Strategic partners. category examples: Legal, Financial, Brand, Media, Education ---- */
-  partners: [
-    { name: "[Partner name]", category: "Legal", logo: "", url: "", blurb: "[What this partner provides to Dexter Sports Co. clients.]", draft: true },
-    { name: "[Partner name]", category: "Financial", logo: "", url: "", blurb: "[What this partner provides to Dexter Sports Co. clients.]", draft: true },
-    { name: "[Partner name]", category: "Brand", logo: "", url: "", blurb: "[What this partner provides to Dexter Sports Co. clients.]", draft: true },
-    { name: "[Partner name]", category: "Media", logo: "", url: "", blurb: "[What this partner provides to Dexter Sports Co. clients.]", draft: true }
-  ],
+  partners: [],
 
   /* ---- Recent wins (home). Like a "recent deals" board. Publish only with the client's written OK.
          result = the headline outcome; detail = one line of context. ---- */
-  wins: [
-    { client: "[Coach name]", role: "[Sport] · [School / level]", result: "[e.g., Promoted to head coach]", detail: "[e.g., 4-year contract with guaranteed years and a reduced buyout]", draft: true },
-    { client: "[Athlete name]", role: "[Sport] · [School / level]", result: "[e.g., First NIL partnership]", detail: "[e.g., Regional brand campaign with clear usage limits]", draft: true },
-    { client: "[Coach name]", role: "[Sport] · [School / level]", result: "[e.g., Contract extension]", detail: "[e.g., Raise plus a new recruiting budget]", draft: true }
-  ],
+  wins: [],
 
   /* ---- Press / in the news (home). outlet, title, date (YYYY-MM-DD), url ---- */
-  press: [
-    { outlet: "[Outlet]", title: "[Article or podcast title featuring Kim]", date: "2026-10-01", url: "", draft: true }
-  ],
+  press: [],
 
   /* ---- Testimonials. Only publish with written permission from the person quoted. ---- */
-  testimonials: [
-    { quote: "[Short quote from an athlete family about working with Kim.]", name: "[Name]", role: "[Parent of a college athlete]", draft: true },
-    { quote: "[Short quote from a coach about Kim's guidance.]", name: "[Name]", role: "[Head coach, program]", draft: true },
-    { quote: "[Short quote from a brand partner.]", name: "[Name]", role: "[Title, company]", draft: true }
-  ],
+  testimonials: [],
 
   /* ---- Insights / articles. url can point to insights/*.html or an outside article. ---- */
   insights: [
