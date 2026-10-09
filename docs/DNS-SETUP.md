@@ -81,3 +81,31 @@ In **Manage DNS Records**:
 3. Re-connect the domain to the Wix site if it was disconnected.
 
 Email is unaffected either way.
+
+## 7. Managing DNS after cancelling Wix
+
+Cancelling the **Wix site plan** (Premium) does **not** cancel the **domain**. They are separate purchases. As long as the domain is registered with Wix, DNS stays editable in Wix → Domains → Manage DNS Records, even with no Wix site or plan. The domain renews yearly (currently due **May 26, 2027**). If it came "free for one year" with the Premium plan, the renewal is billed at Wix's regular domain price.
+
+To leave Wix completely, choose one of these:
+
+| Option | Cost per year | Where you manage DNS | Effort |
+|---|---|---|---|
+| A. Keep the domain at Wix | Wix's domain renewal price | Wix dashboard | None |
+| **B. Transfer to Cloudflare Registrar (recommended)** | about $10–11 (at-cost .com pricing, no markup) | Cloudflare dashboard (free) | About 30 minutes, plus up to 5 days of waiting |
+| C. Transfer to Porkbun or Namecheap | about $11–15 | That registrar's dashboard | About 30 minutes, plus up to 5 days of waiting |
+
+### Option B: transfer to Cloudflare (Kim's own account)
+1. **Create a Cloudflare account** with kim@dextersportsco.com (Free plan) → **Add a domain** → `dextersportsco.com` → **Free**.
+2. **Check the imported DNS records.** Cloudflare copies the existing records; make sure all of these are present:
+   - A `@` → `75.2.60.5`, set to **DNS only (grey cloud)**. Netlify serves HTTPS itself, so don't proxy.
+   - CNAME `www` → `dexter-sports.netlify.app`, set to **DNS only (grey cloud)**.
+   - All 5 Google MX records, the SPF TXT record, and the google-site-verification TXT record.
+3. **Switch the nameservers in Wix:** Domains → ⋯ → **Advanced → Edit name servers**, and replace `ns4/ns5.wixdns.net` with the two Cloudflare nameservers shown. Wait until Cloudflare shows the domain as **Active** (usually within an hour). DNS now runs on Cloudflare.
+4. **Unlock the domain and get the transfer code in Wix:** Domains → ⋯ → **Transfer away from Wix**. Wix emails the authorization (EPP) code.
+5. **Start the transfer in Cloudflare:** **Domain Registration → Transfer domains** → select `dextersportsco.com` → paste the code → pay for one year (this is added on top of the current expiry date). Approve the confirmation email if one arrives. Transfers finish within 5 days.
+6. **Check:** the site and email keep working throughout, because the DNS records never change. Afterward, the domain only needs to be managed from Cloudflare.
+
+Notes:
+- A domain can't be transferred within 60 days of registration or an ownership change. That window passed in summer 2026.
+- Turn on **auto-renew** at the new registrar.
+- Keep the Cloudflare login in Kim's password manager. Whoever controls this account controls the website **and** the email routing.
