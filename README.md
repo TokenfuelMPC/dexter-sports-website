@@ -20,7 +20,7 @@ It replaces the one-page Wix site at `dextersportsco.com` with a multi-page site
 |---|---|
 | **Kim / the business owner** | [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md): what still needs your input before launch |
 | **Someone updating content** (text, partners, articles) | [docs/CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md): step-by-step, no coding background needed |
-| **The webmaster running the site** | [docs/WEBMASTER-GUIDE.md](docs/WEBMASTER-GUIDE.md): **start here.** Every subscription, routine tasks, publishing, troubleshooting |
+| **The webmaster running the site** | [docs/WEBMASTER-GUIDE.md](docs/WEBMASTER-GUIDE.md): **start here.** Every subscription, **web hosting + connecting the dextersportsco.com URL (step by step)**, routine tasks, publishing, troubleshooting |
 | **Anyone making brand materials** | [brand-kit/brand-guide.html](brand-kit/brand-guide.html): colors, fonts, logo, imagery, voice. Logos, photos, video, and the public deck are in `brand-kit/` |
 | **Whoever hosts / launches the site** | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): hosting, domain cutover from Wix, forms, newsletter, analytics |
 | **Whoever pays the bills** | [docs/COSTS-AND-ACCOUNTS.md](docs/COSTS-AND-ACCOUNTS.md): the $0/month stack, who owns which account |

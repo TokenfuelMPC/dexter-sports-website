@@ -29,6 +29,8 @@ Connect the repository, set the framework preset to **None / Other**, leave the 
 
 ## Domain cutover from Wix
 
+> **Step-by-step version with exact DNS values, Wix screens, verification, and undo: [WEBMASTER-GUIDE.md §2a](WEBMASTER-GUIDE.md#2a-web-hosting--connecting-the-dextersportscocom-url).** The summary below is kept for reference.
+
 The live domain is **dextersportsco.com** (currently on Wix).
 
 > Note: `dextersports.co` (no "co" before the dot) **does not exist**. Use `dextersportsco.com` everywhere.
