@@ -98,8 +98,8 @@ window.DSC_CONFIG = {
      right, away from the headline. Credits: docs/DESIGN-SYSTEM.md#imagery */
   heroVideo: {
     enabled: true,
-    desktop: ["assets/video/hero-boxer.mp4", "assets/video/hero-2.mp4"],
-    mobile: ["assets/video/hero-boxer-mobile.mp4", "assets/video/hero-mobile.mp4"],
+    desktop: ["assets/video/hero-basketball.mp4", "assets/video/hero-volleyball.mp4"],
+    mobile: ["assets/video/hero-basketball-mobile.mp4", "assets/video/hero-volleyball-mobile.mp4"],
     poster: "assets/video/hero-poster.jpg",
     mobilePoster: "assets/video/hero-poster-mobile.jpg",
     mirror: false   // framing is baked into the files (see brand-kit/video/README.md)

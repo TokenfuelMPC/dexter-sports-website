@@ -3,30 +3,38 @@
 ## License
 All footage comes from **Pexels** under the [Pexels License](https://www.pexels.com/license/): free for commercial use, no attribution required, and modification allowed. Pexels prohibits presenting identifiable people in a bad light or implying they endorse a product or business. Use the footage as atmosphere only, never as if the person were a Dexter client. **Never digitally alter an athlete's body or face.**
 
-## Source files (`source/`, unedited downloads, Oct 9, 2026)
+## Source files (`source/`, unedited downloads)
 | File | Pexels page | Content |
 |---|---|---|
-| `3444516-hd_1920_1080_30fps.mp4` | https://www.pexels.com/video/a-person-showing-her-boxing-skills-3444516/ | Woman boxer training, dark background. **Primary hero clip.** Note: Everlast logo visible on the gloves (incidental product branding) |
-| `10350259-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/a-woman-holding-a-volleyball-10350259/ | Volleyball athlete close-up, black background with net. **Second hero clip** |
-| `10350257-hd_720_1366_25fps.mp4` | https://www.pexels.com/video/woman-throwing-ball-against-black-background-10350257/ | Same series, vertical. **Phone hero (second clip)** |
-| `10350261-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/woman-in-white-t-shirt-holding-ball-against-black-background-10350261/ | Same series, full body. Alternate, not currently used |
+| `6764724-hd_2048_1080_25fps.mp4` | https://www.pexels.com/video/a-woman-playing-with-a-ball-6764724/ | Basketball player in a locker room. **Hero clip 1** (desktop, and cropped vertical for phones) |
+| `10350259-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/a-woman-holding-a-volleyball-10350259/ | Volleyball close-up, black background with net. **Desktop hero clip 2** |
+| `10350257-hd_720_1366_25fps.mp4` | https://www.pexels.com/video/woman-throwing-ball-against-black-background-10350257/ | Same series, vertical. **Phone hero clip 2** |
+| `10350261-hd_1366_720_25fps.mp4` | https://www.pexels.com/video/woman-in-white-t-shirt-holding-ball-against-black-background-10350261/ | Same series, full body. Alternate, not used |
+
+Downloaded Oct 9, 2026. Direction: **feature women of color**. A boxing clip and a soccer clip were removed at the client's request (Oct 9). Free libraries (Pexels, Mixkit, Pixabay) have very little footage of Black women playing soccer or basketball; see "Upgrading footage" below.
 
 ## Web files (`web/`, copies of what's in `assets/video/`)
 | File | Made from | Treatment |
 |---|---|---|
-| `hero-boxer.mp4` | 3444516 | 1280×720, brightened slightly (+5% brightness, +10% contrast), no audio, H.264 |
-| `hero-boxer-mobile.mp4` | 3444516 | Center crop to vertical, 540×960 |
-| `hero-2.mp4` | 10350259 | Mirrored so the athlete faces into the page, 1280 wide |
-| `hero-mobile.mp4` | 10350257 | 720×1366 vertical |
-| `hero-poster.jpg`, `hero-poster-mobile.jpg` | Frame at 5 s | Shown while video loads, and to visitors with reduced-motion or data-saver on |
+| `hero-basketball.mp4` | 6764724 | 1280×720 |
+| `hero-basketball-mobile.mp4` | 6764724 | Center crop to vertical, 540×960 |
+| `hero-volleyball.mp4` | 10350259 | Mirrored so the athlete faces into the page, 1280 wide |
+| `hero-volleyball-mobile.mp4` | 10350257 | 720×1366 vertical |
+| `hero-poster.jpg`, `hero-poster-mobile.jpg` | Basketball clips, frame at 4 s | Shown while video loads, and to visitors with reduced-motion or data-saver on |
 | `hero-volleyball-fullbody-ALT.mp4` | 10350261 | Mirrored alternate (not on the site) |
 
 Commands used (ffmpeg; any recent version):
 ```bash
-ffmpeg -i SOURCE.mp4 -vf "eq=brightness=0.05:contrast=1.1:saturation=1.08,scale=1280:720" -r 25 -an -c:v libx264 -crf 27 -preset slow -pix_fmt yuv420p -movflags +faststart hero-boxer.mp4
-ffmpeg -i SOURCE.mp4 -vf "eq=brightness=0.05:contrast=1.1:saturation=1.08,crop=608:1080:656:0,scale=540:960" -r 25 -an -c:v libx264 -crf 28 -preset slow -pix_fmt yuv420p -movflags +faststart hero-boxer-mobile.mp4
-ffmpeg -ss 5 -i hero-boxer.mp4 -frames:v 1 -q:v 4 hero-poster.jpg
+ffmpeg -i SOURCE.mp4 -vf "scale=1280:-2" -r 25 -an -c:v libx264 -crf 27 -preset slow -pix_fmt yuv420p -movflags +faststart hero-soccer.mp4
+ffmpeg -i SOURCE_2048.mp4 -vf "crop=608:1080:720:0,scale=540:960" -r 25 -an -c:v libx264 -crf 27 -preset slow -pix_fmt yuv420p -movflags +faststart hero-basketball-mobile.mp4
+ffmpeg -ss 3 -i hero-soccer.mp4 -frames:v 1 -q:v 4 hero-poster.jpg
 ```
+
+## Upgrading footage (recommended)
+For more soccer and basketball featuring Black women and women of color, the best sources are paid:
+- **Envato Elements** (one subscription, ~$16.50/mo; unlimited downloads with a commercial license): cancel after downloading, and the license for downloaded, registered items continues
+- **iStock / Getty** (per clip, roughly $30–$170+): strongest selection of women's soccer and basketball featuring Black athletes
+- **Best of all: real footage** of Dexter clients or HBCU athletes, filmed with signed releases
 
 ## Swapping or adding clips
 1. Put the new file(s) in `assets/video/`. Keep each clip **under ~1.5 MB** (720p, 8–15 s, no audio).

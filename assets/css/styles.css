@@ -237,12 +237,20 @@ a.btn--sm::after { display: none; }
   .has-video .hero-media { left: 34%; right: 0; top: 2%; bottom: auto; height: auto; aspect-ratio: 16 / 9; max-height: 92%; background-color: transparent; }
   .has-video .hero-video { object-position: 50% 35%; }
   .has-video .hero-media::after { background:
-      linear-gradient(90deg, rgba(7, 8, 12, 1) 0%, rgba(7, 8, 12, .5) 20%, rgba(7, 8, 12, 0) 42%),
-      linear-gradient(0deg, rgba(7, 8, 12, 1) 0%, rgba(7, 8, 12, 0) 28%),
-      linear-gradient(180deg, rgba(7, 8, 12, .9) 0%, rgba(7, 8, 12, 0) 16%),
-      linear-gradient(270deg, rgba(7, 8, 12, .6) 0%, rgba(7, 8, 12, 0) 12%); }
+      linear-gradient(90deg, rgba(7, 8, 12, 1) 0%, rgba(7, 8, 12, .55) 20%, rgba(7, 8, 12, 0) 44%),
+      linear-gradient(0deg, rgba(7, 8, 12, 1) 0%, rgba(7, 8, 12, 0) 32%),
+      linear-gradient(180deg, rgba(7, 8, 12, 1) 0%, rgba(7, 8, 12, 0) 24%),
+      linear-gradient(270deg, rgba(7, 8, 12, 1) 0%, rgba(7, 8, 12, 0) 20%); }
+  /* bright daylight clips: tone down slightly so they sit in the dark frame */
+  .has-video .hero-video { filter: saturate(1.05) contrast(1.04) brightness(.92); }
   .has-video .hero-media::before { background: none; }
   .hero-media { background-position: 50% 30%; }
+}
+/* Mid-size screens: narrower text column, footage pushed right so they never overlap */
+@media (min-width: 761px) and (max-width: 1199px) {
+  .has-video .hero-media { left: 46%; }
+  .hero-home--video { grid-template-columns: minmax(0, 56%); }
+  .hero-home--video h1 { font-size: clamp(2.4rem, 1.2rem + 3.4vw, 3.6rem); }
 }
 .hero-chips { margin-top: 28px; }
 .founder-portrait { max-width: 460px; justify-self: end; width: 100%; }
