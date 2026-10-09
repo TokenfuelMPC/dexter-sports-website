@@ -20,6 +20,8 @@ It replaces the one-page Wix site at `dextersportsco.com` with a multi-page site
 |---|---|
 | **Kim / the business owner** | [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md): what still needs your input before launch |
 | **Someone updating content** (text, partners, articles) | [docs/CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md): step-by-step, no coding background needed |
+| **The webmaster running the site** | [docs/WEBMASTER-GUIDE.md](docs/WEBMASTER-GUIDE.md): **start here.** Every subscription, routine tasks, publishing, troubleshooting |
+| **Anyone making brand materials** | [brand-kit/brand-guide.html](brand-kit/brand-guide.html): colors, fonts, logo, imagery, voice. Logos, photos, video, and the public deck are in `brand-kit/` |
 | **Whoever hosts / launches the site** | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): hosting, domain cutover from Wix, forms, newsletter, analytics |
 | **Whoever pays the bills** | [docs/COSTS-AND-ACCOUNTS.md](docs/COSTS-AND-ACCOUNTS.md): the $0/month stack, who owns which account |
 | **Whoever answers urgent requests** | [docs/URGENT-REQUESTS.md](docs/URGENT-REQUESTS.md): triage tiers, alert setup, response runbook |
@@ -56,6 +58,9 @@ assets/js/main.js       Shared header/footer + all interactive behavior
 assets/css/styles.css   All styling; brand colors and fonts at the top
 assets/img/             Favicon, social share image, Kim's headshot (add kim-dexter.jpg), logos
 assets/docs/            The Before You Sign toolkit PDF
+assets/video/           Home hero background clips (compressed) + posters
+
+brand-kit/              Brand guide, logos (+ zip), photography, video originals, public deck, toolkit PDF. Not published
 
 docs/                   Handoff guides (you are here)
 _strategy/              INTERNAL ONLY: competitive landscape, comps data, investor slides. Never published (see _strategy/README.md)

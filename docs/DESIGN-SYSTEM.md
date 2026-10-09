@@ -59,6 +59,7 @@ In the hero, that phrase gets a white-to-blue gradient automatically.
 | `.reveal` / `.rise` | Scroll-in and hero entrance animations (respect `prefers-reduced-motion`) |
 
 ## Imagery
+- **Hero video:** muted crossfading clips (`config.heroVideo`): a woman boxer (Pexels #3444516) and a volleyball athlete close-up (Pexels #10350259); phones get vertical versions. On desktop the footage fills the right ~62% of the hero and fades into Night, so it never sits behind the headline. Natural color: no blue wash over people. Sources and swap instructions: `brand-kit/video/README.md`. Reduced-motion and data-saver visitors see the poster still.
 - **Kim's portrait** (`assets/img/kim-dexter.jpg`, 4:5): the current file is cropped from a 400 px LinkedIn photo. **Replace it with a high-resolution original (≥1200×1500) as soon as possible.**
 - Future photography: candid, editorial, natural light (on the sideline, in a film room, with clients). Avoid stock "handshake" photos.
 - Logos for partners: monochrome SVG preferred; they're shown in grayscale until hovered.

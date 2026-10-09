@@ -205,6 +205,19 @@
           "<h3>" + esc(a.title) + "</h3><p>" + esc(a.summary) + '</p><span class="arrow-link">Read</span></a>';
       }).join("");
     },
+    wins: function (items) {
+      return items.map(function (w) {
+        return '<article class="card win reveal">' + badge(w) + '<span class="tag">' + esc(w.role) + '</span>' +
+          '<h3 class="win-result">' + esc(w.result) + '</h3><p class="win-client">' + esc(w.client) + '</p><p style="margin:0">' + esc(w.detail) + "</p></article>";
+      }).join("");
+    },
+    press: function (items) {
+      return items.map(function (n) {
+        var inner = '<span class="press-outlet">' + esc(n.outlet) + '</span><span class="press-title">' + esc(n.title) + '</span><span class="press-date">' + fmtDate(n.date) + "</span>";
+        return n.url ? '<a class="press-item" href="' + esc(n.url) + '" target="_blank" rel="noopener">' + badge(n) + inner + "</a>"
+          : '<div class="press-item">' + badge(n) + inner + "</div>";
+      }).join("");
+    },
     faqs: function (items) {
       return items.map(function (f) {
         var tag = f.draft && CFG.showDrafts ? ' <span class="tag" style="background:#fff3a8;color:#5c4a00">Placeholder</span>' : "";
@@ -720,6 +733,53 @@
   }
 
   /* ======================================================================
+     7c. Hero background video — config.heroVideo
+     Crossfades a playlist of muted clips behind the hero. Skipped (poster
+     or the plain dark hero is shown) on reduced-motion or data-saver, and
+     paused whenever the hero is off-screen to save battery.
+     ====================================================================== */
+  function heroVideo() {
+    var V = CFG.heroVideo || {}, host = $("[data-hero-video]");
+    if (!host || !V.enabled) return;
+    var media = $(".hero-media", host);
+    var small = window.matchMedia("(max-width: 760px)").matches;
+    var list = (small && V.mobile && V.mobile.length ? V.mobile : V.desktop) || [];
+    var poster = small && V.mobilePoster ? V.mobilePoster : V.poster;
+    host.classList.add("has-video");
+    if (V.mirror && !small) host.classList.add("hero--mirror");
+    if (poster) media.style.backgroundImage = "url(" + url(poster) + ")";
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (!list.length || reduce || saveData) return;
+    var vids = [0, 1].map(function () {
+      var v = document.createElement("video");
+      v.className = "hero-video"; v.muted = true; v.playsInline = true; v.preload = "auto";
+      v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
+      media.appendChild(v); return v;
+    });
+    var i = 0, cur = 0, visible = true;
+    function play(n) {
+      var v = vids[cur];
+      v.src = url(list[n % list.length]);
+      v.loop = list.length === 1;
+      var p = v.play(); if (p && p.catch) p.catch(function () { /* autoplay blocked: poster stays */ });
+      v.classList.add("is-on");
+      vids[1 - cur].classList.remove("is-on");
+    }
+    vids.forEach(function (v) {
+      v.addEventListener("ended", function () { if (list.length > 1) { cur = 1 - cur; i++; play(i); } });
+    });
+    play(0);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) {
+        visible = en[0].isIntersecting;
+        var v = vids[cur];
+        if (visible) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause();
+      }).observe(host);
+    }
+  }
+
+  /* ======================================================================
      8. Analytics (Plausible, optional)
      ====================================================================== */
   function analytics() {
@@ -749,6 +809,7 @@
   newsletter();
   toolkitGate();
   urgent();
+  heroVideo();
   analytics();
   draftMode();
 })();

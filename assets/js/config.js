@@ -91,6 +91,20 @@ window.DSC_CONFIG = {
     backup: { name: "", phone: "", email: "", note: "" }
   },
 
+  /* ---- Home hero background video --------------------------------
+     Muted, looping clips behind the home-page headline. Keep each clip
+     under ~3 MB (720p, 8–15 s). desktop/mobile are playlists that crossfade.
+     mirror: flip desktop clips horizontally so the athlete sits on the
+     right, away from the headline. Credits: docs/DESIGN-SYSTEM.md#imagery */
+  heroVideo: {
+    enabled: true,
+    desktop: ["assets/video/hero-boxer.mp4", "assets/video/hero-2.mp4"],
+    mobile: ["assets/video/hero-boxer-mobile.mp4", "assets/video/hero-mobile.mp4"],
+    poster: "assets/video/hero-poster.jpg",
+    mobilePoster: "assets/video/hero-poster-mobile.jpg",
+    mirror: false   // framing is baked into the files (see brand-kit/video/README.md)
+  },
+
   /* ---- Scheduling: Calendly / Cal.com link (free tiers work) ---- */
   bookingUrl: "",
 

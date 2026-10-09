@@ -171,6 +171,19 @@ window.DSC_CONTENT = {
     { name: "[Partner name]", category: "Media", logo: "", url: "", blurb: "[What this partner provides to Dexter Sports Co. clients.]", draft: true }
   ],
 
+  /* ---- Recent wins (home). Like a "recent deals" board. Publish only with the client's written OK.
+         result = the headline outcome; detail = one line of context. ---- */
+  wins: [
+    { client: "[Coach name]", role: "[Sport] · [School / level]", result: "[e.g., Promoted to head coach]", detail: "[e.g., 4-year contract with guaranteed years and a reduced buyout]", draft: true },
+    { client: "[Athlete name]", role: "[Sport] · [School / level]", result: "[e.g., First NIL partnership]", detail: "[e.g., Regional brand campaign with clear usage limits]", draft: true },
+    { client: "[Coach name]", role: "[Sport] · [School / level]", result: "[e.g., Contract extension]", detail: "[e.g., Raise plus a new recruiting budget]", draft: true }
+  ],
+
+  /* ---- Press / in the news (home). outlet, title, date (YYYY-MM-DD), url ---- */
+  press: [
+    { outlet: "[Outlet]", title: "[Article or podcast title featuring Kim]", date: "2026-10-01", url: "", draft: true }
+  ],
+
   /* ---- Testimonials. Only publish with written permission from the person quoted. ---- */
   testimonials: [
     { quote: "[Short quote from an athlete family about working with Kim.]", name: "[Name]", role: "[Parent of a college athlete]", draft: true },

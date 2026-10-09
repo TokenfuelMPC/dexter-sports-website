@@ -7,6 +7,10 @@ Internal working material for Kim Dexter and the Dexter Sports Co. team. **Not p
 | `dexter-competitive-landscape.md` | Competitive landscape & strategy (Oct 2026): market map, competitor financials, pricing benchmarks, positioning, threats, 90-day plan |
 | `comps.csv` | Data behind every table in the landscape doc |
 | `dexter-comp-slides.pptx` | Investor-deck slides (positioning map + comp table). **Working draft, expect changes.** Regenerate from the script after edits |
+| `Dexter_Sports_Investor_Deck_INTERNAL.pptx` | 15-slide seed investor deck (confidential): revenue model, phasing, illustrative financials, the ask |
+| `Dexter_Sports_Overview_PUBLIC.pptx` | 10-slide public overview deck: safe to share. The website draws its "Women-owned social enterprise" / mission framing from this |
+| `Dexter_Sports_Proforma.xlsx` | Financial proforma (confidential) |
+| `comps-2026-10.xlsx` | Comps workbook (Oct 2026) |
 | `build-comp-slides.js` | Script that generates the slides (`npm i pptxgenjs && node build-comp-slides.js`) |
 
 ## Keeping this folder private

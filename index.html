@@ -49,27 +49,22 @@
   </div>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero">
+    <!-- HERO: full-bleed background video (config.heroVideo). Falls back to the dark grid
+         design when no video is set, on reduced-motion, or on data-saver connections. -->
+    <section class="hero hero--video" data-hero-video>
+      <div class="hero-media" aria-hidden="true"></div>
       <div class="container">
-        <div class="hero-home">
+        <div class="hero-home hero-home--video">
           <div>
-            <span class="eyebrow rise">Coach representation · NIL guidance</span>
+            <span class="eyebrow rise">Women-owned · Coach representation · NIL guidance</span>
             <h1 class="rise rise-2">Protect the talent. Shape the opportunity. <em>Build what lasts.</em></h1>
             <p class="lead rise rise-3">Representation for coaches and athletes in every sport, with a specialty in uplifting women: the coaches and assistants the big agencies overlook, and the athletes and families navigating NIL. Contract-trained, partnership-tested, and led by a former Division I athlete.</p>
             <div class="btn-row rise rise-4">
               <a class="btn btn--primary" href="contact.html">Start a conversation</a>
               <a class="btn btn--ghost" data-toolkit href="nil-toolkit.html#get-toolkit">Free NIL toolkit</a>
             </div>
+            <div class="chips hero-chips rise rise-5"><span class="chip">Women-owned</span><span class="chip">Former D-I athlete</span><span class="chip">Juris Master · FSU</span><span class="chip">Charlotte, NC</span></div>
           </div>
-          <figure class="hero-portrait rise rise-3">
-            <img src="assets/img/kim-dexter.jpg" alt="Kim Dexter, founder of Dexter Sports Co." width="960" height="1200">
-            <figcaption>
-              <strong>Kim Dexter</strong>
-              <span>Founder · Charlotte, NC</span>
-              <div class="chips"><span class="chip">CFRE</span><span class="chip">Juris Master · FSU</span><span class="chip">D-I · Howard</span></div>
-            </figcaption>
-          </figure>
         </div>
 
         <div class="lanes rise rise-5">
@@ -145,7 +140,7 @@
 
     <!-- FOUNDER -->
     <section class="section section--sand">
-      <div class="container split split--top">
+      <div class="container split">
         <div class="reveal">
           <span class="eyebrow">Meet the founder</span>
           <h2>Experience, access, and an advocate's <em>instincts.</em></h2>
@@ -157,7 +152,17 @@
             <a class="arrow-link" href="contact.html">Talk with Kim</a>
           </div>
         </div>
-        <div class="grid grid-2 reveal">
+        <figure class="hero-portrait founder-portrait reveal">
+          <img src="assets/img/kim-dexter.jpg" alt="Kim Dexter, founder of Dexter Sports Co." width="960" height="1200" loading="lazy">
+          <figcaption>
+            <strong>Kim Dexter</strong>
+            <span>Founder · Charlotte, NC</span>
+            <div class="chips"><span class="chip">CFRE</span><span class="chip">Juris Master · FSU</span><span class="chip">D-I · Howard</span></div>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="container">
+        <div class="grid grid-4 reveal" style="margin-top:clamp(32px,5vw,56px)">
           <div class="card card--flat"><span class="index">01</span><h3>Contract-trained</h3><p style="margin:0">Juris Master, Florida State: legal risk management, contracting &amp; compliance.</p></div>
           <div class="card card--flat"><span class="index">02</span><h3>A proven closer</h3><p style="margin:0">CFRE with 10+ years in corporate partnerships, sponsorships, and major gifts.</p></div>
           <div class="card card--flat"><span class="index">03</span><h3>Inside the university</h3><p style="margin:0">Development and external relations at an SEC university.</p></div>
@@ -195,18 +200,21 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
+    <!-- MISSION: "Women-owned social enterprise" framing from Dexter_Sports_Overview_PUBLIC.pptx -->
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How it works</span>
-          <h2>A clear process, from first call to <em>final record.</em></h2>
+        <div class="split split--top" style="margin-bottom:48px">
+          <div>
+            <span class="eyebrow">Women-owned social enterprise</span>
+            <h2>Mission and margin, <em>moving together.</em></h2>
+          </div>
+          <p class="lead">Our business model directly advances outcomes for women in sport. Impact is built in, not bolted on.</p>
         </div>
-        <div class="steps">
-          <div class="step reveal"><h3>Conversation</h3><p>Your goals, boundaries, and timeline: what success looks like for you and your family.</p></div>
-          <div class="step reveal"><h3>Strategy</h3><p>Opportunities, priorities, and the questions that need professional review.</p></div>
-          <div class="step reveal"><h3>Execution</h3><p>Source, evaluate, and negotiate, coordinating with compliance and advisers.</p></div>
-          <div class="step reveal"><h3>Long-term value</h3><p>Track deliverables and payments, and build the career that outlasts any single deal.</p></div>
+        <div class="steps mission-steps">
+          <div class="step reveal"><h3>Women-owned</h3><p>Founded and led by Kim Dexter: ownership and decisions rest with a woman operator in a male-dominated field.</p></div>
+          <div class="step reveal"><h3>Women coaches, advanced</h3><p>We prioritize placing and advancing women into higher-paid, higher-visibility roles.</p></div>
+          <div class="step reveal"><h3>Youth opportunity</h3><p>NIL guidance helps athletes and families, including young women, build value early and equitably.</p></div>
+          <div class="step reveal"><h3>Aligned economics</h3><p>Success-based fees mean we win only when our clients win.</p></div>
         </div>
       </div>
     </section>
@@ -236,6 +244,17 @@
       </div>
     </section>
 
+    <!-- RECENT WINS: content.js -> wins (publish only with the client's written OK) -->
+    <section class="section section--tight" data-hide-empty>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Recent wins</span>
+          <h2>Deals done, <em>careers moved forward.</em></h2>
+        </div>
+        <div class="grid grid-3" data-render="wins"></div>
+      </div>
+    </section>
+
     <!-- TESTIMONIALS -->
     <section class="section section--sand" data-hide-empty>
       <div class="container">
@@ -255,6 +274,17 @@
           <p style="text-align:right;margin:0"><a class="arrow-link" href="insights.html">All insights</a></p>
         </div>
         <div class="grid grid-3" data-render="insights" data-limit="3"></div>
+      </div>
+    </section>
+
+    <!-- IN THE NEWS: content.js -> press -->
+    <section class="section section--tight" data-hide-empty>
+      <div class="container">
+        <div class="section-head" style="margin-bottom:28px">
+          <span class="eyebrow">In the news</span>
+          <h2 style="font-size:var(--step-2)">Kim Dexter &amp; Dexter Sports Co. <em>in the press</em></h2>
+        </div>
+        <div class="press-list" data-render="press"></div>
       </div>
     </section>
 

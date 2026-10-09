@@ -1,2 +1,6 @@
 # Netlify / compatible hosts: never serve internal strategy files publicly.
 /_strategy/*  /404.html  404!
+# Not part of the public site: brand originals and handoff docs live in the repo only
+/brand-kit/*  /404.html  404!
+/docs/*       /404.html  404!
+/README.md    /404.html  404!
