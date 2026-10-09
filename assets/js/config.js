@@ -101,13 +101,17 @@ window.DSC_CONFIG = {
      recentWins   = "Recent wins" (home). Content: content.js → wins
      testimonials = "In their words" (home). Content: content.js → testimonials
      press        = "In the news" (home). Content: content.js → press
+     keyStats     = the 4-figure band under the home ticker and on About
+                    (years, clients advised, relationships, value negotiated).
+                    Content: content.js → stats
      Even when switched on, a section only appears once it has real
      (non-draft) entries in live mode.                                    */
   features: {
     investors: false,
     recentWins: false,
     testimonials: false,
-    press: false
+    press: false,
+    keyStats: false
   },
 
   /* ---- Home hero background video --------------------------------

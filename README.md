@@ -84,7 +84,7 @@ robots.txt, sitemap.xml SEO
 - ⏳ Needs Kim's input: review of her bio, founding story, headshot file, remaining stats, investors, partners, testimonials (see the [Launch Checklist](docs/LAUNCH-CHECKLIST.md))
 - ✅ Positioning aligned with the Oct 2026 competitive-landscape strategy: coach-first, with a focus on women coaches and assistants across all sports
 - ⏳ Needs setup: form endpoint, optional booking link and analytics, domain cutover
-- ⏸ **Hidden for now** (switch back on in `assets/js/config.js` → `features`): Investors, Recent wins, In their words (testimonials), In the news. See [CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md#turn-sections-on-or-off)
+- ⏸ **Hidden for now** (switch back on in `assets/js/config.js` → `features`): Investors, Recent wins, In their words (testimonials), In the news, and the key-stats band (years / clients / relationships / value negotiated). See [CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md#turn-sections-on-or-off)
 
 ---
 Dexter Sports Co. LLC is not a law firm and does not provide legal advice. © Dexter Sports Co. LLC.

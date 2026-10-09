@@ -33,6 +33,7 @@ File: `assets/js/config.js` → `features`
 | `recentWins` | "Recent wins" | Home | **off** |
 | `testimonials` | "In their words" | Home | **off** |
 | `press` | "In the news" | Home | **off** |
+| `keyStats` | 4-figure band under the ticker (years, clients advised, relationships, value negotiated) | Home + About | **off** |
 
 To turn one on, change `false` to `true`:
 ```js

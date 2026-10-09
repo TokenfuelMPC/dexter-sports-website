@@ -59,7 +59,7 @@ The site now leads with coach representation and the women-coaches focus. Before
 - [ ] **Kim:** Plan the first monthly newsletter (Kit → Broadcasts) before the list starts growing
 
 ### Hidden sections (Oct 9, 2026)
-Investors, Recent wins, In their words, and In the news are switched **off** in `config.js → features`. Turn each on only when it has real, permission-cleared entries. See [CONTENT-GUIDE.md](CONTENT-GUIDE.md#turn-sections-on-or-off).
+Investors, Recent wins, In their words, In the news, and the key-stats band (`keyStats`) are switched **off** in `config.js → features`. Turn each on only when it has real, permission-cleared entries. See [CONTENT-GUIDE.md](CONTENT-GUIDE.md#turn-sections-on-or-off).
 
 ## 2. Setup
 
