@@ -93,6 +93,23 @@ window.DSC_CONFIG = {
     backup: { name: "", phone: "", email: "", note: "" }
   },
 
+  /* ---- SECTION SWITCHES ---------------------------------------------
+     Turn whole sections on (true) or off (false). Hidden sections stay in
+     the code with their content, so turning one back on is instant.
+     investors    = "Backed by & built with" logo strip (home) + Investors
+                    section (Partners page). Content: content.js → investors
+     recentWins   = "Recent wins" (home). Content: content.js → wins
+     testimonials = "In their words" (home). Content: content.js → testimonials
+     press        = "In the news" (home). Content: content.js → press
+     Even when switched on, a section only appears once it has real
+     (non-draft) entries in live mode.                                    */
+  features: {
+    investors: false,
+    recentWins: false,
+    testimonials: false,
+    press: false
+  },
+
   /* ---- Home hero background video --------------------------------
      Muted, looping clips behind the home-page headline. Keep each clip
      under ~3 MB (720p, 8–15 s). desktop/mobile are playlists that crossfade.

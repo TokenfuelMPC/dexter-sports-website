@@ -10,6 +10,7 @@ How to update the site without breaking it. No coding experience needed, just a 
 ---
 
 ## Contents
+- [Turn sections on or off](#turn-sections-on-or-off)
 - [Site settings (phone, email, form, booking link)](#site-settings)
 - [Lists: partners, investors, stats, testimonials, FAQ…](#lists)
 - [Page text](#page-text)
@@ -17,6 +18,28 @@ How to update the site without breaking it. No coding experience needed, just a 
 - [Publish an article](#publish-an-article)
 - [Replace the NIL toolkit PDF](#replace-the-toolkit)
 - [Change the menu](#change-the-menu)
+
+---
+
+## Turn sections on or off
+
+Some sections are switched **off** until there's real content to show. They're still in the code with their layouts and content, so turning one back on takes one word.
+
+File: `assets/js/config.js` → `features`
+
+| Switch | Section | Where | Currently |
+|---|---|---|---|
+| `investors` | "Backed by & built with" investor logos + Investors section | Home + Partners page | **off** |
+| `recentWins` | "Recent wins" | Home | **off** |
+| `testimonials` | "In their words" | Home | **off** |
+| `press` | "In the news" | Home | **off** |
+
+To turn one on, change `false` to `true`:
+```js
+  features: {
+    investors: true,   // ← was false
+```
+Then add real entries in `assets/js/content.js` (`investors`, `wins`, `testimonials`, `press`), and remove `draft: true` from each. Even when switched on, a section only appears once it has at least one real entry (placeholders are hidden in live mode). Get written permission before listing any investor, client win, testimonial, or press mention.
 
 ---
 

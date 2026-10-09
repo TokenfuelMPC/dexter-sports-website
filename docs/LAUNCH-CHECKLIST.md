@@ -58,6 +58,9 @@ The site now leads with coach representation and the women-coaches focus. Before
 - [ ] Register once on the live toolkit page; confirm the subscriber in Kit and that the download or email works
 - [ ] **Kim:** Plan the first monthly newsletter (Kit → Broadcasts) before the list starts growing
 
+### Hidden sections (Oct 9, 2026)
+Investors, Recent wins, In their words, and In the news are switched **off** in `config.js → features`. Turn each on only when it has real, permission-cleared entries. See [CONTENT-GUIDE.md](CONTENT-GUIDE.md#turn-sections-on-or-off).
+
 ## 2. Setup
 
 - [ ] **Forms.** On Netlify: enable form detection, set `formProvider: "netlify"`, and add email notifications for the *inquiry* and *urgent* forms. See [DEPLOYMENT.md](DEPLOYMENT.md#forms).

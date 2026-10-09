@@ -96,7 +96,7 @@ After launch, nothing needs managing: every push to `main` on GitHub deploys wit
 
 | What | Where |
 |---|---|
-| Contact details, form/newsletter/booking settings, hero video playlist, launch switch | `assets/js/config.js` |
+| Contact details, form/newsletter/booking settings, hero video playlist, launch switch, **section on/off switches** (`features`) | `assets/js/config.js` |
 | Services, stats, partners, investors, wins, press, testimonials, articles, FAQ, quiz | `assets/js/content.js` |
 | Page text | the `.html` files (index, about, services, nil-toolkit, partners, insights, contact, urgent, privacy) |
 | Articles | `insights/` (copy `_article-template.html`) |

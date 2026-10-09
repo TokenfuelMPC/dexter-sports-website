@@ -226,6 +226,9 @@
     }
   };
   function renderContent() {
+    // Section switches (config.js → features): hide whole sections that are turned off
+    var F = CFG.features || {};
+    $$("[data-feature]").forEach(function (el) { if (F[el.getAttribute("data-feature")] === false) el.hidden = true; });
     $$("[data-render]").forEach(function (el) {
       var kind = el.getAttribute("data-render");
       var key = el.getAttribute("data-source") || kind; // e.g. data-render="profiles" data-source="investors"
@@ -237,6 +240,7 @@
       el.innerHTML = fn(items, el);
       var wrap = el.closest("[data-hide-empty]");
       if (wrap && !items.length) wrap.hidden = true;
+      if (wrap && wrap.hasAttribute("data-feature") && (CFG.features || {})[wrap.getAttribute("data-feature")] === false) wrap.hidden = true;
     });
     // Simple config bindings: <a data-bind="email"> / <span data-bind="phone">
     $$("[data-bind]").forEach(function (el) {

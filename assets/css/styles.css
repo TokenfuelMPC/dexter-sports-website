@@ -819,3 +819,6 @@ textarea { min-height: 130px; resize: vertical; }
 .lanes { margin-bottom: clamp(28px, 4vw, 48px); }
 .cta-band { padding: clamp(28px, 4.5vw, 56px); }
 .sources { padding: 28px 0 40px; }
+
+/* Article cards: category tag hugs its text */
+.insight .tag { align-self: flex-start; }
