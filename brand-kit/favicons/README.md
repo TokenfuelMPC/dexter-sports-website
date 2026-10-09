@@ -1,16 +1,18 @@
 # Favicon options
 
+Every option carries the **Howard-red dot** (#E51937), a quiet nod to Kim's alma mater. Keep the dot red if you make new versions.
+
 `all-options-preview.png` shows every option at full size, at 16/32/48 px, in a dark browser tab, and as a phone home-screen icon.
 
 | Folder | Look | Notes |
 |---|---|---|
-| **electric** | Blue tile, cream D, orange dot | **Live on the site now** (the original brand mark) |
-| chrome | Liquid-silver D on midnight | Matches the site's silver / mercury accents |
-| mercury | Liquid-silver tile, ink D, blue dot | Bright and metallic; strongest on dark tab bars |
-| midnight | Black tile, cream D, blue dot | Quiet and premium; matches the header and footer |
-| gradient | Blue gradient tile, white D, orange dot | A slightly richer take on electric |
-| round | Blue circle, cream D, no dot | Best for social avatars (Instagram, LinkedIn, X) |
-| cream | Cream tile, ink D, blue dot | Light option for print and partner decks |
+| electric | Blue tile, cream D, red dot | The original brand mark |
+| **chrome** | Liquid-silver D on midnight, red dot | **Live on the site now (Oct 2026)**: the lead theme, matching the liquid-silver design |
+| mercury | Liquid-silver tile, ink D, red dot | Bright and metallic; strongest on dark tab bars |
+| midnight | Black tile, cream D, red dot | Quiet and premium; matches the header and footer |
+| gradient | Blue gradient tile, white D, red dot | A slightly richer take on electric |
+| round | Blue circle, cream D, red dot | Best for social avatars (Instagram, LinkedIn, X) |
+| cream | Cream tile, ink D, red dot | Light option for print and partner decks |
 
 Each folder contains:
 - `favicon.svg` (modern browsers)

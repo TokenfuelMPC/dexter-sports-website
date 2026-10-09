@@ -84,7 +84,7 @@
   function icon(name) {
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[name] || ICONS.spark) + "</svg>";
   }
-  var MARK = '<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0052ff"/><path d="M11 10h8.5C26 10 30 14 30 20s-4 10-10.5 10H11V10zm5 4.5v11h3.2c3.6 0 5.6-2.1 5.6-5.5s-2-5.5-5.6-5.5H16z" fill="#fffcf7"/><circle cx="31" cy="31" r="3" fill="#ffffff"/></svg>';
+  var MARK = '<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="dsc-chrome" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#c4cad6"/><stop offset=".5" stop-color="#f7f9fc"/><stop offset=".68" stop-color="#7f8797"/><stop offset=".85" stop-color="#dfe3ea"/><stop offset="1" stop-color="#9aa1b0"/></linearGradient><radialGradient id="dsc-glow" cx="85%" cy="10%" r="90%"><stop offset="0" stop-color="#0052ff" stop-opacity=".45"/><stop offset="1" stop-color="#0052ff" stop-opacity="0"/></radialGradient></defs><rect width="40" height="40" rx="10" fill="#07080c"/><rect width="40" height="40" rx="10" fill="url(#dsc-glow)"/><rect x=".5" y=".5" width="39" height="39" rx="9.5" fill="none" stroke="#c4cad6" stroke-opacity=".35"/><path d="M11 10h8.5C26 10 30 14 30 20s-4 10-10.5 10H11V10zm5 4.5v11h3.2c3.6 0 5.6-2.1 5.6-5.5s-2-5.5-5.6-5.5H16z" fill="url(#dsc-chrome)"/><circle cx="31" cy="31" r="3" fill="#e51937"/></svg>';
 
   /* ======================================================================
      1. Header + footer
@@ -259,6 +259,23 @@
   /* ======================================================================
      3. Draft mode
      ====================================================================== */
+  /* Howard-red full stop: the final period of each page/section headline is
+     set in Howard red, echoing the red dot in the logo. Purely decorative. */
+  function redStops() {
+    $$("main h1, main h2").forEach(function (h) {
+      var w = document.createTreeWalker(h, NodeFilter.SHOW_TEXT, null), n, last = null;
+      while ((n = w.nextNode())) { if (n.nodeValue.trim()) last = n; }
+      if (!last || !/[^.]\.\s*$/.test(last.nodeValue)) return;
+      var i = last.nodeValue.lastIndexOf(".");
+      var tail = last.splitText(i); tail.splitText(1);
+      var span = document.createElement("span"); span.className = "red-stop";
+      tail.parentNode.removeChild(tail); span.appendChild(tail);
+      /* place the stop outside any styled inline (e.g. the chrome <em>) so it keeps its own colour */
+      var host = last.parentNode; while (host !== h && host.parentNode !== h) host = host.parentNode;
+      if (host === h) h.appendChild(span); else host.parentNode.insertBefore(span, host.nextSibling);
+    });
+  }
+
   function draftMode() {
     var count = $$(".ph").length;
     if (!CFG.showDrafts) {
@@ -863,4 +880,5 @@
   countUp();
   analytics();
   draftMode();
+  redStops();
 })();

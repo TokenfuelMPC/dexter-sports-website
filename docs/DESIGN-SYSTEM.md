@@ -15,8 +15,29 @@ All tokens live at the top of `assets/css/styles.css`. Change them there; never 
 | `--sand` | `#EBE6DB` | Alternate light sections |
 | `--ink` / `--ink-soft` / `--ink-mute` | `#0B0D12` / `#3A3F4D` / `#6C7080` | Text hierarchy |
 | `--line` / `--line-dark` | `#DCD6C9` / 10% white | Hairlines on light / dark |
+| `--mercury` | gradient `#FFFFFF`→`#7F8797` | **Shiny liquid silver** for small details: accent words on dark, logo D, dark-tile numbers, markers, checkmarks, chips, hairlines |
+| `--matte` / `--matte-hover` | `#E8EBF0`→`#C3C9D3` | **Matte silver** for large surfaces: primary buttons (always with the blue glow) |
+| `--gunmetal` | dark chrome gradient | Accent words and big numbers on light backgrounds |
+| `--howard` | `#E51937` | **Howard red**: a nod to Kim's alma mater. Tiny accents only (see below) |
 | `--alert` | `#E5372A` | **Urgent requests only.** Never decorative |
 | `--orange` | `#FF7A1A` | Reserved; legacy brand color, use sparingly if at all |
+
+### Finishes & accents (Oct 2026)
+- **Blue is dominant.** Headline accent words, big numbers, labels, chips, and glows stay blue (`styles.css` §8e).
+- **Liquid silver is the secondary finish.** Use matte for the primary buttons, and shiny for the logo, checkmarks, icon rims, and hairlines. It's static: no shimmer animation. Code: `styles.css` §8c.
+- **The blue neon glow stays.** Silver sits on top of a blue halo (buttons, numbers, headline words). Don't swap the glow for gray.
+- **Howard red (`--howard`) whispers.** Its purpose is to honor Howard University, where Kim played D-I volleyball. It appears only in these places:
+  - the logo/favicon dot
+  - the full stop at the end of `h1`/`h2` headlines (added automatically by `redStops()` in `main.js`)
+  - footnote asterisks
+  - every third ticker star
+  - the stat-bar tip
+  - the hero label marker
+  - the pull-quote rule
+  - the centre of the footer line
+  - the "Been in your shoes" card edge (`.card--howard`)
+
+  Never use it on buttons, backgrounds, or body text. Keep it distinct from `--alert`. Code: `styles.css` §8d.
 
 **Rhythm:** alternate dark and light sections. Don't place two blue sections next to each other.
 
@@ -48,7 +69,7 @@ In the hero, that phrase gets a white-to-blue gradient automatically.
 | `.network-grid` / `.network-item` | Dark tiles with a cursor-following blue spotlight |
 | `.stats` / `.stat` | Big numbers with hairline dividers |
 | `.card`, `.card--flat` | White cards; hover lifts with a blue border |
-| `.btn` + `--primary` (blue) / `--blue` (black) / `--ghost` / `--alert` (urgent) / `--sm` | Pill buttons; links get an animated arrow automatically |
+| `.btn` + `--primary` (matte silver, blue glow) / `--blue` (black) / `--ghost` / `--alert` (urgent) / `--sm` | Pill buttons; links get an animated arrow automatically |
 | `.eyebrow`, `.index`, `.tag` | Mono labels |
 | `.checks`, `.steps`, `.timeline` | Lists, process, career history |
 | `.toolkit-cover` | CSS-drawn cover of the Before You Sign toolkit |
@@ -65,7 +86,7 @@ In the hero, that phrase gets a white-to-blue gradient automatically.
 - Logos for partners: monochrome SVG preferred; they're shown in grayscale until hovered.
 
 ## Logo
-An interim "D" monogram (`favicon.svg`, and `MARK` in `main.js`) plus the wordmark "Dexter *Sports Co.*" set in Inter Tight + Instrument Serif. If Kim commissions a logo, replace `MARK` and `favicon.svg`, and regenerate `og-image.png` (1200×630).
+An interim "D" monogram: liquid-silver D on Night with a Howard-red dot (`favicon.svg`, `MARK` in `main.js`, and `brand-kit/logo/`; seven favicon styles in `brand-kit/favicons/`) plus the wordmark "Dexter *Sports Co.*" set in Inter Tight + Instrument Serif. If Kim commissions a logo, replace `MARK` and `favicon.svg`, and regenerate `og-image.png` (1200×630).
 
 ## Voice
 Calm, protective, plain-spoken. Speak to coaches and families as capable partners. Prefer "ask," "understand," and "protect" over hype. Never promise outcomes or give legal or tax advice, and keep the "not a law firm" disclaimer wherever advice-adjacent content appears.

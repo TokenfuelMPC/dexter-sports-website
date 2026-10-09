@@ -632,7 +632,7 @@ textarea { min-height: 130px; resize: vertical; }
   .role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .portrait { max-width: 440px; }
   .toolkit-cover { margin: 0 auto; transform: rotate(2deg); max-width: 300px; }
-  [data-sticky] { position: static !important; }
+  [data-sticky] { position: relative !important; top: auto !important; }
 }
 
 @media (max-width: 760px) {
@@ -822,3 +822,151 @@ textarea { min-height: 130px; resize: vertical; }
 
 /* Article cards: category tag hugs its text */
 .insight .tag { align-self: flex-start; }
+
+/* 8c. Liquid silver layer (Oct 2026) ---------------------------------------
+   Polished-mercury chrome is the lead accent. It sits on top of the existing
+   midnight / cream / electric-blue design and changes no layout. It is a
+   static finish: no new animation. Blue stays as the supporting accent.
+   To remove it, delete this section; nothing else depends on it.          */
+:root {
+  --silver: #c4cad6;
+  --silver-lo: #7f8797;
+  /* liquid mercury: hard bright bands, like a polished bead of metal */
+  --mercury: linear-gradient(100deg, #eef1f6 0%, #c3c9d4 16%, #ffffff 30%, #8d95a4 47%, #e4e8ee 62%, #a5acba 80%, #f6f8fb 100%);
+  --mercury-soft: linear-gradient(100deg, #ffffff 0%, #d9dde5 30%, #ffffff 48%, #b4bbc7 70%, #eef1f5 100%);
+  /* dark chrome for text on paper backgrounds */
+  --gunmetal: linear-gradient(100deg, #10131b 0%, #4c5464 28%, #1d212b 46%, #7d8596 64%, #2a2f3b 82%, #10131b 100%);
+  --silver-line: linear-gradient(90deg, transparent, rgba(196, 202, 214, .55) 20%, #ffffff 50%, rgba(196, 202, 214, .55) 80%, transparent);
+  /* matte (brushed) silver for large surfaces such as buttons */
+  --matte: linear-gradient(180deg, #e8ebf0 0%, #d3d8e0 55%, #c3c9d3 100%);
+  --matte-hover: linear-gradient(180deg, #f0f2f6 0%, #dde1e8 55%, #ccd2db 100%);
+  /* Howard red: a quiet nod to Kim's alma mater. Small touches only; never
+     on buttons (red buttons are reserved for urgent offers). */
+  --howard: #e51937;
+}
+::selection { background: #c4cad6; color: var(--ink); }
+
+/* Chrome type: italic serif accents in headings */
+.hero h1 em, .section--ink h2 em, .section--blue h2 em, .cta-band h2 em, .site-footer em, .lane h3 em {
+  background: var(--mercury); -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(0, 82, 255, .55)) drop-shadow(0 0 2px rgba(122, 162, 255, .35));
+}
+.section:not(.section--ink):not(.section--blue) h2 em,
+.section:not(.section--ink):not(.section--blue) h3 em {
+  background: var(--gunmetal); -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent; padding-right: .04em;
+}
+
+/* Eyebrow labels: silver marker; silver text on dark */
+.eyebrow::before { background: var(--mercury); box-shadow: 0 0 0 1px rgba(11, 13, 18, .18), 0 0 10px rgba(0, 82, 255, .75); }
+.section--ink .eyebrow, .hero .eyebrow, .cta-band .eyebrow { color: var(--silver); }
+
+/* Header + footer: chrome hairlines */
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--silver-line); opacity: .45; pointer-events: none; }
+.site-header, .site-header.is-scrolled { border-bottom-color: transparent; }
+.brand-word i { background: var(--mercury); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; opacity: 1; }
+.site-footer { border-top: 1px solid transparent; border-image: linear-gradient(90deg, transparent, rgba(196, 202, 214, .5) 25%, rgba(255, 255, 255, .8) 50%, rgba(196, 202, 214, .5) 75%, transparent) 1; }
+
+/* Primary buttons: brushed MATTE silver (soft, no mirror bands) with the blue
+   neon halo. Small details elsewhere keep the shiny mercury finish. */
+.btn--primary, .section--blue .btn--primary {
+  --fg: var(--ink); color: var(--ink);
+  background: var(--grain) 0 0 / 120px 120px, var(--matte);
+  background-blend-mode: soft-light, normal;
+  border: 1px solid rgba(255, 255, 255, .55);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7), inset 0 -1px 0 rgba(70, 78, 94, .25), 0 1px 1px rgba(11, 13, 18, .2), 0 8px 30px rgba(0, 82, 255, .45), 0 0 22px -4px rgba(61, 120, 255, .65);
+  text-shadow: none;
+}
+.nav-cta a.btn--primary, .nav-links .nav-cta a.btn--primary:hover { color: var(--ink); }
+.nav-links .nav-cta a.btn--primary::after { display: none; }
+.btn--primary:hover, .section--blue .btn--primary:hover {
+  --fg: var(--ink); color: var(--ink);
+  background: var(--grain) 0 0 / 120px 120px, var(--matte-hover);
+  background-blend-mode: soft-light, normal;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), inset 0 -1px 0 rgba(70, 78, 94, .2), 0 12px 40px rgba(0, 82, 255, .6), 0 0 32px -2px rgba(61, 120, 255, .8);
+}
+/* dark buttons get a chrome rim */
+.btn--blue { box-shadow: inset 0 0 0 1px rgba(196, 202, 214, .35), inset 0 1px 0 rgba(255, 255, 255, .14), 0 10px 24px -12px rgba(11, 13, 18, .6); }
+.section--ink .btn--ghost, .hero .btn--ghost, .cta-band .btn--ghost { border-color: rgba(196, 202, 214, .45); }
+
+/* Stat boxes: gunmetal-chrome numbers, silver accent bar, silver in the border */
+.stat-value { filter: drop-shadow(0 8px 18px rgba(0, 82, 255, .22)) drop-shadow(0 2px 2px rgba(11, 13, 18, .12)); background: var(--gunmetal); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat .stat-value::before { background: linear-gradient(90deg, #1d212b 0%, #8d95a4 40%, #f4f6fa 55%, #6b7383 75%, #2a2f3b 100%); box-shadow: 0 4px 12px rgba(0, 82, 255, .45); }
+.stat::before { background: conic-gradient(from var(--angle), rgba(127, 135, 151, .6), rgba(255, 255, 255, .2) 20%, rgba(0, 82, 255, .45) 45%, rgba(196, 202, 214, .7) 65%, rgba(255, 255, 255, .2) 82%, rgba(127, 135, 151, .6)); }
+
+/* Dark tiles: liquid-silver numbers and a silver edge */
+.network-item .stat-value { background: var(--mercury); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px rgba(0, 82, 255, .6)) drop-shadow(0 4px 10px rgba(0, 0, 0, .5)); }
+.network-item::after { background: conic-gradient(from var(--angle), rgba(255, 255, 255, .75), transparent 28%, rgba(196, 202, 214, .55) 50%, rgba(0, 82, 255, .5) 66%, transparent 82%, rgba(255, 255, 255, .75)); }
+
+/* Cards: chrome top edge and chrome icon tiles */
+.card { position: relative; }
+.card::before { content: ""; position: absolute; left: 18px; right: 18px; top: 0; height: 1px; background: var(--silver-line); pointer-events: none; }
+.card-icon, .bento > :nth-child(1) .card-icon, .bento > :nth-child(2) .card-icon {
+  background: radial-gradient(120% 120% at 20% 0%, #2a2f3b 0%, #07080c 70%);
+  color: #e9ecf2; box-shadow: inset 0 0 0 1px rgba(196, 202, 214, .35), inset 0 1px 0 rgba(255, 255, 255, .18), 0 10px 22px -8px rgba(0, 82, 255, .6);
+}
+.card .index, .card--flat .index { background: var(--mercury); color: var(--ink); box-shadow: inset 0 1px 0 #fff, 0 0 0 1px rgba(11, 13, 18, .12), 0 8px 18px -6px rgba(0, 82, 255, .6); }
+
+/* Checklist tiles: chrome tick */
+.checks--cards li::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%230b0d12' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"), var(--mercury); background-size: 70% auto, 100% 100%; background-color: transparent; box-shadow: inset 0 1px 0 #fff, 0 0 0 1px rgba(11, 13, 18, .14), 0 8px 16px -6px rgba(0, 82, 255, .6); }
+
+/* CTA band, lanes, steps, ticker */
+.cta-band { box-shadow: inset 0 0 0 1px rgba(196, 202, 214, .22), 0 30px 60px -30px rgba(11, 13, 18, .6); }
+.lane .go { border-color: rgba(196, 202, 214, .45); color: #e9ecf2; }
+.lane:hover .go { background: var(--mercury); color: var(--ink); border-color: transparent; box-shadow: 0 0 24px rgba(0, 82, 255, .7); }
+.step::after { background: var(--mercury); box-shadow: 0 0 0 1px rgba(11, 13, 18, .2), 0 0 12px rgba(0, 82, 255, .8); }
+.marquee span::after { color: var(--silver-lo); }
+
+/* Portrait badge + toolkit cover: chrome rim */
+.portrait-badge { box-shadow: inset 0 0 0 1px rgba(196, 202, 214, .45), 0 18px 40px -18px rgba(0, 0, 0, .6); }
+
+/* 8d. Howard red accents (Oct 2026) ----------------------------------------
+   A quiet nod to Howard University (Kim played D-I volleyball there).
+   Kept deliberately small: a few details, never buttons or large areas.   */
+/* ticker: every third star is Howard red */
+.marquee span:nth-child(3n)::after { color: var(--howard); }
+/* stat boxes: a red tip on the steel accent bar */
+.stat .stat-value::before { background: linear-gradient(90deg, #1d212b 0%, #8d95a4 40%, #f4f6fa 55%, #6b7383 72%, #2a2f3b 86%, var(--howard) 86%, var(--howard) 100%); }
+/* hero: the small marker before the eyebrow line glows red */
+.hero .eyebrow::before { background: var(--howard); box-shadow: 0 0 0 1px rgba(255, 255, 255, .2), 0 0 10px rgba(229, 25, 55, .7); }
+/* the "Been in your shoes" (Howard) card on About gets a red top edge */
+.card--howard { position: relative; }
+.card--howard::before { background: linear-gradient(90deg, transparent, rgba(229, 25, 55, .25) 15%, var(--howard) 50%, rgba(229, 25, 55, .25) 85%, transparent); height: 2px; }
+/* footer: a hairline of red at the centre of the silver rule */
+.site-footer { border-image: linear-gradient(90deg, transparent, rgba(196, 202, 214, .5) 25%, rgba(255, 255, 255, .8) 46%, var(--howard) 50%, rgba(255, 255, 255, .8) 54%, rgba(196, 202, 214, .5) 75%, transparent) 1; }
+/* pull quote: red rule */
+.pull-quote { border-left-color: var(--howard); }
+/* type accents: Howard-red full stops on headlines (added by main.js) and
+   red footnote asterisks */
+.red-stop { color: var(--howard); -webkit-text-fill-color: var(--howard); background: none; filter: none; text-shadow: 0 0 12px rgba(229, 25, 55, .35); }
+.fn a, .section--ink .fn a, .section--blue .fn a, .hero .fn a,
+.stat-value .fn a, .network-item .stat-value .fn a { color: var(--howard); -webkit-text-fill-color: var(--howard); }
+.fn-mark { color: var(--howard); }
+
+
+/* 8e. Balance: BLUE stays dominant (Oct 2026) -------------------------------
+   Owner direction: blue is the dominant colour; silver is a secondary finish
+   (matte buttons, logo, hairlines, icon rims, checkmarks); red is a whisper
+   (full stops, asterisks). These rules put text accents and numbers back on
+   blue. Delete this section to let silver lead again.                      */
+.hero h1 em, .section--ink h2 em, .cta-band h2 em, .lane h3 em, .site-footer em {
+  background: linear-gradient(100deg, #ffffff 0%, #c9d6ff 35%, #9db8ff 60%, var(--blue-soft) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+.section:not(.section--ink):not(.section--blue) h2 em,
+.section:not(.section--ink):not(.section--blue) h3 em {
+  background: linear-gradient(100deg, var(--ink) 0%, #1d3b8f 55%, var(--blue) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+.section--blue h2 em { background: none; -webkit-text-fill-color: currentColor; color: inherit; filter: none; }
+.stat-value { background: linear-gradient(120deg, var(--ink) 10%, #1d3b8f 55%, var(--blue) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.network-item .stat-value { background: linear-gradient(120deg, #ffffff 20%, #b9ccff 70%, var(--blue-soft) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.eyebrow::before { background: currentColor; box-shadow: none; }
+.section--ink .eyebrow, .hero .eyebrow, .cta-band .eyebrow { color: var(--blue-soft); }
+.card .index, .card--flat .index { background: linear-gradient(135deg, var(--blue), #3d78ff); color: #fff; box-shadow: 0 8px 18px -6px rgba(0, 82, 255, .6); }
+.step::after { background: var(--blue); box-shadow: 0 0 12px rgba(0, 82, 255, .7); }
+.stat .stat-value::before { background: linear-gradient(90deg, var(--blue) 0%, var(--blue-soft) 80%, var(--howard) 80%, var(--howard) 100%); box-shadow: 0 4px 12px rgba(0, 82, 255, .45); }
+.marquee span::after { color: var(--blue); }
+.marquee span:nth-child(3n)::after { color: var(--howard); }
+.hero .eyebrow::before { background: var(--howard); box-shadow: 0 0 10px rgba(229, 25, 55, .7); }

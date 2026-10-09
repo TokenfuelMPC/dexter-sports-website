@@ -1,9 +1,11 @@
 Dexter Sports Co. logo files
-- dexter-mark.svg / dexter-mark-1024.png: the "D" mark (app icons, social avatars, favicons)
+- dexter-mark.svg / dexter-mark-1024.png: the "D" mark: liquid-silver D on Night with a Howard-red dot (app icons, social avatars, favicons)
 - dexter-wordmark-on-dark.*: for dark backgrounds (#07080C)
 - dexter-wordmark-on-light.*: for white or light backgrounds (transparent PNG)
-Colors: Dexter Blue #0052FF, Night #07080C, Paper #F5F2EB
+Colors: Night #07080C, liquid silver (gradient #FFFFFF to #7F8797), Dexter Blue #0052FF glow, Howard Red #E51937 dot, Paper #F5F2EB
 Fonts: Inter Tight ExtraBold ("Dexter") + Instrument Serif Italic ("Sports Co.") from Google Fonts.
 The SVG wordmarks use live text: install the fonts, or convert text to outlines before sending to print.
 Rules: keep clear space equal to the "D" height; don't recolor, stretch, or add effects.
 Full guide: brand-kit/brand-guide.html
+
+legacy-blue/: the earlier blue-square mark (Oct 2026), kept for reference. More favicon styles: brand-kit/favicons/
