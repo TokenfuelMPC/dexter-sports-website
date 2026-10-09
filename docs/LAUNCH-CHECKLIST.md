@@ -106,3 +106,11 @@ Investors, Recent wins, In their words, In the news, and the key-stats band (`ke
 - [x] Privacy policy filled in (dated Oct 9, 2026; names Netlify; states that no tracking cookies are used). **Still recommended: a quick review by counsel.** Update it if analytics or Kit are added.
 - [x] Netlify custom domain set: `www.dextersportsco.com` (primary) plus `dextersportsco.com`. DNS cutover in Wix is still to do (WEBMASTER-GUIDE §2a).
 
+
+## Domain live (Oct 9, 2026)
+- [x] Wix DNS: A `@` → 75.2.60.5, CNAME `www` → dexter-sports.netlify.app. Google MX, SPF, and verification records untouched (verified)
+- [x] HTTPS certificate (Let's Encrypt via Netlify) covers both dextersportsco.com and www, expires Jan 7, 2027, and auto-renews. http → https and bare → www redirects work
+- [x] Private paths (/_strategy/, /docs/, /brand-kit/) return 404 on the live domain
+- [ ] Send a test email to kim@ and one test submission per form
+- [ ] Delete the old Vercel preview (dexter-sports-preview.vercel.app) once Kim no longer needs the link
+- [ ] Cancel the Wix site plan after about a week (keep the domain; see DNS-SETUP.md §7)
