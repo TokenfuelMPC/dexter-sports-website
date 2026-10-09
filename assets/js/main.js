@@ -785,6 +785,46 @@
   }
 
   /* ======================================================================
+     7d. Count-up numbers — animates any .stat-value that is a plain number
+     (e.g. 242,341 · $1.67B · 47.5% · 10+) when it scrolls into view.
+     Values like "~2/3" or "6 in 100" are left as written.
+     ====================================================================== */
+  function countUp() {
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var items = [];
+    $$(".stat-value").forEach(function (el) {
+      var node = null;
+      for (var i = 0; i < el.childNodes.length; i++) { var c = el.childNodes[i]; if (c.nodeType === 3 && c.nodeValue.trim()) { node = c; break; } }
+      if (!node) return;
+      var m = node.nodeValue.match(/^(\s*[~<$]*)(\d[\d,]*(?:\.\d+)?)(%|M|B|K|\+)?(\s*)$/);
+      if (!m) return;
+      var num = m[2], dec = (num.split(".")[1] || "").length;
+      items.push({ el: el, node: node, pre: m[1], suf: (m[3] || "") + m[4], dec: dec, comma: num.indexOf(",") > -1, target: parseFloat(num.replace(/,/g, "")) });
+    });
+    function fmt(it, v) {
+      var s = it.comma ? v.toLocaleString("en-US", { minimumFractionDigits: it.dec, maximumFractionDigits: it.dec }) : v.toFixed(it.dec);
+      return it.pre + s + it.suf;
+    }
+    function done(it) { it.node.nodeValue = fmt(it, it.target); var box = it.el.closest(".stat"); if (box) box.classList.add("is-counted"); }
+    if (reduce || !("IntersectionObserver" in window)) { items.forEach(done); return; }
+    items.forEach(function (it) { it.node.nodeValue = fmt(it, 0); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        var it = items.filter(function (x) { return x.el === en.target; })[0]; if (!it) return;
+        var t0 = performance.now(), dur = 1500;
+        (function tick(now) {
+          var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+          it.node.nodeValue = fmt(it, it.target * e);
+          if (p < 1) requestAnimationFrame(tick); else done(it);
+        })(t0);
+      });
+    }, { threshold: .4 });
+    items.forEach(function (it) { io.observe(it.el); });
+  }
+
+  /* ======================================================================
      8. Analytics (Plausible, optional)
      ====================================================================== */
   function analytics() {
@@ -815,6 +855,7 @@
   toolkitGate();
   urgent();
   heroVideo();
+  countUp();
   analytics();
   draftMode();
 })();
