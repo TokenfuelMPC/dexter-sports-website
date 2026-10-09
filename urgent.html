@@ -30,6 +30,8 @@
           <!-- URGENT FORM: posts as Netlify form "urgent" or to config.urgent.formEndpoint. Field names are used in alerts; keep them. -->
           <form class="intake" name="urgent" data-urgent data-netlify="true" netlify-honeypot="_gotcha" novalidate style="margin-top:28px">
             <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <!-- Netlify uses this as the notification email subject (set by main.js) -->
+            <input type="hidden" name="subject" value="URGENT offer request" data-remove-prefix>
             <div class="field-row">
               <div class="field"><label for="u-name">Your name <span class="req">*</span></label><input id="u-name" name="name" type="text" autocomplete="name" required></div>
               <div class="field"><label for="u-role">I am <span class="req">*</span></label>

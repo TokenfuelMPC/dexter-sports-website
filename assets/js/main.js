@@ -530,6 +530,7 @@
   /* Send a lead form (intake or urgent) using config.formProvider.
      Returns a Promise, or null when no provider is set (caller falls back to email). */
   function sendForm(formName, d, endpointOverride) {
+    if (d._subject) d.subject = d._subject; // Netlify Forms reads "subject" for the email subject line
     var provider = CFG.formProvider || (CFG.formEndpoint ? "endpoint" : "");
     if (endpointOverride) return send(endpointOverride, d);
     if (provider === "netlify") { // the <form name="..." data-netlify="true"> in the page is detected at deploy

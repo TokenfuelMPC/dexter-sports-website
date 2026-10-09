@@ -31,7 +31,7 @@ window.DSC_CONFIG = {
                     to Kim. Recommended when the site is hosted on Netlify.
        "endpoint" = POST JSON to formEndpoint (Formspree, Basin, etc.).
        ""         = fallback: opens the visitor's email app, pre-filled.  */
-  formProvider: "",
+  formProvider: "netlify",
   formEndpoint: "",
 
   /* ---- Monthly newsletter + toolkit registration wall -----------------
