@@ -18,7 +18,7 @@ It replaces the one-page Wix site at `dextersportsco.com` with a multi-page site
 
 | You are… | Read |
 |---|---|
-| **Kim / the business owner** | [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md): what still needs your input before launch |
+| **Kim / the business owner** | [docs/KIM-HANDOFF.md](docs/KIM-HANDOFF.md): **start here.** Take over GitHub, Netlify, form emails, and the domain; new vendors; switching templates later. Then [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md) |
 | **Someone updating content** (text, partners, articles) | [docs/CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md): step-by-step, no coding background needed |
 | **The webmaster running the site** | [docs/WEBMASTER-GUIDE.md](docs/WEBMASTER-GUIDE.md): **start here.** Every subscription, **web hosting + connecting the dextersportsco.com URL (step by step)**, routine tasks, publishing, troubleshooting |
 | **Anyone making brand materials** | [brand-kit/brand-guide.html](brand-kit/brand-guide.html): colors, fonts, logo, imagery, voice. Logos, photos, video, and the public deck are in `brand-kit/` |
@@ -84,7 +84,8 @@ robots.txt, sitemap.xml SEO
 - ⏳ Needs Kim's input: review of her bio, founding story, headshot file, remaining stats, investors, partners, testimonials (see the [Launch Checklist](docs/LAUNCH-CHECKLIST.md))
 - ✅ Positioning aligned with the Oct 2026 competitive-landscape strategy: coach-first, with a focus on women coaches and assistants across all sports
 - ✅ **Hosted on Netlify:** https://dexter-sports.netlify.app (auto-deploys from `main`; forms email kim@dextersportsco.com)
-- ⏳ Needs: Kim to take over the Netlify project (WEBMASTER-GUIDE §2b), domain cutover from Wix (§2a), optional booking link and analytics
+- ✅ Live on dextersportsco.com since Oct 9, 2026 (DNS in Wix → Netlify)
+- ⏳ Needs: Kim to take over GitHub + Netlify ([KIM-HANDOFF.md](docs/KIM-HANDOFF.md)); connect Kit so newsletter/toolkit sign-ups are saved; optional booking link and analytics
 - ⏸ **Hidden for now** (switch back on in `assets/js/config.js` → `features`): Investors, Recent wins, In their words (testimonials), In the news, and the key-stats band (years / clients / relationships / value negotiated). See [CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md#turn-sections-on-or-off)
 
 ---

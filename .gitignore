@@ -8,3 +8,6 @@ Thumbs.db
 _local/
 *.local.*
 node_modules/
+
+# Netlify CLI local state (never commit)
+.netlify/
