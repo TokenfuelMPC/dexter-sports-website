@@ -110,6 +110,12 @@ After launch, nothing needs managing: every push to `main` on GitHub deploys wit
 | Review mode | `showDrafts: true`, so placeholders are highlighted. Set it to `false` at launch |
 
 ### Handing Netlify over to Kim (about 15 minutes)
+
+> **Updated Nov 2, 2026: the agreed plan is a fresh launch, not a team transfer.** Kim deploys her own copy in her free Netlify account. Then:
+> 1. Marcus removes the domains from his project and renames it `dexter-sports-old`.
+> 2. Kim renames hers to `dexter-sports` and adds the domains. No Wix DNS change is needed.
+>
+> Follow [KIM-HANDOFF.md](KIM-HANDOFF.md) Step 1. The transfer steps below are kept only as a fallback.
 1. **Kim creates her account:** sign up at netlify.com with **kim@dextersportsco.com** (Free plan). This creates her own team.
 2. **Kim invites Marcus to her team** (Team settings → Members → Invite) so he can move the project. Marcus accepts the email invite.
 3. **Marcus transfers the project:** in the *dexter-sports* project → **Project configuration → General → Danger zone → Transfer project** → choose Kim's team. The site, its URL, deploy history, forms, and notification settings move with it.
