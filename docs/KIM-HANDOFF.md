@@ -207,6 +207,59 @@ Phase 1 moves web hosting first. The site stays live, apart from a short HTTPS g
 - [ ] **KIM:** have your attorney review the privacy policy
 - [ ] **KIM:** cancel the Wix *website plan* last, once all of the above works (keep the domain)
 
+**Phase 6: Moving to sheholdscourt.com (when you're ready)**
+
+- [ ] **KIM:** register sheholdscourt.com soon, since it's still available
+- [ ] **KIM:** follow "Using sheholdscourt.com instead" below; Marcus has no tasks here
+
+## Using sheholdscourt.com instead
+
+**sheholdscourt.com is not registered yet** (checked November 2, 2026), so the first step is to buy it before someone else does. You can do this before or after the handoff; Steps 1–4 work the same either way.
+
+**The plan:**
+- the new domain becomes the main address;
+- dextersportsco.com stays registered and forwards every page to the new domain, so old links, business cards, and Google results keep working;
+- your email keeps working, because it lives on dextersportsco.com.
+
+**1. Register the domain (about 10 minutes, about $10–11 a year)**
+1. Recommended: **Cloudflare Registrar**, which charges cost price with no markup. Sign up at **dash.cloudflare.com** with kim@dextersportsco.com, go to **Domain Registration → Register Domains**, and buy **sheholdscourt.com**.
+2. Turn on **auto-renew** and two-factor authentication. Privacy protection for your contact details is included.
+3. If your new template is a website builder (Squarespace, Wix, Framer, Webflow), you can buy the domain there instead. It usually costs more after the first year.
+
+**2. Point it at the website**
+
+If you keep this site on Netlify:
+1. In Netlify, go to your project → **Domain management → Add a domain**, and add **www.sheholdscourt.com** and **sheholdscourt.com**.
+2. Click **⋯ → Set as primary domain** on www.sheholdscourt.com. Leave both dextersportsco.com addresses listed. Netlify then automatically forwards them, page for page, to the primary domain.
+3. In Cloudflare, go to **sheholdscourt.com → DNS → Records** and add both records with the proxy set to **DNS only** (grey cloud). Netlify handles HTTPS itself.
+   - **A**, name `@`, value `75.2.60.5`
+   - **CNAME**, name `www`, value `dexter-sports.netlify.app`
+4. Within an hour, Netlify issues HTTPS for the new domain. If it hasn't started, go to **HTTPS → Verify DNS configuration**.
+
+If the new template lives somewhere else:
+- **New domain:** follow that platform's "connect a domain" steps, adding its records in Cloudflare.
+- **Old domain:** keep the Netlify project running with only **dextersportsco.com** on it, plus one forwarding rule your webmaster adds to the `_redirects` file: `https://www.dextersportsco.com/* https://www.sheholdscourt.com/:splat 301!`. That keeps old links working at no cost.
+
+**3. Update the site to the new address (webmaster, about 15 minutes)**
+1. Find and replace `https://www.dextersportsco.com` with `https://www.sheholdscourt.com` across the site's pages, `sitemap.xml`, and `robots.txt` (42 places). These are the search-engine and sharing links.
+2. Leave **kim@dextersportsco.com** as is unless you change your email (part 4).
+3. If the business name on the site is also changing to She Holds Court, that's a separate content and logo update. The domain change alone doesn't alter any wording.
+
+**4. Email (optional)**
+
+Your mailbox stays kim@dextersportsco.com. To also receive mail at an address like kim@sheholdscourt.com:
+1. In the **Google Workspace Admin console**, go to **Account → Domains → Manage domains → Add a domain**, choose **User alias domain**, and enter sheholdscourt.com. That adds an alias at no extra cost.
+2. Google shows a verification TXT record, plus MX records (`smtp.google.com`, priority 1) and an SPF record (`v=spf1 include:_spf.google.com ~all`). Add all of them in Cloudflare DNS, then click **Verify** in Google.
+3. Mail to either address now arrives in the same inbox.
+4. Keep dextersportsco.com renewing for as long as you use kim@dextersportsco.com anywhere, including your Netlify, GitHub, and Kit logins.
+
+**5. Tell Google and update everywhere else**
+- [ ] Google Search Console: add sheholdscourt.com as a property, then use **Settings → Change of address** from the dextersportsco.com property. This moves your search ranking over.
+- [ ] Update LinkedIn, social profiles, email signature, and business cards
+- [ ] If you changed your email: update the Netlify form alert address (Step 3), and ask the webmaster to update the email in `assets/js/config.js`
+- [ ] Kit (if used): update the sender address and the website link in your account settings
+- [ ] Never let dextersportsco.com expire while it still forwards visitors or carries your email
+
 ## Running the site, and switching to a new template later
 
 **Day to day:**
