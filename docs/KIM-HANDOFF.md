@@ -1,8 +1,8 @@
 # Dexter Sports Co. Website Handoff Guide for Kim
 
-*October 30, 2026. Prepared by Marcus Martin.*
+*Updated November 2, 2026. Prepared by Marcus Martin.*
 
-This guide moves the live website at **www.dextersportsco.com** into accounts Kim owns. It takes about 1–2 hours, and everything here is free. Do Steps 1–4 first: that gives Kim full control of today's site, even if she later switches to a new template (see the last section).
+This guide moves the live website at **www.dextersportsco.com** into accounts Kim owns. It takes about 1–2 hours, and everything here is free. Start with web hosting (Step 1), then do Steps 2–4. The checklist in Step 6 shows who does what, in order. Steps 1–4 give Kim full control of today's site, even if she later switches to a new template (see the last section).
 
 **Live today:**
 - **Hosting:** Netlify (project *dexter-sports*), currently in Marcus's team.
@@ -13,8 +13,8 @@ This guide moves the live website at **www.dextersportsco.com** into accounts Ki
 
 | Account | What it does | Cost | When |
 |---|---|---|---|
-| GitHub | Stores the code, with every change saved and undoable | Free | Now (Step 1) |
-| Netlify | Hosting, HTTPS, form submissions | Free | Now (Step 2) |
+| GitHub | Stores the code, with every change saved and undoable | Free | Right after hosting (Step 2) |
+| Netlify | Hosting, HTTPS, form submissions | Free | First (Step 1) |
 | Google Workspace | kim@dextersportsco.com mailbox | Existing | No action |
 | Wix (domain + DNS) | Points the domain at Netlify and email at Google | Domain renewal (due May 26, 2027) | Check now (Step 4) |
 | Password manager | Holds all logins | Free–$3/mo | Now |
@@ -24,7 +24,37 @@ Use kim@dextersportsco.com for every account. Store each login in a password man
 
 ---
 
-## Step 1: GitHub (about 15 minutes)
+## Step 1: Move web hosting to your Netlify account (about 20 minutes)
+
+1. Sign up at **netlify.com** with your email (kim@dextersportsco.com) on the Free plan. Name the team *Dexter Sports Co* and turn on two-factor authentication.
+2. **Option A (recommended): transfer.** The address, HTTPS, forms, and email alerts all stay the same, and no domain change is needed.
+   1. **Kim:** go to **Team settings → Members → Invite members** and invite **marcus@mpactcap.com** as **Owner**. Only an owner of both teams can move a project.
+   2. **Marcus:** in the **dexter-sports** project, go to **Project configuration → General → Danger zone → Transfer project** and choose Kim's team.
+   3. **Kim:** check three things:
+      - **Domain management** lists www.dextersportsco.com, with HTTPS active.
+      - **Forms** lists *inquiry* and *urgent*.
+      - **Deploys** shows a Published deploy.
+   4. **Kim:** remove Marcus under **Team settings → Members**.
+3. **Reconnect auto-publishing to your GitHub (after Step 2):**
+   1. Go to **Project configuration → Build & deploy → Continuous deployment → Manage repository → Link to a different repository → GitHub**. Authorize Netlify (only select repositories is fine).
+   2. Settings:
+      - Branch: `main`
+      - Base directory: blank
+      - Build command: blank
+      - Publish directory: `.`
+   3. Test it: edit README.md on GitHub and commit. A new deploy should appear in Netlify within a minute.
+   4. In GitHub, go to **Settings → Deploy keys** and **Settings → Webhooks**. Delete the older Netlify entries and keep the newest.
+4. **Option B: fresh project (only if the transfer isn't possible).**
+   1. Go to **Add new project → Import an existing project → GitHub → dexter-sports-website**, use the same settings, and click **Deploy**.
+   2. Turn on **Forms → Enable form detection**, then redeploy.
+   3. Add the email alert (Step 3).
+   4. Move the domain:
+      - Marcus removes the domain from his project.
+      - Kim adds **www.dextersportsco.com** and **dextersportsco.com** under **Domain management**.
+      - In Wix, change the **www** CNAME to Kim's new `*.netlify.app` address. The A record (75.2.60.5) stays.
+   5. Expect up to an hour of downtime while HTTPS is re-issued. Export old submissions first.
+
+## Step 2: GitHub: take ownership of the code (about 15 minutes)
 
 1. Sign up at **github.com/signup** with kim@dextersportsco.com (Free plan) and choose a business username, e.g. `dextersportsco`. Turn on two-factor authentication.
 2. Optional: create a free organization, *Dexter Sports Co*, so webmasters can be added and removed without sharing your login.
@@ -46,36 +76,6 @@ Use kim@dextersportsco.com for every account. Store each login in a password man
    - **docs/CONTENT-GUIDE.md**: no-code edits
    - **docs/DNS-SETUP.md**: domain records
 6. **Add a webmaster later:** go to **Settings → Collaborators → Add people**.
-
-## Step 2: Netlify (about 20 minutes)
-
-1. Sign up at **netlify.com** with your email (kim@dextersportsco.com) on the Free plan. Name the team *Dexter Sports Co* and turn on two-factor authentication.
-2. **Option A (recommended): transfer.** The address, HTTPS, forms, and email alerts all stay the same, and no domain change is needed.
-   1. **Kim:** go to **Team settings → Members → Invite members** and invite **marcus@mpactcap.com** as **Owner**. Only an owner of both teams can move a project.
-   2. **Marcus:** in the **dexter-sports** project, go to **Project configuration → General → Danger zone → Transfer project** and choose Kim's team.
-   3. **Kim:** check three things:
-      - **Domain management** lists www.dextersportsco.com, with HTTPS active.
-      - **Forms** lists *inquiry* and *urgent*.
-      - **Deploys** shows a Published deploy.
-   4. **Kim:** remove Marcus under **Team settings → Members**.
-3. **Reconnect auto-publishing to your GitHub (after Step 1):**
-   1. Go to **Project configuration → Build & deploy → Continuous deployment → Manage repository → Link to a different repository → GitHub**. Authorize Netlify (only select repositories is fine).
-   2. Settings:
-      - Branch: `main`
-      - Base directory: blank
-      - Build command: blank
-      - Publish directory: `.`
-   3. Test it: edit README.md on GitHub and commit. A new deploy should appear in Netlify within a minute.
-   4. In GitHub, go to **Settings → Deploy keys** and **Settings → Webhooks**. Delete the older Netlify entries and keep the newest.
-4. **Option B: fresh project (only if the transfer isn't possible).**
-   1. Go to **Add new project → Import an existing project → GitHub → dexter-sports-website**, use the same settings, and click **Deploy**.
-   2. Turn on **Forms → Enable form detection**, then redeploy.
-   3. Add the email alert (Step 3).
-   4. Move the domain:
-      - Marcus removes the domain from his project.
-      - Kim adds **www.dextersportsco.com** and **dextersportsco.com** under **Domain management**.
-      - In Wix, change the **www** CNAME to Kim's new `*.netlify.app` address. The A record (75.2.60.5) stays.
-   5. Expect up to an hour of downtime while HTTPS is re-issued. Export old submissions first.
 
 ## Step 3: Email in Netlify (about 10 minutes)
 
@@ -113,7 +113,7 @@ No change is needed with Option A. Confirm the following:
 | TXT | @ | v=spf1 include:_spf.google.com ~all | Email anti-spoofing. **Never change** |
 | TXT | @ | google-site-verification=… | Google ownership. **Never change** |
 
-- **Option B in Step 2:** update only the www CNAME.
+- **Option B in Step 1:** update only the www CNAME.
 - **Cancelling the Wix website plan** doesn't cancel the domain. Keep the domain renewing.
 - **Leaving Wix entirely** (optional): see DNS-SETUP.md §7 (Cloudflare Registrar, about $10–11/yr).
 
@@ -143,22 +143,56 @@ The webmaster then sets these in `assets/js/config.js`:
 
 Optional: text-message alerts for urgent offers. See URGENT-REQUESTS.md.
 
-## Step 6: Final checklist
+## Step 6: Handoff checklist (who does what, in order)
 
-- [ ] Password manager set up; two-factor authentication on everywhere
-- [ ] GitHub account created; repository transferred (Step 1)
-- [ ] Netlify account created; project transferred (Step 2)
-- [ ] Netlify relinked to your GitHub; test edit published
-- [ ] Form alerts confirmed; Gmail filters made; both test submissions received (Step 3)
-- [ ] Wix domain confirmed, auto-renew on, DNS matches the table (Step 4)
-- [ ] Marcus removed from the Netlify team; old deploy key and webhook deleted in GitHub
-- [ ] Kit connected, or deferred to the new template (Step 5)
-- [ ] High-resolution headshot supplied (≥1200 × 1500 px)
-- [ ] Reworded About-page sentence approved ("representing coaches and athletes across all sports, with a specialty in uplifting women in sport")
-- [ ] Urgent-offer hours confirmed: same day if received by noon ET, Monday–Friday
-- [ ] Optional: backup contact for urgent offers
-- [ ] Privacy policy reviewed by your attorney
-- [ ] Wix website plan cancelled last (keep the domain)
+Work top to bottom.
+- **KIM** marks your tasks.
+- **MARCUS → after …** marks a task Marcus does once you've finished the step named. Send him a quick note each time you reach one.
+
+Phase 1 moves web hosting first, and the site stays live the whole time.
+
+**Phase 0: Get ready**
+
+- [ ] **MARCUS:** send Kim this guide (Word and .md) and a Google Drive link to the code zip
+- [ ] **KIM:** set up a password manager (Bitwarden or 1Password)
+
+**Phase 1: Move web hosting (Netlify), Step 1**
+
+- [ ] **KIM:** create a Netlify account with kim@dextersportsco.com, name the team *Dexter Sports Co*, and turn on two-factor authentication
+- [ ] **KIM:** invite **marcus@mpactcap.com** to your team as **Owner**, then tell Marcus
+- [ ] **MARCUS → after Kim's invite:** accept it, then transfer the *dexter-sports* project to Kim's team
+- [ ] **KIM:** confirm the project is in your team (Domain management shows HTTPS active; Forms lists *inquiry* and *urgent*), then open www.dextersportsco.com to check the site is up
+- [ ] **KIM:** check the form email alert, create the Gmail filters, and send both test submissions (Step 3)
+
+**Phase 2: Move the code (GitHub), Step 2**
+
+- [ ] **KIM:** create a GitHub account with kim@dextersportsco.com, turn on two-factor authentication, and send Marcus your username
+- [ ] **MARCUS → after Kim sends her username:** decide whether the private `_strategy/` folder goes to Kim (delete it first if not), then transfer the repository to her
+- [ ] **KIM:** accept the transfer email within one day
+- [ ] **KIM:** in Netlify, relink the project to your GitHub repository and make a test edit (Step 1, "Reconnect auto-publishing")
+- [ ] **KIM:** in GitHub, delete the older Netlify deploy key and webhook, then tell Marcus it's done
+
+**Phase 3: Close out Marcus's access**
+
+- [ ] **MARCUS → after Kim confirms the relink works:**
+   - leave Kim's Netlify team (or Kim removes him under **Team settings → Members**);
+   - confirm no Dexter project is left in his Netlify team;
+   - delete the old Vercel preview (*dexter-sports-preview*);
+   - remove any saved GitHub or Netlify links to the project on his computer.
+- [ ] **KIM:** confirm Marcus no longer appears in Netlify **Team settings → Members** or in GitHub **Settings → Collaborators**
+
+**Phase 4: Domain (Wix), Step 4**
+
+- [ ] **KIM:** confirm dextersportsco.com is in your Wix account, turn on auto-renew and two-factor authentication, and check that the DNS matches the table
+
+**Phase 5: Optional, and content only you can supply**
+
+- [ ] **KIM:** connect Kit so sign-ups are saved, or wait for the new template (Step 5)
+- [ ] **KIM:** send a high-resolution headshot (at least 1200 × 1500 px)
+- [ ] **KIM:** approve the reworded About-page sentence ("representing coaches and athletes across all sports, with a specialty in uplifting women in sport")
+- [ ] **KIM:** confirm the urgent-offer hours: same day if received by noon ET, Monday–Friday; optionally name a backup contact
+- [ ] **KIM:** have your attorney review the privacy policy
+- [ ] **KIM:** cancel the Wix *website plan* last, once all of the above works (keep the domain)
 
 ## Running the site, and switching to a new template later
 
