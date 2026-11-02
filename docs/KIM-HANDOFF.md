@@ -53,7 +53,7 @@ Wix needs no changes, because Kim's project takes over the same name, *dexter-sp
 4. **Kim:** open https://www.dextersportsco.com and https://dextersportsco.com (both should show a padlock), then send the two test submissions (Step 3, part 4).
 5. **Marcus:** download the old form submissions (**Forms → each form → Download as CSV**) and send them to Kim. After one week, delete *dexter-sports-old*.
 
-**If the name *dexter-sports* isn't available:** use any name, then in Wix change the **www** CNAME to `<your-name>.netlify.app`. The A record (75.2.60.5) stays the same.
+**If the name dexter-sports isn't available:** use any name, then in Wix change the **www** CNAME to `<your-name>.netlify.app`. The A record (75.2.60.5) stays the same.
 
 Until Step 2 links your GitHub, publish updates by dragging the folder into **Deploys**. After Step 2, changes publish automatically.
 
@@ -125,7 +125,7 @@ Nothing in Wix changes, because your project takes the name *dexter-sports* in S
 | TXT | @ | v=spf1 include:_spf.google.com ~all | Email anti-spoofing. **Never change** |
 | TXT | @ | google-site-verification=… | Google ownership. **Never change** |
 
-- **If your project couldn't take the name *dexter-sports*:** update only the www CNAME to your project's Netlify address.
+- **If your project couldn't take the name dexter-sports:** update only the www CNAME to your project's Netlify address.
 - **Cancelling the Wix website plan** doesn't cancel the domain. Keep the domain renewing.
 - **Leaving Wix entirely** (optional): see DNS-SETUP.md §7 (Cloudflare Registrar, about $10–11/yr).
 
